@@ -34,12 +34,12 @@ jobs:
 
     steps:
       - name: Checkout public repo (this repo)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           path: public
 
       - name: Checkout enterprise repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: ${{ inputs.enterprise_repo || 'priyaranjan-sahu/multi-cloud-finops-enterprise' }}
           ref: ${{ inputs.enterprise_ref || github.event.client_payload.enterprise_ref || 'main' }}
