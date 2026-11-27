@@ -1,0 +1,6 @@
+# ruff check .
+All checks passed!
+# ruff format --check .
+94 files already formatted
+# mypy finops_engine
+Success: no issues found in 40 source files

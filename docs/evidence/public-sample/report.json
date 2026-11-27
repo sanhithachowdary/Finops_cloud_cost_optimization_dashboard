@@ -1,0 +1,161 @@
+{
+  "dataset": {
+    "source": "https://github.com/FinOps-Open-Cost-and-Usage-Spec/FOCUS-Sample-Data",
+    "file": "FOCUS-1.0/focus_sample_10000.csv",
+    "licence": "CC BY 4.0 (FinOps Foundation)",
+    "sha256": "0bf58b73123294c4476b648e647cad842935036f67dc4e9a2cc4a6d7497cc2e3",
+    "label": "anonymised real-world sample; NOT this project's Q2 baseline"
+  },
+  "config_version": "2026.10-v1",
+  "ingestion": {
+    "status": "accepted_with_quarantine",
+    "rows_received": 10000,
+    "rows_accepted": 9927,
+    "rows_quarantined": 73,
+    "rows_duplicate": 0,
+    "quarantine_reasons": {
+      "unknown_provider": 68,
+      "negative_usage_quantity": 5
+    },
+    "warnings": {
+      "naive_timestamp_assumed_utc": 20000,
+      "unrecognised_usage_unit": 1111,
+      "usage_reversal_row_accepted": 149
+    },
+    "transformations": {
+      "unit_seconds_to_Hours": 32,
+      "unit_minutes_to_Hours": 1
+    },
+    "quarantine_ratio": 0.0073,
+    "safe_mode_triggered": false,
+    "reconciliation": {
+      "accepted_cost_usd": 146.240996,
+      "quarantined_cost_usd": 5.188945,
+      "duplicate_cost_usd": 0.0,
+      "parsed_input_cost_usd": 151.429941,
+      "note": "parsed_input = accepted + quarantined + duplicate; rows with unparseable cost are counted in rows_unparseable_cost and quarantined"
+    }
+  },
+  "attribution": {
+    "attributed_cost_share": 0.7464,
+    "unattributed_rows": 868,
+    "conflicting_resource_ids": 5
+  },
+  "spend": {
+    "overview": {
+      "total_cost_usd": 146.24,
+      "records": 9927,
+      "days_covered": 30,
+      "average_daily_cost_usd": 4.87,
+      "period_start": "2024-09-01",
+      "period_end": "2024-09-30",
+      "by_charge_category": {
+        "Credit": -98.6,
+        "Tax": 0.0,
+        "Usage": 244.84
+      }
+    },
+    "by_provider_engine": {
+      "AWS": 112.17,
+      "Azure": 34.07
+    },
+    "by_provider_oracle": {
+      "AWS": 112.17,
+      "Azure": 34.07
+    },
+    "oracle_mismatches": {},
+    "oracle_status": "pass",
+    "daily_points": 30,
+    "top_services": [
+      {
+        "key": "Amazon Elastic Compute Cloud",
+        "cost_usd": 88.28,
+        "share": 0.7165,
+        "records": 5252,
+        "flags": []
+      },
+      {
+        "key": "Azure SQL Database",
+        "cost_usd": 20.17,
+        "share": 0.0873,
+        "records": 7,
+        "flags": []
+      },
+      {
+        "key": "Virtual Machines",
+        "cost_usd": 16.16,
+        "share": 0.0473,
+        "records": 26,
+        "flags": []
+      },
+      {
+        "key": "Amazon Relational Database Service",
+        "cost_usd": 10.6,
+        "share": 0.0266,
+        "records": 173,
+        "flags": []
+      },
+      {
+        "key": "Virtual Machine Scale Sets",
+        "cost_usd": 8.95,
+        "share": 0.0225,
+        "records": 17,
+        "flags": []
+      }
+    ],
+    "unattributed_resource_share": 0.2536
+  },
+  "anomalies": {
+    "count": 0,
+    "alerts": []
+  },
+  "forecast_backtest": {
+    "status": "ok",
+    "method": "linear_regression_with_t_prediction_interval",
+    "train_days": 23,
+    "holdout_days": 7,
+    "train_period": [
+      "2024-09-01",
+      "2024-09-23"
+    ],
+    "holdout_period": [
+      "2024-09-24",
+      "2024-09-30"
+    ],
+    "model": {
+      "mae_usd": 9.67,
+      "rmse_usd": 16.75,
+      "mape_pct": null,
+      "mape_note": "MAPE undefined: held-out actuals contain zero/negative values"
+    },
+    "baselines": {
+      "naive_last_value": {
+        "mae_usd": 12.82,
+        "rmse_usd": 18.97,
+        "mape_pct": null,
+        "mape_note": "MAPE undefined: held-out actuals contain zero/negative values"
+      },
+      "naive_mean_7d": {
+        "mae_usd": 9.77,
+        "rmse_usd": 15.34,
+        "mape_pct": null,
+        "mape_note": "MAPE undefined: held-out actuals contain zero/negative values"
+      }
+    },
+    "prediction_interval_coverage": 0.7143,
+    "nominal_interval": 0.95,
+    "beats_best_naive_baseline_on_mae": true,
+    "holdout_total_actual_usd": 8.18,
+    "holdout_total_predicted_usd": 74.24
+  },
+  "recommendations": {
+    "summary_counts": {
+      "commitment": {
+        "requires_review": 2,
+        "insufficient_data": 6
+      }
+    },
+    "estimated_monthly_savings_usd": 0.0,
+    "note": "No utilisation data in billing exports: right-sizing/idle not evaluated."
+  }
+}

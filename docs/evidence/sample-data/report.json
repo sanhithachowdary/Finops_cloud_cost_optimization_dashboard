@@ -1,0 +1,2679 @@
+{
+  "generated_at": "2026-10-24 09:06 UTC",
+  "app_version": "1.3.0",
+  "config_version": "2026.10-v2-sample-inr",
+  "data_label": "GENERATED sample data, approved by the course instructor as the reference data for this project. Not a real cloud bill.",
+  "currency": "INR",
+  "currency_note": "All amounts in INR, converted at 1 USD = \u20b994.95 (rate set in the config)",
+  "kpis": [
+    {
+      "kpi": "KPI-1 Estimated savings vs Q2 reference",
+      "measured": "7.91% (\u20b929,211.91 of \u20b93,69,263.97/month)",
+      "target": ">= 5%",
+      "result": "MET",
+      "basis": "focus_compliant_demo_q2.csv (Apr-Jun 2026); actionable recommendations only"
+    },
+    {
+      "kpi": "KPI-2 Forecast accuracy",
+      "measured": "focus_bill_jan_mar.csv: 0.57%; focus_bill_mar_may.csv: 0.2%; focus_bill_may_june.csv: 0.86% (naive was better); focus_compliant_demo_q2.csv: 13.37% (naive was better)",
+      "target": "Measure and report against approved reference data",
+      "result": "REPORTED",
+      "basis": "7-day hold-out back-test (MAPE) per file"
+    },
+    {
+      "kpi": "KPI-3 Anomaly precision",
+      "measured": "precision 1.0 (1/1 alerts correct); recall 1/2 planted spike/step events",
+      "target": "Compute against independent ground truth",
+      "result": "REPORTED",
+      "basis": "Planted scenarios from the generator scripts (see PLANTED in the script)"
+    },
+    {
+      "kpi": "KPI-4 Recovery rate",
+      "measured": "20/20 faults recovered",
+      "target": "Measure recoveries after fault injection",
+      "result": "REPORTED",
+      "basis": "docs/evidence/kpi-results.json fault campaign"
+    },
+    {
+      "kpi": "KPI-5 Service error rate",
+      "measured": "0.0 (0/135) vs reference 0.0",
+      "target": "<= 0.8 x reference",
+      "result": "MET",
+      "basis": "Reference = original v1.3.0 code, same machine and workload"
+    },
+    {
+      "kpi": "KPI-6 p95 latency",
+      "measured": "64.65 ms vs reference 1488.63 ms (ratio 0.043)",
+      "target": "<= 0.80 x reference",
+      "result": "MET",
+      "basis": "Reference = original v1.3.0 code, same machine and workload"
+    }
+  ],
+  "files": [
+    {
+      "file": "focus_bill_jan_mar.csv",
+      "sha256": "1e3063d7f35c5e422b2164b14ee0a24e5305aaedcb51918fa3ac31c3d1074a07",
+      "ingestion": {
+        "status": "accepted",
+        "rows_received": 1080,
+        "rows_accepted": 1080,
+        "rows_quarantined": 0,
+        "rows_duplicate": 0,
+        "quarantine_reasons": {},
+        "warnings": {},
+        "safe_mode_triggered": false,
+        "reconciliation": {
+          "accepted_cost_usd": 222931.348425,
+          "quarantined_cost_usd": 0,
+          "duplicate_cost_usd": 0.0,
+          "parsed_input_cost_usd": 222931.348425,
+          "note": "parsed_input = accepted + quarantined + duplicate; rows with unparseable cost are counted in rows_unparseable_cost and quarantined"
+        }
+      },
+      "overview": {
+        "total_cost_usd": 222931.35,
+        "records": 1080,
+        "days_covered": 90,
+        "average_daily_cost_usd": 2477.01,
+        "period_start": "2026-01-01",
+        "period_end": "2026-03-31",
+        "by_charge_category": {
+          "Usage": 222931.35
+        }
+      },
+      "by_provider": [
+        {
+          "key": "AWS",
+          "cost_usd": 74377.91,
+          "share": 0.3336,
+          "records": 360,
+          "flags": []
+        },
+        {
+          "key": "Azure",
+          "cost_usd": 74282.79,
+          "share": 0.3332,
+          "records": 360,
+          "flags": []
+        },
+        {
+          "key": "GCP",
+          "cost_usd": 74270.65,
+          "share": 0.3332,
+          "records": 360,
+          "flags": []
+        }
+      ],
+      "by_service": [
+        {
+          "key": "AWS_Database",
+          "cost_usd": 45126.37,
+          "share": 0.2024,
+          "records": 90,
+          "flags": []
+        },
+        {
+          "key": "GCP_Database",
+          "cost_usd": 45088.55,
+          "share": 0.2023,
+          "records": 90,
+          "flags": []
+        },
+        {
+          "key": "Azure_Database",
+          "cost_usd": 45078.09,
+          "share": 0.2022,
+          "records": 90,
+          "flags": []
+        },
+        {
+          "key": "AWS_Compute",
+          "cost_usd": 24665.5,
+          "share": 0.1106,
+          "records": 90,
+          "flags": []
+        },
+        {
+          "key": "Azure_Compute",
+          "cost_usd": 24633.81,
+          "share": 0.1105,
+          "records": 90,
+          "flags": []
+        },
+        {
+          "key": "GCP_Compute",
+          "cost_usd": 24621.45,
+          "share": 0.1104,
+          "records": 90,
+          "flags": []
+        },
+        {
+          "key": "AWS_Storage",
+          "cost_usd": 4575.58,
+          "share": 0.0205,
+          "records": 90,
+          "flags": []
+        },
+        {
+          "key": "Azure_Storage",
+          "cost_usd": 4566.55,
+          "share": 0.0205,
+          "records": 90,
+          "flags": []
+        },
+        {
+          "key": "GCP_Storage",
+          "cost_usd": 4556.34,
+          "share": 0.0204,
+          "records": 90,
+          "flags": []
+        },
+        {
+          "key": "AWS_Serverless",
+          "cost_usd": 10.44,
+          "share": 0.0,
+          "records": 90,
+          "flags": []
+        },
+        {
+          "key": "Azure_Serverless",
+          "cost_usd": 4.34,
+          "share": 0.0,
+          "records": 90,
+          "flags": []
+        },
+        {
+          "key": "GCP_Serverless",
+          "cost_usd": 4.32,
+          "share": 0.0,
+          "records": 90,
+          "flags": []
+        }
+      ],
+      "monthly": [
+        {
+          "period_start": "2026-01-01T00:00:00+00:00",
+          "period": "2026-01",
+          "cost_usd": 76689.95,
+          "records": 372
+        },
+        {
+          "period_start": "2026-02-01T00:00:00+00:00",
+          "period": "2026-02",
+          "cost_usd": 69330.43,
+          "records": 336
+        },
+        {
+          "period_start": "2026-03-01T00:00:00+00:00",
+          "period": "2026-03",
+          "cost_usd": 76910.97,
+          "records": 372
+        }
+      ],
+      "daily": [
+        {
+          "period": "2026-01-01",
+          "cost_usd": 2492.28
+        },
+        {
+          "period": "2026-01-02",
+          "cost_usd": 2445.8
+        },
+        {
+          "period": "2026-01-03",
+          "cost_usd": 2481.35
+        },
+        {
+          "period": "2026-01-04",
+          "cost_usd": 2472.9
+        },
+        {
+          "period": "2026-01-05",
+          "cost_usd": 2453.26
+        },
+        {
+          "period": "2026-01-06",
+          "cost_usd": 2505.52
+        },
+        {
+          "period": "2026-01-07",
+          "cost_usd": 2442.73
+        },
+        {
+          "period": "2026-01-08",
+          "cost_usd": 2454.88
+        },
+        {
+          "period": "2026-01-09",
+          "cost_usd": 2488.11
+        },
+        {
+          "period": "2026-01-10",
+          "cost_usd": 2507.08
+        },
+        {
+          "period": "2026-01-11",
+          "cost_usd": 2506.75
+        },
+        {
+          "period": "2026-01-12",
+          "cost_usd": 2499.22
+        },
+        {
+          "period": "2026-01-13",
+          "cost_usd": 2436.37
+        },
+        {
+          "period": "2026-01-14",
+          "cost_usd": 2480.14
+        },
+        {
+          "period": "2026-01-15",
+          "cost_usd": 2485.73
+        },
+        {
+          "period": "2026-01-16",
+          "cost_usd": 2465.19
+        },
+        {
+          "period": "2026-01-17",
+          "cost_usd": 2491.79
+        },
+        {
+          "period": "2026-01-18",
+          "cost_usd": 2498.88
+        },
+        {
+          "period": "2026-01-19",
+          "cost_usd": 2457.9
+        },
+        {
+          "period": "2026-01-20",
+          "cost_usd": 2467.87
+        },
+        {
+          "period": "2026-01-21",
+          "cost_usd": 2494.25
+        },
+        {
+          "period": "2026-01-22",
+          "cost_usd": 2448.26
+        },
+        {
+          "period": "2026-01-23",
+          "cost_usd": 2455.24
+        },
+        {
+          "period": "2026-01-24",
+          "cost_usd": 2478.17
+        },
+        {
+          "period": "2026-01-25",
+          "cost_usd": 2459.09
+        },
+        {
+          "period": "2026-01-26",
+          "cost_usd": 2511.19
+        },
+        {
+          "period": "2026-01-27",
+          "cost_usd": 2439.05
+        },
+        {
+          "period": "2026-01-28",
+          "cost_usd": 2434.23
+        },
+        {
+          "period": "2026-01-29",
+          "cost_usd": 2434.84
+        },
+        {
+          "period": "2026-01-30",
+          "cost_usd": 2491.22
+        },
+        {
+          "period": "2026-01-31",
+          "cost_usd": 2510.66
+        },
+        {
+          "period": "2026-02-01",
+          "cost_usd": 2504.7
+        },
+        {
+          "period": "2026-02-02",
+          "cost_usd": 2484.13
+        },
+        {
+          "period": "2026-02-03",
+          "cost_usd": 2461.72
+        },
+        {
+          "period": "2026-02-04",
+          "cost_usd": 2507.25
+        },
+        {
+          "period": "2026-02-05",
+          "cost_usd": 2471.48
+        },
+        {
+          "period": "2026-02-06",
+          "cost_usd": 2463.02
+        },
+        {
+          "period": "2026-02-07",
+          "cost_usd": 2504.53
+        },
+        {
+          "period": "2026-02-08",
+          "cost_usd": 2473.27
+        },
+        {
+          "period": "2026-02-09",
+          "cost_usd": 2474.75
+        },
+        {
+          "period": "2026-02-10",
+          "cost_usd": 2479.46
+        },
+        {
+          "period": "2026-02-11",
+          "cost_usd": 2423.26
+        },
+        {
+          "period": "2026-02-12",
+          "cost_usd": 2487.25
+        },
+        {
+          "period": "2026-02-13",
+          "cost_usd": 2502.18
+        },
+        {
+          "period": "2026-02-14",
+          "cost_usd": 2457.45
+        },
+        {
+          "period": "2026-02-15",
+          "cost_usd": 2488.28
+        },
+        {
+          "period": "2026-02-16",
+          "cost_usd": 2448.63
+        },
+        {
+          "period": "2026-02-17",
+          "cost_usd": 2437.49
+        },
+        {
+          "period": "2026-02-18",
+          "cost_usd": 2447.94
+        },
+        {
+          "period": "2026-02-19",
+          "cost_usd": 2520.64
+        },
+        {
+          "period": "2026-02-20",
+          "cost_usd": 2502.17
+        },
+        {
+          "period": "2026-02-21",
+          "cost_usd": 2460.15
+        },
+        {
+          "period": "2026-02-22",
+          "cost_usd": 2480.05
+        },
+        {
+          "period": "2026-02-23",
+          "cost_usd": 2512.44
+        },
+        {
+          "period": "2026-02-24",
+          "cost_usd": 2483.2
+        },
+        {
+          "period": "2026-02-25",
+          "cost_usd": 2430.81
+        },
+        {
+          "period": "2026-02-26",
+          "cost_usd": 2483.52
+        },
+        {
+          "period": "2026-02-27",
+          "cost_usd": 2472.59
+        },
+        {
+          "period": "2026-02-28",
+          "cost_usd": 2468.08
+        },
+        {
+          "period": "2026-03-01",
+          "cost_usd": 2509.29
+        },
+        {
+          "period": "2026-03-02",
+          "cost_usd": 2491.13
+        },
+        {
+          "period": "2026-03-03",
+          "cost_usd": 2485.96
+        },
+        {
+          "period": "2026-03-04",
+          "cost_usd": 2485.08
+        },
+        {
+          "period": "2026-03-05",
+          "cost_usd": 2441.7
+        },
+        {
+          "period": "2026-03-06",
+          "cost_usd": 2492.02
+        },
+        {
+          "period": "2026-03-07",
+          "cost_usd": 2472.45
+        },
+        {
+          "period": "2026-03-08",
+          "cost_usd": 2444.63
+        },
+        {
+          "period": "2026-03-09",
+          "cost_usd": 2464.28
+        },
+        {
+          "period": "2026-03-10",
+          "cost_usd": 2475.85
+        },
+        {
+          "period": "2026-03-11",
+          "cost_usd": 2501.11
+        },
+        {
+          "period": "2026-03-12",
+          "cost_usd": 2451.75
+        },
+        {
+          "period": "2026-03-13",
+          "cost_usd": 2505.36
+        },
+        {
+          "period": "2026-03-14",
+          "cost_usd": 2484.58
+        },
+        {
+          "period": "2026-03-15",
+          "cost_usd": 2458.83
+        },
+        {
+          "period": "2026-03-16",
+          "cost_usd": 2475.68
+        },
+        {
+          "period": "2026-03-17",
+          "cost_usd": 2507.76
+        },
+        {
+          "period": "2026-03-18",
+          "cost_usd": 2474.99
+        },
+        {
+          "period": "2026-03-19",
+          "cost_usd": 2470.59
+        },
+        {
+          "period": "2026-03-20",
+          "cost_usd": 2464.28
+        },
+        {
+          "period": "2026-03-21",
+          "cost_usd": 2463.59
+        },
+        {
+          "period": "2026-03-22",
+          "cost_usd": 2507.4
+        },
+        {
+          "period": "2026-03-23",
+          "cost_usd": 2505.97
+        },
+        {
+          "period": "2026-03-24",
+          "cost_usd": 2502.42
+        },
+        {
+          "period": "2026-03-25",
+          "cost_usd": 2474.54
+        },
+        {
+          "period": "2026-03-26",
+          "cost_usd": 2502.69
+        },
+        {
+          "period": "2026-03-27",
+          "cost_usd": 2508.17
+        },
+        {
+          "period": "2026-03-28",
+          "cost_usd": 2473.37
+        },
+        {
+          "period": "2026-03-29",
+          "cost_usd": 2459.29
+        },
+        {
+          "period": "2026-03-30",
+          "cost_usd": 2485.95
+        },
+        {
+          "period": "2026-03-31",
+          "cost_usd": 2470.27
+        }
+      ],
+      "anomalies": [],
+      "anomaly_evaluation": {
+        "planted_events": [
+          {
+            "event": "AWS serverless 15-25x usage spike",
+            "provider": "AWS",
+            "service": "AWS_Serverless",
+            "start": "2026-02-20",
+            "end": "2026-02-25",
+            "kind": "spike"
+          }
+        ],
+        "alerts": 0,
+        "true_positive_alerts": 0,
+        "false_positive_alerts": 0,
+        "point_events": 1,
+        "point_events_detected": [],
+        "note": "Drift events are gradual by design and are not counted as point anomalies."
+      },
+      "forecast_next_30_days": {
+        "status": "ok",
+        "total_projected_spend_usd": 74478.85,
+        "average_daily_projected_usd": 2482.63,
+        "trend_usd_per_day": 0.0936,
+        "history_days": 90
+      },
+      "backtest": {
+        "status": "ok",
+        "method": "linear_regression_with_t_prediction_interval",
+        "train_days": 83,
+        "holdout_days": 7,
+        "train_period": [
+          "2026-01-01",
+          "2026-03-24"
+        ],
+        "holdout_period": [
+          "2026-03-25",
+          "2026-03-31"
+        ],
+        "model": {
+          "mae_usd": 14.3,
+          "rmse_usd": 16.67,
+          "mape_pct": 0.57,
+          "mape_note": null
+        },
+        "baselines": {
+          "naive_last_value": {
+            "mae_usd": 22.1,
+            "rmse_usd": 26.24,
+            "mape_pct": 0.89,
+            "mape_note": null
+          },
+          "naive_mean_7d": {
+            "mae_usd": 14.79,
+            "rmse_usd": 16.67,
+            "mape_pct": 0.6,
+            "mape_note": null
+          }
+        },
+        "prediction_interval_coverage": 1.0,
+        "nominal_interval": 0.95,
+        "beats_best_naive_baseline_on_mae": true,
+        "holdout_total_actual_usd": 17374.28,
+        "holdout_total_predicted_usd": 17363.88
+      },
+      "utilisation_samples": 6,
+      "utilisation_skipped": 6,
+      "recommendations": [
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "AWS",
+          "service": "AWS_Compute",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 1774.2,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9264.02/day over 90 days (CV 0.02); candidate: Compute Savings Plan (1-year, no upfront) covering \u20b9211.21/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "AWS",
+          "service": "AWS_Database",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 3269.31,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9486.50/day over 90 days (CV 0.02); candidate: Reserved DB instances (1-year) covering \u20b9389.20/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "requires_review",
+          "provider": "AWS",
+          "service": "AWS_Serverless",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 0.32,
+          "confidence": "low",
+          "reason": "Stable baseline usage: P10 \u20b90.05/day over 90 days (CV 2.20); candidate: Compute Savings Plan (1-year, no upfront) covering \u20b90.04/day; review needed: usage is volatile (CV 2.20 > 0.35)"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "Azure",
+          "service": "Azure_Compute",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 1900.66,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9263.98/day over 90 days (CV 0.02); candidate: Azure savings plan for compute (1-year) covering \u20b9211.18/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "Azure",
+          "service": "Azure_Database",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 3491.42,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9484.92/day over 90 days (CV 0.02); candidate: Reserved capacity (1-year) covering \u20b9387.94/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "Azure",
+          "service": "Azure_Serverless",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 0.34,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b90.05/day over 90 days (CV 0.05); candidate: Azure savings plan for compute (1-year) covering \u20b90.04/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "GCP",
+          "service": "GCP_Compute",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 1579.44,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9263.24/day over 90 days (CV 0.03); candidate: Committed use discount (1-year) covering \u20b9210.59/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "GCP",
+          "service": "GCP_Database",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 2900.34,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9483.39/day over 90 days (CV 0.02); candidate: Committed use discount (1-year) covering \u20b9386.71/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "GCP",
+          "service": "GCP_Serverless",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 0.28,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b90.05/day over 90 days (CV 0.05); candidate: Committed use discount (1-year) covering \u20b90.04/day"
+        }
+      ],
+      "savings": {
+        "estimated_monthly_savings_usd": 14915.99,
+        "estimated_relative_savings_pct": 20.05,
+        "potential_monthly_savings_requires_review_usd": 0.32,
+        "reference": {
+          "monthly_cost_usd": 74401.68,
+          "window_days": 30,
+          "window_start": "2026-03-02",
+          "window_end": "2026-03-31",
+          "formula": "sum(billed_cost in trailing window) / days_with_data * 30"
+        },
+        "counts": {
+          "commitment": {
+            "actionable": 8,
+            "requires_review": 1
+          }
+        }
+      },
+      "config_version": "2026.10-v2-sample-inr"
+    },
+    {
+      "file": "focus_bill_mar_may.csv",
+      "sha256": "37d3d889e29e25b3f84443cc9a513103e660bf1038028a18caae8c71f131cbe2",
+      "ingestion": {
+        "status": "accepted",
+        "rows_received": 828,
+        "rows_accepted": 828,
+        "rows_quarantined": 0,
+        "rows_duplicate": 0,
+        "quarantine_reasons": {},
+        "warnings": {},
+        "safe_mode_triggered": false,
+        "reconciliation": {
+          "accepted_cost_usd": 511591.558995,
+          "quarantined_cost_usd": 0,
+          "duplicate_cost_usd": 0.0,
+          "parsed_input_cost_usd": 511591.558995,
+          "note": "parsed_input = accepted + quarantined + duplicate; rows with unparseable cost are counted in rows_unparseable_cost and quarantined"
+        }
+      },
+      "overview": {
+        "total_cost_usd": 511591.56,
+        "records": 828,
+        "days_covered": 92,
+        "average_daily_cost_usd": 5560.78,
+        "period_start": "2026-03-01",
+        "period_end": "2026-05-31",
+        "by_charge_category": {
+          "Usage": 511591.56
+        }
+      },
+      "by_provider": [
+        {
+          "key": "GCP",
+          "cost_usd": 170552.48,
+          "share": 0.3334,
+          "records": 276,
+          "flags": []
+        },
+        {
+          "key": "Azure",
+          "cost_usd": 170549.65,
+          "share": 0.3334,
+          "records": 276,
+          "flags": []
+        },
+        {
+          "key": "AWS",
+          "cost_usd": 170489.44,
+          "share": 0.3333,
+          "records": 276,
+          "flags": []
+        }
+      ],
+      "by_service": [
+        {
+          "key": "GCP_Storage",
+          "cost_usd": 113947.08,
+          "share": 0.2227,
+          "records": 92,
+          "flags": []
+        },
+        {
+          "key": "Azure_Storage",
+          "cost_usd": 113944.25,
+          "share": 0.2227,
+          "records": 92,
+          "flags": []
+        },
+        {
+          "key": "AWS_Storage",
+          "cost_usd": 113884.05,
+          "share": 0.2226,
+          "records": 92,
+          "flags": []
+        },
+        {
+          "key": "AWS_Database",
+          "cost_usd": 37736.93,
+          "share": 0.0738,
+          "records": 92,
+          "flags": []
+        },
+        {
+          "key": "Azure_Database",
+          "cost_usd": 37736.93,
+          "share": 0.0738,
+          "records": 92,
+          "flags": []
+        },
+        {
+          "key": "GCP_Database",
+          "cost_usd": 37736.93,
+          "share": 0.0738,
+          "records": 92,
+          "flags": []
+        },
+        {
+          "key": "AWS_Compute",
+          "cost_usd": 18868.46,
+          "share": 0.0369,
+          "records": 92,
+          "flags": []
+        },
+        {
+          "key": "Azure_Compute",
+          "cost_usd": 18868.46,
+          "share": 0.0369,
+          "records": 92,
+          "flags": []
+        },
+        {
+          "key": "GCP_Compute",
+          "cost_usd": 18868.46,
+          "share": 0.0369,
+          "records": 92,
+          "flags": []
+        }
+      ],
+      "monthly": [
+        {
+          "period_start": "2026-03-01T00:00:00+00:00",
+          "period": "2026-03",
+          "cost_usd": 141025.51,
+          "records": 279
+        },
+        {
+          "period_start": "2026-04-01T00:00:00+00:00",
+          "period": "2026-04",
+          "cost_usd": 166806.59,
+          "records": 270
+        },
+        {
+          "period_start": "2026-05-01T00:00:00+00:00",
+          "period": "2026-05",
+          "cost_usd": 203759.45,
+          "records": 279
+        }
+      ],
+      "daily": [
+        {
+          "period": "2026-03-01",
+          "cost_usd": 4049.71
+        },
+        {
+          "period": "2026-03-02",
+          "cost_usd": 4087.19
+        },
+        {
+          "period": "2026-03-03",
+          "cost_usd": 4113.99
+        },
+        {
+          "period": "2026-03-04",
+          "cost_usd": 4179.88
+        },
+        {
+          "period": "2026-03-05",
+          "cost_usd": 4161.6
+        },
+        {
+          "period": "2026-03-06",
+          "cost_usd": 4229.95
+        },
+        {
+          "period": "2026-03-07",
+          "cost_usd": 4247.81
+        },
+        {
+          "period": "2026-03-08",
+          "cost_usd": 4279.23
+        },
+        {
+          "period": "2026-03-09",
+          "cost_usd": 4307.56
+        },
+        {
+          "period": "2026-03-10",
+          "cost_usd": 4350.29
+        },
+        {
+          "period": "2026-03-11",
+          "cost_usd": 4404.98
+        },
+        {
+          "period": "2026-03-12",
+          "cost_usd": 4417.24
+        },
+        {
+          "period": "2026-03-13",
+          "cost_usd": 4459.72
+        },
+        {
+          "period": "2026-03-14",
+          "cost_usd": 4469.95
+        },
+        {
+          "period": "2026-03-15",
+          "cost_usd": 4538.74
+        },
+        {
+          "period": "2026-03-16",
+          "cost_usd": 4551.2
+        },
+        {
+          "period": "2026-03-17",
+          "cost_usd": 4547.65
+        },
+        {
+          "period": "2026-03-18",
+          "cost_usd": 4626.92
+        },
+        {
+          "period": "2026-03-19",
+          "cost_usd": 4626.28
+        },
+        {
+          "period": "2026-03-20",
+          "cost_usd": 4703.12
+        },
+        {
+          "period": "2026-03-21",
+          "cost_usd": 4726.93
+        },
+        {
+          "period": "2026-03-22",
+          "cost_usd": 4739.03
+        },
+        {
+          "period": "2026-03-23",
+          "cost_usd": 4785.32
+        },
+        {
+          "period": "2026-03-24",
+          "cost_usd": 4807.91
+        },
+        {
+          "period": "2026-03-25",
+          "cost_usd": 4834.77
+        },
+        {
+          "period": "2026-03-26",
+          "cost_usd": 4876.99
+        },
+        {
+          "period": "2026-03-27",
+          "cost_usd": 4909.9
+        },
+        {
+          "period": "2026-03-28",
+          "cost_usd": 4948.76
+        },
+        {
+          "period": "2026-03-29",
+          "cost_usd": 4991.81
+        },
+        {
+          "period": "2026-03-30",
+          "cost_usd": 5018.18
+        },
+        {
+          "period": "2026-03-31",
+          "cost_usd": 5032.92
+        },
+        {
+          "period": "2026-04-01",
+          "cost_usd": 5092.27
+        },
+        {
+          "period": "2026-04-02",
+          "cost_usd": 5113.63
+        },
+        {
+          "period": "2026-04-03",
+          "cost_usd": 5144.97
+        },
+        {
+          "period": "2026-04-04",
+          "cost_usd": 5197.75
+        },
+        {
+          "period": "2026-04-05",
+          "cost_usd": 5177.31
+        },
+        {
+          "period": "2026-04-06",
+          "cost_usd": 5232.27
+        },
+        {
+          "period": "2026-04-07",
+          "cost_usd": 5268.83
+        },
+        {
+          "period": "2026-04-08",
+          "cost_usd": 5316.49
+        },
+        {
+          "period": "2026-04-09",
+          "cost_usd": 5306.32
+        },
+        {
+          "period": "2026-04-10",
+          "cost_usd": 5384.1
+        },
+        {
+          "period": "2026-04-11",
+          "cost_usd": 5405.42
+        },
+        {
+          "period": "2026-04-12",
+          "cost_usd": 5447.4
+        },
+        {
+          "period": "2026-04-13",
+          "cost_usd": 5489.34
+        },
+        {
+          "period": "2026-04-14",
+          "cost_usd": 5496.25
+        },
+        {
+          "period": "2026-04-15",
+          "cost_usd": 5558.18
+        },
+        {
+          "period": "2026-04-16",
+          "cost_usd": 5563.54
+        },
+        {
+          "period": "2026-04-17",
+          "cost_usd": 5638.32
+        },
+        {
+          "period": "2026-04-18",
+          "cost_usd": 5677.71
+        },
+        {
+          "period": "2026-04-19",
+          "cost_usd": 5676.21
+        },
+        {
+          "period": "2026-04-20",
+          "cost_usd": 5722.95
+        },
+        {
+          "period": "2026-04-21",
+          "cost_usd": 5739.78
+        },
+        {
+          "period": "2026-04-22",
+          "cost_usd": 5776.75
+        },
+        {
+          "period": "2026-04-23",
+          "cost_usd": 5795.16
+        },
+        {
+          "period": "2026-04-24",
+          "cost_usd": 5844.22
+        },
+        {
+          "period": "2026-04-25",
+          "cost_usd": 5888.01
+        },
+        {
+          "period": "2026-04-26",
+          "cost_usd": 5913.98
+        },
+        {
+          "period": "2026-04-27",
+          "cost_usd": 5944.29
+        },
+        {
+          "period": "2026-04-28",
+          "cost_usd": 5974.37
+        },
+        {
+          "period": "2026-04-29",
+          "cost_usd": 5991.6
+        },
+        {
+          "period": "2026-04-30",
+          "cost_usd": 6029.17
+        },
+        {
+          "period": "2026-05-01",
+          "cost_usd": 6073.1
+        },
+        {
+          "period": "2026-05-02",
+          "cost_usd": 6094.07
+        },
+        {
+          "period": "2026-05-03",
+          "cost_usd": 6154.23
+        },
+        {
+          "period": "2026-05-04",
+          "cost_usd": 6150.55
+        },
+        {
+          "period": "2026-05-05",
+          "cost_usd": 6210.11
+        },
+        {
+          "period": "2026-05-06",
+          "cost_usd": 6190.59
+        },
+        {
+          "period": "2026-05-07",
+          "cost_usd": 6240.11
+        },
+        {
+          "period": "2026-05-08",
+          "cost_usd": 6314.95
+        },
+        {
+          "period": "2026-05-09",
+          "cost_usd": 6300.9
+        },
+        {
+          "period": "2026-05-10",
+          "cost_usd": 6406.34
+        },
+        {
+          "period": "2026-05-11",
+          "cost_usd": 6399.84
+        },
+        {
+          "period": "2026-05-12",
+          "cost_usd": 6435.87
+        },
+        {
+          "period": "2026-05-13",
+          "cost_usd": 6486.02
+        },
+        {
+          "period": "2026-05-14",
+          "cost_usd": 6525.06
+        },
+        {
+          "period": "2026-05-15",
+          "cost_usd": 6520.44
+        },
+        {
+          "period": "2026-05-16",
+          "cost_usd": 6612.66
+        },
+        {
+          "period": "2026-05-17",
+          "cost_usd": 6660.71
+        },
+        {
+          "period": "2026-05-18",
+          "cost_usd": 6618.9
+        },
+        {
+          "period": "2026-05-19",
+          "cost_usd": 6693.55
+        },
+        {
+          "period": "2026-05-20",
+          "cost_usd": 6704.41
+        },
+        {
+          "period": "2026-05-21",
+          "cost_usd": 6705.9
+        },
+        {
+          "period": "2026-05-22",
+          "cost_usd": 6757.43
+        },
+        {
+          "period": "2026-05-23",
+          "cost_usd": 6811.6
+        },
+        {
+          "period": "2026-05-24",
+          "cost_usd": 6818.19
+        },
+        {
+          "period": "2026-05-25",
+          "cost_usd": 6895.27
+        },
+        {
+          "period": "2026-05-26",
+          "cost_usd": 6922.71
+        },
+        {
+          "period": "2026-05-27",
+          "cost_usd": 6937.51
+        },
+        {
+          "period": "2026-05-28",
+          "cost_usd": 6983.88
+        },
+        {
+          "period": "2026-05-29",
+          "cost_usd": 7002.54
+        },
+        {
+          "period": "2026-05-30",
+          "cost_usd": 7044.69
+        },
+        {
+          "period": "2026-05-31",
+          "cost_usd": 7087.31
+        }
+      ],
+      "anomalies": [],
+      "anomaly_evaluation": {
+        "planted_events": [
+          {
+            "event": "Storage grows every day (no clean-up)",
+            "provider": "*",
+            "service": "*_Storage",
+            "start": "2026-03-01",
+            "end": "2026-05-31",
+            "kind": "drift"
+          }
+        ],
+        "alerts": 0,
+        "true_positive_alerts": 0,
+        "false_positive_alerts": 0,
+        "point_events": 0,
+        "point_events_detected": [],
+        "note": "Drift events are gradual by design and are not counted as point anomalies."
+      },
+      "forecast_next_30_days": {
+        "status": "ok",
+        "total_projected_spend_usd": 227578.02,
+        "average_daily_projected_usd": 7585.93,
+        "trend_usd_per_day": 33.1993,
+        "history_days": 92
+      },
+      "backtest": {
+        "status": "ok",
+        "method": "linear_regression_with_t_prediction_interval",
+        "train_days": 85,
+        "holdout_days": 7,
+        "train_period": [
+          "2026-03-01",
+          "2026-05-24"
+        ],
+        "holdout_period": [
+          "2026-05-25",
+          "2026-05-31"
+        ],
+        "model": {
+          "mae_usd": 14.01,
+          "rmse_usd": 16.57,
+          "mape_pct": 0.2,
+          "mape_note": null
+        },
+        "baselines": {
+          "naive_last_value": {
+            "mae_usd": 163.8,
+            "rmse_usd": 175.77,
+            "mape_pct": 2.34,
+            "mape_note": null
+          },
+          "naive_mean_7d": {
+            "mae_usd": 251.99,
+            "rmse_usd": 259.93,
+            "mape_pct": 3.6,
+            "mape_note": null
+          }
+        },
+        "prediction_interval_coverage": 1.0,
+        "nominal_interval": 0.95,
+        "beats_best_naive_baseline_on_mae": true,
+        "holdout_total_actual_usd": 48873.92,
+        "holdout_total_predicted_usd": 48775.86
+      },
+      "utilisation_samples": 6,
+      "utilisation_skipped": 3,
+      "recommendations": [
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "AWS",
+          "service": "AWS_Compute",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 1378.22,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9205.09/day over 90 days (CV 0.00); candidate: Compute Savings Plan (1-year, no upfront) covering \u20b9164.07/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "AWS",
+          "service": "AWS_Database",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 2756.44,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9410.18/day over 90 days (CV 0.00); candidate: Reserved DB instances (1-year) covering \u20b9328.15/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "Azure",
+          "service": "Azure_Compute",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 1476.66,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9205.09/day over 90 days (CV 0.00); candidate: Azure savings plan for compute (1-year) covering \u20b9164.07/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "Azure",
+          "service": "Azure_Database",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 2953.32,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9410.18/day over 90 days (CV 0.00); candidate: Reserved capacity (1-year) covering \u20b9328.15/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "GCP",
+          "service": "GCP_Compute",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 1230.55,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9205.09/day over 90 days (CV 0.00); candidate: Committed use discount (1-year) covering \u20b9164.07/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "GCP",
+          "service": "GCP_Database",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 2461.1,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9410.18/day over 90 days (CV 0.00); candidate: Committed use discount (1-year) covering \u20b9328.15/day"
+        }
+      ],
+      "savings": {
+        "estimated_monthly_savings_usd": 12256.29,
+        "estimated_relative_savings_pct": 6.2,
+        "potential_monthly_savings_requires_review_usd": 0.0,
+        "reference": {
+          "monthly_cost_usd": 197686.36,
+          "window_days": 30,
+          "window_start": "2026-05-02",
+          "window_end": "2026-05-31",
+          "formula": "sum(billed_cost in trailing window) / days_with_data * 30"
+        },
+        "counts": {
+          "commitment": {
+            "actionable": 6
+          }
+        }
+      },
+      "config_version": "2026.10-v2-sample-inr"
+    },
+    {
+      "file": "focus_bill_may_june.csv",
+      "sha256": "4684ebdb6913ab147e5cd6c02a07585d89554ab55b7428a8bdf9ad67bac44eae",
+      "ingestion": {
+        "status": "accepted",
+        "rows_received": 549,
+        "rows_accepted": 549,
+        "rows_quarantined": 0,
+        "rows_duplicate": 0,
+        "quarantine_reasons": {},
+        "warnings": {},
+        "safe_mode_triggered": false,
+        "reconciliation": {
+          "accepted_cost_usd": 202656.5325,
+          "quarantined_cost_usd": 0,
+          "duplicate_cost_usd": 0.0,
+          "parsed_input_cost_usd": 202656.5325,
+          "note": "parsed_input = accepted + quarantined + duplicate; rows with unparseable cost are counted in rows_unparseable_cost and quarantined"
+        }
+      },
+      "overview": {
+        "total_cost_usd": 202656.53,
+        "records": 549,
+        "days_covered": 61,
+        "average_daily_cost_usd": 3322.24,
+        "period_start": "2026-05-01",
+        "period_end": "2026-06-30",
+        "by_charge_category": {
+          "Usage": 202656.53
+        }
+      },
+      "by_provider": [
+        {
+          "key": "GCP",
+          "cost_usd": 72337.66,
+          "share": 0.3569,
+          "records": 183,
+          "flags": []
+        },
+        {
+          "key": "AWS",
+          "cost_usd": 65159.44,
+          "share": 0.3215,
+          "records": 183,
+          "flags": []
+        },
+        {
+          "key": "Azure",
+          "cost_usd": 65159.44,
+          "share": 0.3215,
+          "records": 183,
+          "flags": []
+        }
+      ],
+      "by_service": [
+        {
+          "key": "AWS_Database",
+          "cost_usd": 41702.04,
+          "share": 0.2058,
+          "records": 61,
+          "flags": []
+        },
+        {
+          "key": "Azure_Database",
+          "cost_usd": 41702.04,
+          "share": 0.2058,
+          "records": 61,
+          "flags": []
+        },
+        {
+          "key": "GCP_Database",
+          "cost_usd": 41702.04,
+          "share": 0.2058,
+          "records": 61,
+          "flags": []
+        },
+        {
+          "key": "GCP_Compute",
+          "cost_usd": 28029.24,
+          "share": 0.1383,
+          "records": 61,
+          "flags": []
+        },
+        {
+          "key": "AWS_Compute",
+          "cost_usd": 20851.02,
+          "share": 0.1029,
+          "records": 61,
+          "flags": []
+        },
+        {
+          "key": "Azure_Compute",
+          "cost_usd": 20851.02,
+          "share": 0.1029,
+          "records": 61,
+          "flags": []
+        },
+        {
+          "key": "AWS_Storage",
+          "cost_usd": 2606.38,
+          "share": 0.0129,
+          "records": 61,
+          "flags": []
+        },
+        {
+          "key": "Azure_Storage",
+          "cost_usd": 2606.38,
+          "share": 0.0129,
+          "records": 61,
+          "flags": []
+        },
+        {
+          "key": "GCP_Storage",
+          "cost_usd": 2606.38,
+          "share": 0.0129,
+          "records": 61,
+          "flags": []
+        }
+      ],
+      "monthly": [
+        {
+          "period_start": "2026-05-01T00:00:00+00:00",
+          "period": "2026-05",
+          "cost_usd": 99341.44,
+          "records": 279
+        },
+        {
+          "period_start": "2026-06-01T00:00:00+00:00",
+          "period": "2026-06",
+          "cost_usd": 103315.1,
+          "records": 270
+        }
+      ],
+      "daily": [
+        {
+          "period": "2026-05-01",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-02",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-03",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-04",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-05",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-06",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-07",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-08",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-09",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-10",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-11",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-12",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-13",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-14",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-15",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-16",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-17",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-18",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-19",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-20",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-21",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-22",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-23",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-24",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-25",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-26",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-27",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-28",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-29",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-30",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-05-31",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-06-01",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-06-02",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-06-03",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-06-04",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-06-05",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-06-06",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-06-07",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-06-08",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-06-09",
+          "cost_usd": 3204.56
+        },
+        {
+          "period": "2026-06-10",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-11",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-12",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-13",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-14",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-15",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-16",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-17",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-18",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-19",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-20",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-21",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-22",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-23",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-24",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-25",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-26",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-27",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-28",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-29",
+          "cost_usd": 3546.38
+        },
+        {
+          "period": "2026-06-30",
+          "cost_usd": 3546.38
+        }
+      ],
+      "anomalies": [
+        {
+          "date": "2026-06-10",
+          "provider": "GCP",
+          "service": "GCP_Compute",
+          "actual_cost_usd": 683.64,
+          "expected_baseline_usd": 341.82,
+          "anomaly_excess_usd": 341.82,
+          "severity": "LOW",
+          "reason": "Daily spend \u20b9683.64 jumped off a flat 14-day baseline of \u20b9341.82/day (+100%)"
+        }
+      ],
+      "anomaly_evaluation": {
+        "planted_events": [
+          {
+            "event": "GCP compute doubles overnight",
+            "provider": "GCP",
+            "service": "GCP_Compute",
+            "start": "2026-06-10",
+            "end": "2026-06-30",
+            "kind": "step"
+          }
+        ],
+        "alerts": 1,
+        "true_positive_alerts": 1,
+        "false_positive_alerts": 0,
+        "point_events": 1,
+        "point_events_detected": [
+          "GCP compute doubles overnight"
+        ],
+        "note": "Drift events are gradual by design and are not counted as point anomalies."
+      },
+      "forecast_next_30_days": {
+        "status": "ok",
+        "total_projected_spend_usd": 110030.22,
+        "average_daily_projected_usd": 3667.67,
+        "trend_usd_per_day": 7.592,
+        "history_days": 61
+      },
+      "backtest": {
+        "status": "ok",
+        "method": "linear_regression_with_t_prediction_interval",
+        "train_days": 54,
+        "holdout_days": 7,
+        "train_period": [
+          "2026-05-01",
+          "2026-06-23"
+        ],
+        "holdout_period": [
+          "2026-06-24",
+          "2026-06-30"
+        ],
+        "model": {
+          "mae_usd": 30.66,
+          "rmse_usd": 33.96,
+          "mape_pct": 0.86,
+          "mape_note": null
+        },
+        "baselines": {
+          "naive_last_value": {
+            "mae_usd": 0.0,
+            "rmse_usd": 0.0,
+            "mape_pct": 0.0,
+            "mape_note": null
+          },
+          "naive_mean_7d": {
+            "mae_usd": 0.0,
+            "rmse_usd": 0.0,
+            "mape_pct": 0.0,
+            "mape_note": null
+          }
+        },
+        "prediction_interval_coverage": 1.0,
+        "nominal_interval": 0.95,
+        "beats_best_naive_baseline_on_mae": false,
+        "holdout_total_actual_usd": 24824.68,
+        "holdout_total_predicted_usd": 24610.04
+      },
+      "utilisation_samples": 6,
+      "utilisation_skipped": 3,
+      "recommendations": [
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "AWS",
+          "service": "AWS_Compute",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 2297.03,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9341.82/day over 61 days (CV 0.00); candidate: Compute Savings Plan (1-year, no upfront) covering \u20b9273.46/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "AWS",
+          "service": "AWS_Database",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 4594.06,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9683.64/day over 61 days (CV 0.00); candidate: Reserved DB instances (1-year) covering \u20b9546.91/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "Azure",
+          "service": "Azure_Compute",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 2461.1,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9341.82/day over 61 days (CV 0.00); candidate: Azure savings plan for compute (1-year) covering \u20b9273.46/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "Azure",
+          "service": "Azure_Database",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 4922.21,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9683.64/day over 61 days (CV 0.00); candidate: Reserved capacity (1-year) covering \u20b9546.91/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "requires_review",
+          "provider": "GCP",
+          "service": "GCP_Compute",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 2050.92,
+          "confidence": "low",
+          "reason": "Stable baseline usage: P10 \u20b9341.82/day over 61 days (CV 0.35); candidate: Committed use discount (1-year) covering \u20b9273.46/day; review needed: usage is volatile (CV 0.35 > 0.35)"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "GCP",
+          "service": "GCP_Database",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 4101.84,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9683.64/day over 61 days (CV 0.00); candidate: Committed use discount (1-year) covering \u20b9546.91/day"
+        }
+      ],
+      "savings": {
+        "estimated_monthly_savings_usd": 18376.24,
+        "estimated_relative_savings_pct": 17.79,
+        "potential_monthly_savings_requires_review_usd": 2050.92,
+        "reference": {
+          "monthly_cost_usd": 103315.1,
+          "window_days": 30,
+          "window_start": "2026-06-01",
+          "window_end": "2026-06-30",
+          "formula": "sum(billed_cost in trailing window) / days_with_data * 30"
+        },
+        "counts": {
+          "commitment": {
+            "actionable": 5,
+            "requires_review": 1
+          }
+        }
+      },
+      "config_version": "2026.10-v2-sample-inr"
+    },
+    {
+      "file": "focus_compliant_demo_q2.csv",
+      "sha256": "2b9abdfeb1b91c1c232b54159a54697ee967dc4f8911aae69f0625622e557d7c",
+      "ingestion": {
+        "status": "accepted",
+        "rows_received": 1092,
+        "rows_accepted": 1092,
+        "rows_quarantined": 0,
+        "rows_duplicate": 0,
+        "quarantine_reasons": {},
+        "warnings": {},
+        "safe_mode_triggered": false,
+        "reconciliation": {
+          "accepted_cost_usd": 1129942.39131,
+          "quarantined_cost_usd": 0,
+          "duplicate_cost_usd": 0.0,
+          "parsed_input_cost_usd": 1129942.39131,
+          "note": "parsed_input = accepted + quarantined + duplicate; rows with unparseable cost are counted in rows_unparseable_cost and quarantined"
+        }
+      },
+      "overview": {
+        "total_cost_usd": 1129942.39,
+        "records": 1092,
+        "days_covered": 91,
+        "average_daily_cost_usd": 12416.95,
+        "period_start": "2026-04-01",
+        "period_end": "2026-06-30",
+        "by_charge_category": {
+          "Usage": 1129942.39
+        }
+      },
+      "by_provider": [
+        {
+          "key": "AWS",
+          "cost_usd": 513909.96,
+          "share": 0.4548,
+          "records": 364,
+          "flags": []
+        },
+        {
+          "key": "Azure",
+          "cost_usd": 505313.4,
+          "share": 0.4472,
+          "records": 364,
+          "flags": []
+        },
+        {
+          "key": "GCP",
+          "cost_usd": 110719.03,
+          "share": 0.098,
+          "records": 364,
+          "flags": []
+        }
+      ],
+      "by_service": [
+        {
+          "key": "AWSLambda",
+          "cost_usd": 448386.84,
+          "share": 0.3968,
+          "records": 91,
+          "flags": []
+        },
+        {
+          "key": "Azure Functions",
+          "cost_usd": 430970.97,
+          "share": 0.3814,
+          "records": 91,
+          "flags": []
+        },
+        {
+          "key": "Cloud Functions",
+          "cost_usd": 66883.44,
+          "share": 0.0592,
+          "records": 91,
+          "flags": []
+        },
+        {
+          "key": "Azure SQL",
+          "cost_usd": 51842.7,
+          "share": 0.0459,
+          "records": 91,
+          "flags": []
+        },
+        {
+          "key": "AmazonRDS",
+          "cost_usd": 41474.16,
+          "share": 0.0367,
+          "records": 91,
+          "flags": []
+        },
+        {
+          "key": "Cloud SQL",
+          "cost_usd": 31105.62,
+          "share": 0.0275,
+          "records": 91,
+          "flags": []
+        },
+        {
+          "key": "AmazonEC2",
+          "cost_usd": 20737.08,
+          "share": 0.0184,
+          "records": 91,
+          "flags": []
+        },
+        {
+          "key": "Virtual Machines",
+          "cost_usd": 19907.6,
+          "share": 0.0176,
+          "records": 91,
+          "flags": []
+        },
+        {
+          "key": "Compute Engine",
+          "cost_usd": 9850.11,
+          "share": 0.0087,
+          "records": 91,
+          "flags": []
+        },
+        {
+          "key": "AmazonS3",
+          "cost_usd": 3311.88,
+          "share": 0.0029,
+          "records": 91,
+          "flags": []
+        },
+        {
+          "key": "Cloud Storage",
+          "cost_usd": 2879.86,
+          "share": 0.0025,
+          "records": 91,
+          "flags": []
+        },
+        {
+          "key": "Blob Storage",
+          "cost_usd": 2592.13,
+          "share": 0.0023,
+          "records": 91,
+          "flags": []
+        }
+      ],
+      "monthly": [
+        {
+          "period_start": "2026-04-01T00:00:00+00:00",
+          "period": "2026-04",
+          "cost_usd": 366309.67,
+          "records": 360
+        },
+        {
+          "period_start": "2026-05-01T00:00:00+00:00",
+          "period": "2026-05",
+          "cost_usd": 394368.76,
+          "records": 372
+        },
+        {
+          "period_start": "2026-06-01T00:00:00+00:00",
+          "period": "2026-06",
+          "cost_usd": 369263.97,
+          "records": 360
+        }
+      ],
+      "daily": [
+        {
+          "period": "2026-04-01",
+          "cost_usd": 10524.69
+        },
+        {
+          "period": "2026-04-02",
+          "cost_usd": 13157.41
+        },
+        {
+          "period": "2026-04-03",
+          "cost_usd": 12050.14
+        },
+        {
+          "period": "2026-04-04",
+          "cost_usd": 14247.67
+        },
+        {
+          "period": "2026-04-05",
+          "cost_usd": 14328.66
+        },
+        {
+          "period": "2026-04-06",
+          "cost_usd": 11861.17
+        },
+        {
+          "period": "2026-04-07",
+          "cost_usd": 13607.81
+        },
+        {
+          "period": "2026-04-08",
+          "cost_usd": 15555.99
+        },
+        {
+          "period": "2026-04-09",
+          "cost_usd": 9905.87
+        },
+        {
+          "period": "2026-04-10",
+          "cost_usd": 7486.66
+        },
+        {
+          "period": "2026-04-11",
+          "cost_usd": 9874.58
+        },
+        {
+          "period": "2026-04-12",
+          "cost_usd": 13367.19
+        },
+        {
+          "period": "2026-04-13",
+          "cost_usd": 13325.89
+        },
+        {
+          "period": "2026-04-14",
+          "cost_usd": 14251.2
+        },
+        {
+          "period": "2026-04-15",
+          "cost_usd": 14973.03
+        },
+        {
+          "period": "2026-04-16",
+          "cost_usd": 14028.24
+        },
+        {
+          "period": "2026-04-17",
+          "cost_usd": 11423.67
+        },
+        {
+          "period": "2026-04-18",
+          "cost_usd": 11788.62
+        },
+        {
+          "period": "2026-04-19",
+          "cost_usd": 9606.27
+        },
+        {
+          "period": "2026-04-20",
+          "cost_usd": 11793.35
+        },
+        {
+          "period": "2026-04-21",
+          "cost_usd": 13251.51
+        },
+        {
+          "period": "2026-04-22",
+          "cost_usd": 11546.95
+        },
+        {
+          "period": "2026-04-23",
+          "cost_usd": 14497.61
+        },
+        {
+          "period": "2026-04-24",
+          "cost_usd": 8213.76
+        },
+        {
+          "period": "2026-04-25",
+          "cost_usd": 10415.36
+        },
+        {
+          "period": "2026-04-26",
+          "cost_usd": 13656.15
+        },
+        {
+          "period": "2026-04-27",
+          "cost_usd": 7519.95
+        },
+        {
+          "period": "2026-04-28",
+          "cost_usd": 16929.72
+        },
+        {
+          "period": "2026-04-29",
+          "cost_usd": 13869.36
+        },
+        {
+          "period": "2026-04-30",
+          "cost_usd": 9251.21
+        },
+        {
+          "period": "2026-05-01",
+          "cost_usd": 12656.86
+        },
+        {
+          "period": "2026-05-02",
+          "cost_usd": 17062.49
+        },
+        {
+          "period": "2026-05-03",
+          "cost_usd": 9073.53
+        },
+        {
+          "period": "2026-05-04",
+          "cost_usd": 15963.94
+        },
+        {
+          "period": "2026-05-05",
+          "cost_usd": 13462.8
+        },
+        {
+          "period": "2026-05-06",
+          "cost_usd": 14477.52
+        },
+        {
+          "period": "2026-05-07",
+          "cost_usd": 14432.12
+        },
+        {
+          "period": "2026-05-08",
+          "cost_usd": 9815.44
+        },
+        {
+          "period": "2026-05-09",
+          "cost_usd": 13652.99
+        },
+        {
+          "period": "2026-05-10",
+          "cost_usd": 15625.33
+        },
+        {
+          "period": "2026-05-11",
+          "cost_usd": 11102.19
+        },
+        {
+          "period": "2026-05-12",
+          "cost_usd": 7503.28
+        },
+        {
+          "period": "2026-05-13",
+          "cost_usd": 7830.35
+        },
+        {
+          "period": "2026-05-14",
+          "cost_usd": 8633.96
+        },
+        {
+          "period": "2026-05-15",
+          "cost_usd": 13414.39
+        },
+        {
+          "period": "2026-05-16",
+          "cost_usd": 12599.27
+        },
+        {
+          "period": "2026-05-17",
+          "cost_usd": 15074.96
+        },
+        {
+          "period": "2026-05-18",
+          "cost_usd": 16810.21
+        },
+        {
+          "period": "2026-05-19",
+          "cost_usd": 11232.77
+        },
+        {
+          "period": "2026-05-20",
+          "cost_usd": 16651.06
+        },
+        {
+          "period": "2026-05-21",
+          "cost_usd": 11733.79
+        },
+        {
+          "period": "2026-05-22",
+          "cost_usd": 10645.09
+        },
+        {
+          "period": "2026-05-23",
+          "cost_usd": 12373.02
+        },
+        {
+          "period": "2026-05-24",
+          "cost_usd": 14819.34
+        },
+        {
+          "period": "2026-05-25",
+          "cost_usd": 12605.3
+        },
+        {
+          "period": "2026-05-26",
+          "cost_usd": 15216.55
+        },
+        {
+          "period": "2026-05-27",
+          "cost_usd": 11405.76
+        },
+        {
+          "period": "2026-05-28",
+          "cost_usd": 11984.99
+        },
+        {
+          "period": "2026-05-29",
+          "cost_usd": 11172.36
+        },
+        {
+          "period": "2026-05-30",
+          "cost_usd": 13184.32
+        },
+        {
+          "period": "2026-05-31",
+          "cost_usd": 12152.78
+        },
+        {
+          "period": "2026-06-01",
+          "cost_usd": 12154.84
+        },
+        {
+          "period": "2026-06-02",
+          "cost_usd": 14942.38
+        },
+        {
+          "period": "2026-06-03",
+          "cost_usd": 10091.13
+        },
+        {
+          "period": "2026-06-04",
+          "cost_usd": 13508.19
+        },
+        {
+          "period": "2026-06-05",
+          "cost_usd": 14697.97
+        },
+        {
+          "period": "2026-06-06",
+          "cost_usd": 11994.45
+        },
+        {
+          "period": "2026-06-07",
+          "cost_usd": 9916.74
+        },
+        {
+          "period": "2026-06-08",
+          "cost_usd": 10443.01
+        },
+        {
+          "period": "2026-06-09",
+          "cost_usd": 8802.04
+        },
+        {
+          "period": "2026-06-10",
+          "cost_usd": 10291.35
+        },
+        {
+          "period": "2026-06-11",
+          "cost_usd": 13895.67
+        },
+        {
+          "period": "2026-06-12",
+          "cost_usd": 12343.89
+        },
+        {
+          "period": "2026-06-13",
+          "cost_usd": 9994.43
+        },
+        {
+          "period": "2026-06-14",
+          "cost_usd": 15404.37
+        },
+        {
+          "period": "2026-06-15",
+          "cost_usd": 12939.82
+        },
+        {
+          "period": "2026-06-16",
+          "cost_usd": 12636.3
+        },
+        {
+          "period": "2026-06-17",
+          "cost_usd": 10076.39
+        },
+        {
+          "period": "2026-06-18",
+          "cost_usd": 15825.51
+        },
+        {
+          "period": "2026-06-19",
+          "cost_usd": 11835.84
+        },
+        {
+          "period": "2026-06-20",
+          "cost_usd": 10722.4
+        },
+        {
+          "period": "2026-06-21",
+          "cost_usd": 13659.48
+        },
+        {
+          "period": "2026-06-22",
+          "cost_usd": 12781.29
+        },
+        {
+          "period": "2026-06-23",
+          "cost_usd": 12738.62
+        },
+        {
+          "period": "2026-06-24",
+          "cost_usd": 8721.29
+        },
+        {
+          "period": "2026-06-25",
+          "cost_usd": 14736.91
+        },
+        {
+          "period": "2026-06-26",
+          "cost_usd": 13770.74
+        },
+        {
+          "period": "2026-06-27",
+          "cost_usd": 11816.66
+        },
+        {
+          "period": "2026-06-28",
+          "cost_usd": 11692.51
+        },
+        {
+          "period": "2026-06-29",
+          "cost_usd": 12712.15
+        },
+        {
+          "period": "2026-06-30",
+          "cost_usd": 14117.61
+        }
+      ],
+      "anomalies": [],
+      "anomaly_evaluation": {
+        "planted_events": [],
+        "alerts": 0,
+        "true_positive_alerts": 0,
+        "false_positive_alerts": 0,
+        "point_events": 0,
+        "point_events_detected": [],
+        "note": "Drift events are gradual by design and are not counted as point anomalies."
+      },
+      "forecast_next_30_days": {
+        "status": "ok",
+        "total_projected_spend_usd": 373427.71,
+        "average_daily_projected_usd": 12447.59,
+        "trend_usd_per_day": 0.5065,
+        "history_days": 91
+      },
+      "backtest": {
+        "status": "ok",
+        "method": "linear_regression_with_t_prediction_interval",
+        "train_days": 84,
+        "holdout_days": 7,
+        "train_period": [
+          "2026-04-01",
+          "2026-06-23"
+        ],
+        "holdout_period": [
+          "2026-06-24",
+          "2026-06-30"
+        ],
+        "model": {
+          "mae_usd": 1529.37,
+          "rmse_usd": 1880.79,
+          "mape_pct": 13.37,
+          "mape_note": null
+        },
+        "baselines": {
+          "naive_last_value": {
+            "mae_usd": 1488.75,
+            "rmse_usd": 1891.49,
+            "mape_pct": 13.41,
+            "mape_note": null
+          },
+          "naive_mean_7d": {
+            "mae_usd": 1512.43,
+            "rmse_usd": 1877.61,
+            "mape_pct": 13.36,
+            "mape_note": null
+          }
+        },
+        "prediction_interval_coverage": 1.0,
+        "nominal_interval": 0.95,
+        "beats_best_naive_baseline_on_mae": false,
+        "holdout_total_actual_usd": 87567.88,
+        "holdout_total_predicted_usd": 86814.24
+      },
+      "utilisation_samples": 6,
+      "utilisation_skipped": 6,
+      "recommendations": [
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "AWS",
+          "service": "AWSLambda",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 16240.52,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b92,416.74/day over 90 days (CV 0.35); candidate: Compute Savings Plan (1-year, no upfront) covering \u20b91,933.39/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "AWS",
+          "service": "AmazonEC2",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 1531.35,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9227.88/day over 90 days (CV 0.00); candidate: Compute Savings Plan (1-year, no upfront) covering \u20b9182.30/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "AWS",
+          "service": "AmazonRDS",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 3062.71,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9455.76/day over 90 days (CV 0.00); candidate: Reserved DB instances (1-year) covering \u20b9364.61/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "requires_review",
+          "provider": "Azure",
+          "service": "Azure Functions",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 16803.6,
+          "confidence": "low",
+          "reason": "Stable baseline usage: P10 \u20b92,333.83/day over 90 days (CV 0.36); candidate: Azure savings plan for compute (1-year) covering \u20b91,867.07/day; review needed: usage is volatile (CV 0.36 > 0.35)"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "Azure",
+          "service": "Azure SQL",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 4101.84,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9569.70/day over 90 days (CV 0.00); candidate: Reserved capacity (1-year) covering \u20b9455.76/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "Azure",
+          "service": "Virtual Machines",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 1575.11,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9218.76/day over 90 days (CV 0.00); candidate: Azure savings plan for compute (1-year) covering \u20b9175.01/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "requires_review",
+          "provider": "GCP",
+          "service": "Cloud Functions",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 1986.2,
+          "confidence": "low",
+          "reason": "Stable baseline usage: P10 \u20b9331.03/day over 90 days (CV 0.38); candidate: Committed use discount (1-year) covering \u20b9264.83/day; review needed: usage is volatile (CV 0.38 > 0.35)"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "GCP",
+          "service": "Cloud SQL",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 2050.92,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9341.82/day over 90 days (CV 0.00); candidate: Committed use discount (1-year) covering \u20b9273.46/day"
+        },
+        {
+          "kind": "commitment",
+          "status": "actionable",
+          "provider": "GCP",
+          "service": "Compute Engine",
+          "resource_id": null,
+          "action": "evaluate_commitment_purchase",
+          "estimated_monthly_savings_usd": 649.46,
+          "confidence": "medium",
+          "reason": "Stable baseline usage: P10 \u20b9108.24/day over 90 days (CV 0.00); candidate: Committed use discount (1-year) covering \u20b986.59/day"
+        }
+      ],
+      "savings": {
+        "estimated_monthly_savings_usd": 29211.91,
+        "estimated_relative_savings_pct": 7.91,
+        "potential_monthly_savings_requires_review_usd": 18789.8,
+        "reference": {
+          "monthly_cost_usd": 369263.97,
+          "window_days": 30,
+          "window_start": "2026-06-01",
+          "window_end": "2026-06-30",
+          "formula": "sum(billed_cost in trailing window) / days_with_data * 30"
+        },
+        "counts": {
+          "commitment": {
+            "actionable": 7,
+            "requires_review": 2
+          }
+        }
+      },
+      "config_version": "2026.10-v2-sample-inr"
+    }
+  ]
+}

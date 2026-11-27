@@ -1,0 +1,18 @@
+{
+  "fixture": "billing_small_v1.csv",
+  "method": "Hand-computed by the author from the CSV rows (independent of the engine). All periods in UTC; ISO weeks start Monday.",
+  "notes": [
+    "Row 6 starts 2026-05-31T23:30-02:00 = 2026-06-01T01:30Z, so it belongs to UTC day 2026-06-01 (timezone boundary case).",
+    "Row 9 is a Credit of -20.00 and is included in net totals.",
+    "EffectiveCost is empty for rows 3-8 and defaults to BilledCost."
+  ],
+  "total_billed_usd": 425.50,
+  "total_effective_usd": 395.50,
+  "by_provider": {"AWS": 210.50, "GCP": 100.00, "Azure": 115.00},
+  "by_service": {"AmazonEC2": 200.00, "AmazonS3": 10.50, "BigQuery": 100.00, "Virtual Machines": 115.00},
+  "by_account": {"111111111111": 210.50, "proj-a": 100.00, "sub-1": 115.00},
+  "by_charge_category": {"Usage": 445.50, "Credit": -20.00},
+  "daily": {"2026-06-01": 190.75, "2026-06-02": 100.00, "2026-06-08": 49.75, "2026-06-30": 40.00, "2026-07-01": 45.00},
+  "weekly": {"2026-W23": 290.75, "2026-W24": 49.75, "2026-W27": 85.00},
+  "monthly": {"2026-06": 380.50, "2026-07": 45.00}
+}

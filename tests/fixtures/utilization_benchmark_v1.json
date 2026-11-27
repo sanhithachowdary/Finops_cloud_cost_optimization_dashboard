@@ -1,0 +1,117 @@
+{
+  "generator_version": "benchmark-v1",
+  "notes": "SYNTHETIC utilisation. `expected` is a hand-derived oracle and is stripped before ingestion.",
+  "samples": [
+    {
+      "resource_id": "arn:aws:ec2:us-east-1:111111111111:instance/i-0web01",
+      "provider": "AWS",
+      "resource_type": "vm",
+      "size": "m5.4xlarge",
+      "cpu_avg_pct": 14.0,
+      "cpu_p95_pct": 24.0,
+      "mem_avg_pct": 22.0,
+      "mem_p95_pct": 33.0,
+      "observation_days": 30,
+      "expected": {
+        "rightsizing": "actionable"
+      }
+    },
+    {
+      "resource_id": "arn:aws:rds:us-east-1:111111111111:db/orders",
+      "provider": "AWS",
+      "resource_type": "database",
+      "size": "db.r5.2xlarge",
+      "cpu_avg_pct": 48.0,
+      "cpu_p95_pct": 71.0,
+      "mem_avg_pct": 60.0,
+      "mem_p95_pct": 78.0,
+      "observation_days": 30,
+      "expected": {
+        "rightsizing": null
+      }
+    },
+    {
+      "resource_id": "arn:aws:eks:us-west-2:222222222222:cluster/core",
+      "provider": "AWS",
+      "resource_type": "k8s_workload",
+      "size": "8 vCPU requested",
+      "cpu_avg_pct": 11.0,
+      "cpu_p95_pct": 19.0,
+      "mem_avg_pct": 25.0,
+      "mem_p95_pct": 36.0,
+      "observation_days": 30,
+      "expected": {
+        "rightsizing": "actionable"
+      }
+    },
+    {
+      "resource_id": "projects/analytics-prod/instances/etl-01",
+      "provider": "GCP",
+      "resource_type": "vm",
+      "size": "n2-standard-8",
+      "cpu_avg_pct": 9.0,
+      "cpu_p95_pct": 15.0,
+      "mem_avg_pct": 20.0,
+      "mem_p95_pct": 28.0,
+      "observation_days": 5,
+      "expected": {
+        "rightsizing": "requires_review"
+      }
+    },
+    {
+      "resource_id": "projects/analytics-prod/disks/pd-orphan-3",
+      "provider": "GCP",
+      "resource_type": "disk",
+      "size": "2 TB pd-standard",
+      "attached": false,
+      "observation_days": 30,
+      "expected": {
+        "idle": "actionable"
+      }
+    },
+    {
+      "resource_id": "/subscriptions/sub-0001/vm/api-vm-01",
+      "provider": "Azure",
+      "resource_type": "vm",
+      "size": "Standard_D8s_v5",
+      "cpu_avg_pct": 15.0,
+      "cpu_p95_pct": 26.0,
+      "mem_avg_pct": 25.0,
+      "mem_p95_pct": 37.0,
+      "observation_days": 30,
+      "tags": {
+        "env": "prod"
+      },
+      "expected": {
+        "rightsizing": "requires_review"
+      }
+    },
+    {
+      "resource_id": "/subscriptions/sub-0001/sql/billing-db",
+      "provider": "Azure",
+      "resource_type": "database",
+      "size": "GP_Gen5_8",
+      "observation_days": 30,
+      "expected": {
+        "rightsizing": "insufficient_data"
+      }
+    },
+    {
+      "resource_id": "arn:aws:ec2:us-east-1:111111111111:instance/i-0legacy07",
+      "provider": "AWS",
+      "resource_type": "vm",
+      "size": "t3.large",
+      "cpu_avg_pct": 0.4,
+      "cpu_p95_pct": 1.1,
+      "mem_avg_pct": 6.0,
+      "mem_p95_pct": 8.0,
+      "requests_per_day": 0.0,
+      "network_mb_per_day": 0.3,
+      "observation_days": 30,
+      "expected": {
+        "idle": "actionable",
+        "rightsizing": "suppressed"
+      }
+    }
+  ]
+}

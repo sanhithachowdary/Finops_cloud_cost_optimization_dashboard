@@ -1,0 +1,386 @@
+Requirement already satisfied: pip in .\.venv\Lib\site-packages (26.2.1)
+Requirement already satisfied: fastapi==0.142.2 in .\.venv\Lib\site-packages (from -r <repo>\requirements.txt (line 1)) (0.142.2)
+Requirement already satisfied: uvicorn==0.54.0 in .\.venv\Lib\site-packages (from uvicorn[standard]==0.54.0->-r <repo>\requirements.txt (line 2)) (0.54.0)
+Requirement already satisfied: pydantic==2.13.5 in .\.venv\Lib\site-packages (from -r <repo>\requirements.txt (line 3)) (2.13.5)
+Requirement already satisfied: pandas==2.3.3 in .\.venv\Lib\site-packages (from -r <repo>\requirements.txt (line 4)) (2.3.3)
+Requirement already satisfied: numpy==2.2.6 in .\.venv\Lib\site-packages (from -r <repo>\requirements.txt (line 5)) (2.2.6)
+Requirement already satisfied: scipy==1.15.3 in .\.venv\Lib\site-packages (from -r <repo>\requirements.txt (line 6)) (1.15.3)
+Requirement already satisfied: scikit-learn==1.7.2 in .\.venv\Lib\site-packages (from -r <repo>\requirements.txt (line 7)) (1.7.2)
+Requirement already satisfied: boto3==1.43.108 in .\.venv\Lib\site-packages (from -r <repo>\requirements.txt (line 8)) (1.43.108)
+Requirement already satisfied: google-cloud-bigquery==3.46.1 in .\.venv\Lib\site-packages (from -r <repo>\requirements.txt (line 9)) (3.46.1)
+Requirement already satisfied: azure-mgmt-costmanagement==4.0.1 in .\.venv\Lib\site-packages (from -r <repo>\requirements.txt (line 10)) (4.0.1)
+Requirement already satisfied: azure-identity==1.26.0 in .\.venv\Lib\site-packages (from -r <repo>\requirements.txt (line 11)) (1.26.0)
+Requirement already satisfied: prometheus-client==0.26.0 in .\.venv\Lib\site-packages (from -r <repo>\requirements.txt (line 12)) (0.26.0)
+Requirement already satisfied: pydantic-settings==2.15.0 in .\.venv\Lib\site-packages (from -r <repo>\requirements.txt (line 13)) (2.15.0)
+Requirement already satisfied: cachetools==7.2.0 in .\.venv\Lib\site-packages (from -r <repo>\requirements.txt (line 14)) (7.2.0)
+Requirement already satisfied: pytest==8.4.2 in .\.venv\Lib\site-packages (from -r requirements-dev.txt (line 3)) (8.4.2)
+Requirement already satisfied: pytest-cov==7.1.0 in .\.venv\Lib\site-packages (from -r requirements-dev.txt (line 4)) (7.1.0)
+Requirement already satisfied: httpx==0.28.1 in .\.venv\Lib\site-packages (from -r requirements-dev.txt (line 5)) (0.28.1)
+Requirement already satisfied: ruff==0.16.10 in .\.venv\Lib\site-packages (from -r requirements-dev.txt (line 6)) (0.16.10)
+Requirement already satisfied: mypy==2.4.0 in .\.venv\Lib\site-packages (from -r requirements-dev.txt (line 7)) (2.4.0)
+Requirement already satisfied: starlette>=0.46.0 in .\.venv\Lib\site-packages (from fastapi==0.142.2->-r <repo>\requirements.txt (line 1)) (1.8.0)
+Requirement already satisfied: typing-extensions>=4.8.0 in .\.venv\Lib\site-packages (from fastapi==0.142.2->-r <repo>\requirements.txt (line 1)) (4.16.0)
+Requirement already satisfied: typing-inspection>=0.4.2 in .\.venv\Lib\site-packages (from fastapi==0.142.2->-r <repo>\requirements.txt (line 1)) (0.4.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in .\.venv\Lib\site-packages (from fastapi==0.142.2->-r <repo>\requirements.txt (line 1)) (0.0.5)
+Requirement already satisfied: opentelemetry-api>=1.44.0 in .\.venv\Lib\site-packages (from fastapi==0.142.2->-r <repo>\requirements.txt (line 1)) (1.45.1)
+Requirement already satisfied: click>=7.0 in .\.venv\Lib\site-packages (from uvicorn==0.54.0->uvicorn[standard]==0.54.0->-r <repo>\requirements.txt (line 2)) (8.5.0)
+Requirement already satisfied: h11>=0.8 in .\.venv\Lib\site-packages (from uvicorn==0.54.0->uvicorn[standard]==0.54.0->-r <repo>\requirements.txt (line 2)) (0.16.0)
+Requirement already satisfied: annotated-types>=0.6.0 in .\.venv\Lib\site-packages (from pydantic==2.13.5->-r <repo>\requirements.txt (line 3)) (0.8.0)
+Requirement already satisfied: pydantic-core==2.46.5 in .\.venv\Lib\site-packages (from pydantic==2.13.5->-r <repo>\requirements.txt (line 3)) (2.46.5)
+Requirement already satisfied: python-dateutil>=2.8.2 in .\.venv\Lib\site-packages (from pandas==2.3.3->-r <repo>\requirements.txt (line 4)) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in .\.venv\Lib\site-packages (from pandas==2.3.3->-r <repo>\requirements.txt (line 4)) (2026.5)
+Requirement already satisfied: tzdata>=2022.7 in .\.venv\Lib\site-packages (from pandas==2.3.3->-r <repo>\requirements.txt (line 4)) (2026.5)
+Requirement already satisfied: joblib>=1.2.0 in .\.venv\Lib\site-packages (from scikit-learn==1.7.2->-r <repo>\requirements.txt (line 7)) (1.6.0)
+Requirement already satisfied: threadpoolctl>=3.1.0 in .\.venv\Lib\site-packages (from scikit-learn==1.7.2->-r <repo>\requirements.txt (line 7)) (3.7.0)
+Requirement already satisfied: botocore<1.44.0,>=1.43.108 in .\.venv\Lib\site-packages (from boto3==1.43.108->-r <repo>\requirements.txt (line 8)) (1.43.114)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in .\.venv\Lib\site-packages (from boto3==1.43.108->-r <repo>\requirements.txt (line 8)) (1.1.0)
+Requirement already satisfied: s3transfer<0.20.0,>=0.19.0 in .\.venv\Lib\site-packages (from boto3==1.43.108->-r <repo>\requirements.txt (line 8)) (0.19.2)
+Requirement already satisfied: google-api-core<3.0.0,>=2.28.0 in .\.venv\Lib\site-packages (from google-api-core[grpc]<3.0.0,>=2.28.0->google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (2.42.0)
+Requirement already satisfied: google-auth<3.0.0,>=2.14.1 in .\.venv\Lib\site-packages (from google-auth[pyopenssl]<3.0.0,>=2.14.1->google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (2.62.0)
+Requirement already satisfied: google-cloud-core<3.0.0,>=2.4.1 in .\.venv\Lib\site-packages (from google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (2.8.0)
+Requirement already satisfied: google-resumable-media<3.0.0,>=2.0.0 in .\.venv\Lib\site-packages (from google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (2.11.0)
+Requirement already satisfied: packaging>=24.2.0 in .\.venv\Lib\site-packages (from google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (26.3)
+Requirement already satisfied: requests<3.0.0,>=2.21.0 in .\.venv\Lib\site-packages (from google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (2.34.2)
+Requirement already satisfied: isodate<1.0.0,>=0.6.1 in .\.venv\Lib\site-packages (from azure-mgmt-costmanagement==4.0.1->-r <repo>\requirements.txt (line 10)) (0.7.2)
+Requirement already satisfied: azure-common~=1.1 in .\.venv\Lib\site-packages (from azure-mgmt-costmanagement==4.0.1->-r <repo>\requirements.txt (line 10)) (1.1.28)
+Requirement already satisfied: azure-mgmt-core<2.0.0,>=1.3.2 in .\.venv\Lib\site-packages (from azure-mgmt-costmanagement==4.0.1->-r <repo>\requirements.txt (line 10)) (1.6.0)
+Requirement already satisfied: azure-core>=1.31.0 in .\.venv\Lib\site-packages (from azure-identity==1.26.0->-r <repo>\requirements.txt (line 11)) (1.41.0)
+Requirement already satisfied: cryptography>=2.5 in .\.venv\Lib\site-packages (from azure-identity==1.26.0->-r <repo>\requirements.txt (line 11)) (50.0.2)
+Requirement already satisfied: msal>=1.39.0 in .\.venv\Lib\site-packages (from azure-identity==1.26.0->-r <repo>\requirements.txt (line 11)) (1.39.0)
+Requirement already satisfied: msal-extensions>=1.2.0 in .\.venv\Lib\site-packages (from azure-identity==1.26.0->-r <repo>\requirements.txt (line 11)) (1.3.1)
+Requirement already satisfied: python-dotenv>=0.21.0 in .\.venv\Lib\site-packages (from pydantic-settings==2.15.0->-r <repo>\requirements.txt (line 13)) (1.2.4)
+Requirement already satisfied: colorama>=0.4 in .\.venv\Lib\site-packages (from pytest==8.4.2->-r requirements-dev.txt (line 3)) (0.4.6)
+Requirement already satisfied: iniconfig>=1 in .\.venv\Lib\site-packages (from pytest==8.4.2->-r requirements-dev.txt (line 3)) (2.3.1)
+Requirement already satisfied: pluggy<2,>=1.5 in .\.venv\Lib\site-packages (from pytest==8.4.2->-r requirements-dev.txt (line 3)) (1.7.0)
+Requirement already satisfied: pygments>=2.7.2 in .\.venv\Lib\site-packages (from pytest==8.4.2->-r requirements-dev.txt (line 3)) (2.21.0)
+Requirement already satisfied: coverage>=7.10.6 in .\.venv\Lib\site-packages (from coverage[toml]>=7.10.6->pytest-cov==7.1.0->-r requirements-dev.txt (line 4)) (7.16.2)
+Requirement already satisfied: anyio in .\.venv\Lib\site-packages (from httpx==0.28.1->-r requirements-dev.txt (line 5)) (4.15.1)
+Requirement already satisfied: certifi in .\.venv\Lib\site-packages (from httpx==0.28.1->-r requirements-dev.txt (line 5)) (2026.7.22)
+Requirement already satisfied: httpcore==1.* in .\.venv\Lib\site-packages (from httpx==0.28.1->-r requirements-dev.txt (line 5)) (1.0.9)
+Requirement already satisfied: idna in .\.venv\Lib\site-packages (from httpx==0.28.1->-r requirements-dev.txt (line 5)) (3.20)
+Requirement already satisfied: mypy_extensions>=1.0.0 in .\.venv\Lib\site-packages (from mypy==2.4.0->-r requirements-dev.txt (line 7)) (1.1.0)
+Requirement already satisfied: pathspec>=1.0.0 in .\.venv\Lib\site-packages (from mypy==2.4.0->-r requirements-dev.txt (line 7)) (1.1.1)
+Requirement already satisfied: librt>=0.16.0 in .\.venv\Lib\site-packages (from mypy==2.4.0->-r requirements-dev.txt (line 7)) (0.16.0)
+Requirement already satisfied: ast-serialize<1.0.0,>=0.11.2 in .\.venv\Lib\site-packages (from mypy==2.4.0->-r requirements-dev.txt (line 7)) (0.13.0)
+Requirement already satisfied: httptools>=0.8.0 in .\.venv\Lib\site-packages (from uvicorn[standard]==0.54.0->-r <repo>\requirements.txt (line 2)) (0.9.0)
+Requirement already satisfied: pyyaml>=5.1 in .\.venv\Lib\site-packages (from uvicorn[standard]==0.54.0->-r <repo>\requirements.txt (line 2)) (6.0.3)
+Requirement already satisfied: watchfiles>=0.20 in .\.venv\Lib\site-packages (from uvicorn[standard]==0.54.0->-r <repo>\requirements.txt (line 2)) (1.3.0)
+Requirement already satisfied: websockets>=13.0 in .\.venv\Lib\site-packages (from uvicorn[standard]==0.54.0->-r <repo>\requirements.txt (line 2)) (17.2)
+Requirement already satisfied: urllib3!=2.2.0,<3,>=1.25.4 in .\.venv\Lib\site-packages (from botocore<1.44.0,>=1.43.108->boto3==1.43.108->-r <repo>\requirements.txt (line 8)) (2.8.0)
+Requirement already satisfied: googleapis-common-protos<2.0.0,>=1.69.2 in .\.venv\Lib\site-packages (from google-api-core<3.0.0,>=2.28.0->google-api-core[grpc]<3.0.0,>=2.28.0->google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (1.75.5)
+Requirement already satisfied: protobuf<8.0.0,>=6.33.5 in .\.venv\Lib\site-packages (from google-api-core<3.0.0,>=2.28.0->google-api-core[grpc]<3.0.0,>=2.28.0->google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (7.36.2)
+Requirement already satisfied: proto-plus<2.0.0,>=1.26.1 in .\.venv\Lib\site-packages (from google-api-core<3.0.0,>=2.28.0->google-api-core[grpc]<3.0.0,>=2.28.0->google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (1.29.0)
+Requirement already satisfied: grpcio<2.0.0,>=1.59.0 in .\.venv\Lib\site-packages (from google-api-core[grpc]<3.0.0,>=2.28.0->google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (1.84.0)
+Requirement already satisfied: grpcio-status<2.0.0,>=1.59.0 in .\.venv\Lib\site-packages (from google-api-core[grpc]<3.0.0,>=2.28.0->google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (1.84.0)
+Requirement already satisfied: pyasn1-modules>=0.2.1 in .\.venv\Lib\site-packages (from google-auth<3.0.0,>=2.14.1->google-auth[pyopenssl]<3.0.0,>=2.14.1->google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (0.4.2)
+Requirement already satisfied: google-crc32c<2.0.0,>=1.0.0 in .\.venv\Lib\site-packages (from google-resumable-media<3.0.0,>=2.0.0->google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (1.9.0)
+Requirement already satisfied: six>=1.5 in .\.venv\Lib\site-packages (from python-dateutil>=2.8.2->pandas==2.3.3->-r <repo>\requirements.txt (line 4)) (1.17.0)
+Requirement already satisfied: charset_normalizer<4,>=2 in .\.venv\Lib\site-packages (from requests<3.0.0,>=2.21.0->google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (3.5.2)
+Requirement already satisfied: cffi>=2.0.0 in .\.venv\Lib\site-packages (from cryptography>=2.5->azure-identity==1.26.0->-r <repo>\requirements.txt (line 11)) (2.1.1)
+Requirement already satisfied: pycparser in .\.venv\Lib\site-packages (from cffi>=2.0.0->cryptography>=2.5->azure-identity==1.26.0->-r <repo>\requirements.txt (line 11)) (3.11)
+Requirement already satisfied: cloudpickle>=3.0 in .\.venv\Lib\site-packages (from joblib>=1.2.0->scikit-learn==1.7.2->-r <repo>\requirements.txt (line 7)) (3.1.2)
+Requirement already satisfied: PyJWT<3,>=1.0.0 in .\.venv\Lib\site-packages (from PyJWT[crypto]<3,>=1.0.0->msal>=1.39.0->azure-identity==1.26.0->-r <repo>\requirements.txt (line 11)) (2.15.1)
+Requirement already satisfied: pyasn1<0.7.0,>=0.6.1 in .\.venv\Lib\site-packages (from pyasn1-modules>=0.2.1->google-auth<3.0.0,>=2.14.1->google-auth[pyopenssl]<3.0.0,>=2.14.1->google-cloud-bigquery==3.46.1->-r <repo>\requirements.txt (line 9)) (0.6.4)
+All checks passed!
+96 files already formatted
+Success: no issues found in 40 source files
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-8.4.2, pluggy-1.7.0 -- <repo>\.venv\Scripts\python.exe
+rootdir: <repo>
+configfile: pyproject.toml
+plugins: anyio-4.15.1, cov-7.1.0
+collecting ... collected 176 items
+
+tests/negative/test_nt1_billing_complexity.py::test_each_problem_row_is_quarantined_with_the_right_reason PASSED [  0%]
+tests/negative/test_nt1_billing_complexity.py::test_exact_duplicate_counted_once PASSED [  1%]
+tests/negative/test_nt1_billing_complexity.py::test_accepted_rows_and_transformations PASSED [  1%]
+tests/negative/test_nt1_billing_complexity.py::test_totals_reconcile_no_silent_corruption PASSED [  2%]
+tests/negative/test_nt1_billing_complexity.py::test_high_quarantine_ratio_enters_safe_mode_and_suppresses_recommendations PASSED [  2%]
+tests/negative/test_nt1_billing_complexity.py::test_api_rejects_unparseable_and_oversized_payloads PASSED [  3%]
+tests/negative/test_nt2_attribution.py::test_totals_preserved_and_unattributed_bucket_explicit PASSED [  3%]
+tests/negative/test_nt2_attribution.py::test_conflicting_attribution_detected_and_flagged PASSED [  4%]
+tests/negative/test_nt2_attribution.py::test_recommendation_on_conflicting_resource_requires_review PASSED [  5%]
+tests/negative/test_nt2_attribution.py::test_conflict_detected_across_batches PASSED [  5%]
+tests/negative/test_nt2_attribution.py::test_opencost_row_without_determinable_provider_is_quarantined PASSED [  6%]
+tests/negative/test_nt2_attribution.py::test_opencost_idle_allocation_is_unattributed_workload PASSED [  6%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_missing_utilization_is_insufficient_data PASSED [  7%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_unsupported_resource_type_rejected PASSED [  7%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_short_observation_window_requires_review PASSED [  8%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_implausible_savings_rejected PASSED [  9%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_protected_resource_requires_review PASSED [  9%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_no_billing_evidence_requires_review_without_savings PASSED [ 10%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_cpu_only_idle_signal_is_not_actionable PASSED [ 10%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_disk_with_unknown_attachment_is_insufficient PASSED [ 11%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_safe_mode_suppresses_everything PASSED [ 11%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_invalid_utilization_values_rejected_at_the_boundary PASSED [ 12%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_no_recommendation_is_ever_auto_applied PASSED [ 13%]
+tests/negative/test_nt4_latency_overload.py::test_slow_dependency_is_bounded_in_time_and_attempts PASSED [ 13%]
+tests/negative/test_nt4_latency_overload.py::test_breaker_opens_fails_fast_then_recovers PASSED [ 14%]
+tests/negative/test_nt4_latency_overload.py::test_partial_failure_is_labelled_not_hidden PASSED [ 14%]
+tests/negative/test_nt4_latency_overload.py::test_saturation_is_rejected_immediately PASSED [ 15%]
+tests/negative/test_nt4_latency_overload.py::test_retry_count_is_bounded PASSED [ 15%]
+tests/negative/test_nt4_latency_overload.py::test_open_breaker_raises_without_calling PASSED [ 16%]
+tests/negative/test_nt4_latency_overload.py::test_timeout_error_type PASSED [ 17%]
+tests/negative/test_nt4_latency_overload.py::test_api_returns_503_quickly_when_live_dependency_hangs PASSED [ 17%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_metrics_refresh_failure_is_visible PASSED [ 18%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_stale_telemetry_reported_unknown_not_ok PASSED [ 18%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_no_signal_is_unknown PASSED [ 19%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_live_mode_without_utilization_says_not_evaluated PASSED [ 19%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_corrupt_utilization_samples_rejected_with_reasons PASSED [ 20%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_slo_verdict_requires_enough_evidence PASSED [ 21%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_unhandled_error_returns_incident_id_not_stack_trace PASSED [ 21%]
+tests/test_ai_engines.py::test_mock_connector_generates_records PASSED   [ 22%]
+tests/test_ai_engines.py::test_mock_connector_resource_ids_are_stable PASSED [ 22%]
+tests/test_ai_engines.py::test_anomaly_detector_returns_list PASSED      [ 23%]
+tests/test_ai_engines.py::test_anomaly_detector_detects_spikes PASSED    [ 23%]
+tests/test_ai_engines.py::test_anomaly_detector_empty_records PASSED     [ 24%]
+tests/test_ai_engines.py::test_anomaly_severity_assignment PASSED        [ 25%]
+tests/test_ai_engines.py::test_cost_forecaster_output_structure PASSED   [ 25%]
+tests/test_ai_engines.py::test_forecaster_confidence_bounds_present PASSED [ 26%]
+tests/test_ai_engines.py::test_forecaster_intervals_widen_with_horizon PASSED [ 26%]
+tests/test_ai_engines.py::test_forecaster_empty_records PASSED           [ 27%]
+tests/test_api.py::test_root_health_check PASSED                         [ 27%]
+tests/test_api.py::test_cost_summary_endpoint PASSED                     [ 28%]
+tests/test_api.py::test_cost_summary_reports_data_source PASSED          [ 28%]
+tests/test_api.py::test_cost_summary_includes_region_breakdown PASSED    [ 29%]
+tests/test_api.py::test_focus_export_endpoint PASSED                     [ 30%]
+tests/test_api.py::test_focus_export_pagination PASSED                   [ 30%]
+tests/test_api.py::test_anomaly_detection_endpoint PASSED                [ 31%]
+tests/test_api.py::test_cost_forecast_endpoint PASSED                    [ 31%]
+tests/test_api.py::test_prometheus_metrics_endpoint PASSED               [ 32%]
+tests/test_api.py::test_docs_available PASSED                            [ 32%]
+tests/test_api.py::test_api_key_enforced_when_configured PASSED          [ 33%]
+tests/test_api.py::test_live_mode_fails_closed_when_no_data PASSED       [ 34%]
+tests/test_api.py::test_openapi_declares_api_key_scheme_when_configured PASSED [ 34%]
+tests/test_api.py::test_openapi_omits_security_when_key_disabled PASSED  [ 35%]
+tests/test_api_extended.py::test_end_to_end_workflow_on_ingested_benchmark PASSED [ 35%]
+tests/test_api_extended.py::test_opencost_ingestion_endpoint PASSED      [ 36%]
+tests/test_api_extended.py::test_ingested_source_without_data_is_404 PASSED [ 36%]
+tests/test_api_extended.py::test_query_validation[/api/v1/costs/breakdown?dimension=colour] PASSED [ 37%]
+tests/test_api_extended.py::test_query_validation[/api/v1/costs/trends?granularity=hourly] PASSED [ 38%]
+tests/test_api_extended.py::test_query_validation[/api/v1/costs/overview?days=0] PASSED [ 38%]
+tests/test_api_extended.py::test_query_validation[/api/v1/costs/overview?source=s3] PASSED [ 39%]
+tests/test_api_extended.py::test_query_validation[/api/v1/recommendations?kind=magic] PASSED [ 39%]
+tests/test_api_extended.py::test_query_validation[/api/v1/forecast/backtest?holdout_days=0] PASSED [ 40%]
+tests/test_api_extended.py::test_auth_boundary_on_new_endpoints PASSED   [ 40%]
+tests/test_api_extended.py::test_dashboard_is_self_contained_with_security_headers PASSED [ 41%]
+tests/test_api_extended.py::test_latency_metrics_and_slo_after_traffic PASSED [ 42%]
+tests/test_aws_connector.py::test_aws_connector_maps_sdk_response_to_focus_record PASSED [ 42%]
+tests/test_aws_connector.py::test_aws_connector_uses_default_dates_when_omitted PASSED [ 43%]
+tests/test_aws_connector.py::test_aws_connector_isolates_malformed_rows PASSED [ 43%]
+tests/test_aws_connector.py::test_aws_connector_returns_empty_on_sdk_failure PASSED [ 44%]
+tests/test_azure_connector.py::test_azure_connector_maps_sdk_response_to_focus_record PASSED [ 44%]
+tests/test_azure_connector.py::test_azure_connector_builds_query_definition_with_required_type_and_datetimes PASSED [ 45%]
+tests/test_azure_connector.py::test_azure_connector_isolates_malformed_rows PASSED [ 46%]
+tests/test_config.py::test_env_bool_parses_truthy_values PASSED          [ 46%]
+tests/test_config.py::test_env_bool_parses_falsy_and_missing PASSED      [ 47%]
+tests/test_config.py::test_env_int_parses_valid_value PASSED             [ 47%]
+tests/test_config.py::test_env_int_falls_back_on_garbage PASSED          [ 48%]
+tests/test_config.py::test_env_int_falls_back_on_too_small PASSED        [ 48%]
+tests/test_config.py::test_env_int_uses_default_when_missing PASSED      [ 49%]
+tests/test_config.py::test_settings_survive_bad_metrics_refresh_value[abc] PASSED [ 50%]
+tests/test_config.py::test_settings_survive_bad_metrics_refresh_value[0] PASSED [ 50%]
+tests/test_config.py::test_settings_survive_bad_metrics_refresh_value[-3] PASSED [ 51%]
+tests/test_config.py::test_settings_survive_bad_metrics_refresh_value[] PASSED [ 51%]
+tests/test_config.py::test_package_version_matches_pyproject PASSED      [ 52%]
+tests/test_connectors.py::test_mock_connector_returns_focus_records PASSED [ 52%]
+tests/test_connectors.py::test_fetch_multicloud_cost_mock_mode PASSED    [ 53%]
+tests/test_connectors.py::test_fetch_multicloud_cost_fails_closed PASSED [ 53%]
+tests/test_connectors.py::test_fetch_multicloud_cost_fails_closed_empty_data PASSED [ 54%]
+tests/test_connectors.py::test_fetch_multicloud_cost_mock_fallback PASSED [ 55%]
+tests/test_connectors.py::test_live_connectors_are_never_imported_in_mock_mode PASSED [ 55%]
+tests/test_engine_config.py::test_defaults_are_valid_and_versioned PASSED [ 56%]
+tests/test_engine_config.py::test_shipped_config_file_matches_schema PASSED [ 56%]
+tests/test_engine_config.py::test_unknown_key_rejected PASSED            [ 57%]
+tests/test_engine_config.py::test_out_of_range_rejected PASSED           [ 57%]
+tests/test_engine_config.py::test_invalid_json_and_missing_explicit_file PASSED [ 58%]
+tests/test_evaluation.py::test_alert_contract_fields PASSED              [ 59%]
+tests/test_evaluation.py::test_precision_and_recall_on_development_fixture PASSED [ 59%]
+tests/test_evaluation.py::test_precision_on_independent_holdout_fixture PASSED [ 60%]
+tests/test_evaluation.py::test_detector_is_deterministic PASSED          [ 60%]
+tests/test_evaluation.py::test_no_alerts_on_empty_or_tiny_input PASSED   [ 61%]
+tests/test_evaluation.py::test_backtest_reports_metrics_and_baselines PASSED [ 61%]
+tests/test_evaluation.py::test_backtest_insufficient_history PASSED      [ 62%]
+tests/test_evaluation.py::test_forecaster_reports_insufficient_history PASSED [ 63%]
+tests/test_evaluation.py::test_absolute_materiality_floor_suppresses_cent_level_noise PASSED [ 63%]
+tests/test_exporter.py::test_metrics_exporter_updates_cost_and_anomalies PASSED [ 64%]
+tests/test_focus_spec.py::test_focus_record_creation PASSED              [ 64%]
+tests/test_focus_spec.py::test_focus_record_allows_credit_charges PASSED [ 65%]
+tests/test_focus_spec.py::test_focus_record_to_dict_is_json_serializable PASSED [ 65%]
+tests/test_focus_spec.py::test_normalize_to_focus_dataframe PASSED       [ 66%]
+tests/test_focus_spec.py::test_normalize_empty_records_returns_expected_columns PASSED [ 67%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[AmazonEC2-Compute] PASSED [ 67%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[Compute Engine-Compute] PASSED [ 68%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[Virtual Machines-Compute] PASSED [ 68%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[AWS Lambda-Compute] PASSED [ 69%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[AmazonS3-Storage] PASSED [ 69%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[Cloud Storage-Storage] PASSED [ 70%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[Blob Storage-Storage] PASSED [ 71%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[AmazonRDS-Database] PASSED [ 71%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[BigQuery-Database] PASSED [ 72%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[SQL Database-Database] PASSED [ 72%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[AmazonDynamoDB-Database] PASSED [ 73%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[AmazonEKS-Container] PASSED [ 73%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[GKE-Container] PASSED [ 74%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[AKS-Container] PASSED [ 75%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[AmazonECS-Container] PASSED [ 75%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[AmazonVPC-Network] PASSED [ 76%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[Virtual Network-Network] PASSED [ 76%]
+tests/test_focus_spec.py::test_categorize_service_shared_across_providers[Cloud CDN-Network] PASSED [ 77%]
+tests/test_gcp_connector.py::test_gcp_connector_maps_row_to_focus_record PASSED [ 77%]
+tests/test_gcp_connector.py::test_gcp_connector_falls_back_to_unknown_service PASSED [ 78%]
+tests/test_gcp_connector.py::test_gcp_connector_isolates_malformed_rows PASSED [ 78%]
+tests/test_gcp_connector.py::test_gcp_connector_returns_empty_on_sdk_failure PASSED [ 79%]
+tests/test_ingestion.py::test_valid_batch_has_provenance_and_reconciles PASSED [ 80%]
+tests/test_ingestion.py::test_reingesting_same_file_is_idempotent PASSED [ 80%]
+tests/test_ingestion.py::test_same_rows_in_different_file_are_not_double_counted PASSED [ 81%]
+tests/test_ingestion.py::test_unsupported_schema_version_rejects_whole_batch PASSED [ 81%]
+tests/test_ingestion.py::test_fx_conversion_only_with_configured_rate PASSED [ 82%]
+tests/test_ingestion.py::test_credit_rows_allowed_negative_but_positive_credit_quarantined PASSED [ 82%]
+tests/test_ingestion.py::test_large_and_zero_values PASSED               [ 83%]
+tests/test_ingestion.py::test_concurrent_ingestion_of_same_file_creates_one_batch PASSED [ 84%]
+tests/test_ingestion.py::test_evidence_file_written PASSED               [ 84%]
+tests/test_ingestion.py::test_opencost_adapter_maps_workloads_and_utilization PASSED [ 85%]
+tests/test_ingestion.py::test_opencost_payload_errors PASSED             [ 85%]
+tests/test_ingestion.py::test_literal_null_strings_are_missing_values PASSED [ 86%]
+tests/test_ingestion.py::test_distinct_line_items_in_same_hour_are_not_duplicates PASSED [ 86%]
+tests/test_ingestion.py::test_same_line_item_id_is_still_deduplicated PASSED [ 87%]
+tests/test_ingestion.py::test_reversal_row_accepted_but_inconsistent_sign_quarantined PASSED [ 88%]
+tests/test_optimization.py::test_recommendation_outcomes_match_hand_derived_oracle PASSED [ 88%]
+tests/test_optimization.py::test_every_recommendation_has_required_contract PASSED [ 89%]
+tests/test_optimization.py::test_savings_summary_separates_estimated_potential_and_realized PASSED [ 89%]
+tests/test_optimization.py::test_idle_supersedes_rightsizing_no_double_count PASSED [ 90%]
+tests/test_optimization.py::test_commitment_baseline_reduced_by_claimed_savings PASSED [ 90%]
+tests/test_optimization.py::test_commitments_require_history_and_discount_rate PASSED [ 91%]
+tests/test_optimization.py::test_realized_savings_measured_only_with_before_and_after_data PASSED [ 92%]
+tests/test_spend_analytics.py::test_totals_match_hand_computed PASSED    [ 92%]
+tests/test_spend_analytics.py::test_breakdowns_match_hand_computed[provider-by_provider] PASSED [ 93%]
+tests/test_spend_analytics.py::test_breakdowns_match_hand_computed[service-by_service] PASSED [ 93%]
+tests/test_spend_analytics.py::test_breakdowns_match_hand_computed[account-by_account] PASSED [ 94%]
+tests/test_spend_analytics.py::test_trends_match_hand_computed_utc[daily] PASSED [ 94%]
+tests/test_spend_analytics.py::test_trends_match_hand_computed_utc[weekly] PASSED [ 95%]
+tests/test_spend_analytics.py::test_trends_match_hand_computed_utc[monthly] PASSED [ 96%]
+tests/test_spend_analytics.py::test_timezone_boundary_row_lands_on_utc_day PASSED [ 96%]
+tests/test_spend_analytics.py::test_breakdown_top_n_folds_rest_into_other PASSED [ 97%]
+tests/test_spend_analytics.py::test_period_comparison PASSED             [ 97%]
+tests/test_spend_analytics.py::test_empty_dataset_is_safe PASSED         [ 98%]
+tests/test_spend_analytics.py::test_invalid_dimension_and_granularity_rejected PASSED [ 98%]
+tests/test_spend_analytics.py::test_benchmark_daily_totals_match_pure_python_recomputation PASSED [ 99%]
+tests/test_spend_analytics.py::test_shares_use_gross_spend_when_credits_make_net_small PASSED [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  <repo>\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: <repo>\output\evidence\pytest-junit-windows.xml -
+================== 176 passed, 1 warning in 92.23s (0:01:32) ==================
+============================= test session starts =============================
+platform win32 -- Python 3.13.7, pytest-8.4.2, pluggy-1.7.0 -- <repo>\.venv\Scripts\python.exe
+rootdir: <repo>
+configfile: pyproject.toml
+plugins: anyio-4.15.1, cov-7.1.0
+collecting ... collected 38 items
+
+tests/negative/test_nt1_billing_complexity.py::test_each_problem_row_is_quarantined_with_the_right_reason PASSED [  2%]
+tests/negative/test_nt1_billing_complexity.py::test_exact_duplicate_counted_once PASSED [  5%]
+tests/negative/test_nt1_billing_complexity.py::test_accepted_rows_and_transformations PASSED [  7%]
+tests/negative/test_nt1_billing_complexity.py::test_totals_reconcile_no_silent_corruption PASSED [ 10%]
+tests/negative/test_nt1_billing_complexity.py::test_high_quarantine_ratio_enters_safe_mode_and_suppresses_recommendations PASSED [ 13%]
+tests/negative/test_nt1_billing_complexity.py::test_api_rejects_unparseable_and_oversized_payloads PASSED [ 15%]
+tests/negative/test_nt2_attribution.py::test_totals_preserved_and_unattributed_bucket_explicit PASSED [ 18%]
+tests/negative/test_nt2_attribution.py::test_conflicting_attribution_detected_and_flagged PASSED [ 21%]
+tests/negative/test_nt2_attribution.py::test_recommendation_on_conflicting_resource_requires_review PASSED [ 23%]
+tests/negative/test_nt2_attribution.py::test_conflict_detected_across_batches PASSED [ 26%]
+tests/negative/test_nt2_attribution.py::test_opencost_row_without_determinable_provider_is_quarantined PASSED [ 28%]
+tests/negative/test_nt2_attribution.py::test_opencost_idle_allocation_is_unattributed_workload PASSED [ 31%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_missing_utilization_is_insufficient_data PASSED [ 34%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_unsupported_resource_type_rejected PASSED [ 36%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_short_observation_window_requires_review PASSED [ 39%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_implausible_savings_rejected PASSED [ 42%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_protected_resource_requires_review PASSED [ 44%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_no_billing_evidence_requires_review_without_savings PASSED [ 47%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_cpu_only_idle_signal_is_not_actionable PASSED [ 50%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_disk_with_unknown_attachment_is_insufficient PASSED [ 52%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_safe_mode_suppresses_everything PASSED [ 55%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_invalid_utilization_values_rejected_at_the_boundary PASSED [ 57%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_no_recommendation_is_ever_auto_applied PASSED [ 60%]
+tests/negative/test_nt4_latency_overload.py::test_slow_dependency_is_bounded_in_time_and_attempts PASSED [ 63%]
+tests/negative/test_nt4_latency_overload.py::test_breaker_opens_fails_fast_then_recovers PASSED [ 65%]
+tests/negative/test_nt4_latency_overload.py::test_partial_failure_is_labelled_not_hidden PASSED [ 68%]
+tests/negative/test_nt4_latency_overload.py::test_saturation_is_rejected_immediately PASSED [ 71%]
+tests/negative/test_nt4_latency_overload.py::test_retry_count_is_bounded PASSED [ 73%]
+tests/negative/test_nt4_latency_overload.py::test_open_breaker_raises_without_calling PASSED [ 76%]
+tests/negative/test_nt4_latency_overload.py::test_timeout_error_type PASSED [ 78%]
+tests/negative/test_nt4_latency_overload.py::test_api_returns_503_quickly_when_live_dependency_hangs PASSED [ 81%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_metrics_refresh_failure_is_visible PASSED [ 84%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_stale_telemetry_reported_unknown_not_ok PASSED [ 86%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_no_signal_is_unknown PASSED [ 89%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_live_mode_without_utilization_says_not_evaluated PASSED [ 92%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_corrupt_utilization_samples_rejected_with_reasons PASSED [ 94%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_slo_verdict_requires_enough_evidence PASSED [ 97%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_unhandled_error_returns_incident_id_not_stack_trace PASSED [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  <repo>\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 38 passed, 1 warning in 24.39s ========================
+[
+  {
+    "kpi": "KPI-1 estimated savings",
+    "measured": "30.45% of reference monthly cost (benchmark fixture)",
+    "baseline": "Q2 reference NOT supplied",
+    "formula": "sum(actionable est. monthly savings) / trailing-30-day cost x 30",
+    "target": ">= 5% relative improvement vs Q2 reference",
+    "status": "simulated-only; vs-Q2 BLOCKED (no Q2 baseline)"
+  },
+  {
+    "kpi": "KPI-2 forecast accuracy",
+    "measured": "dev MAPE 3.02% / MAE $101.84; holdout MAPE 3.88% / MAE $133.85",
+    "baseline": "naive 7-day mean MAE dev $106.29, holdout $152.79",
+    "formula": "MAE, RMSE, MAPE on last 14 held-out days",
+    "target": "measure and report against approved reference data",
+    "status": "measured (synthetic); approved reference data not supplied"
+  },
+  {
+    "kpi": "KPI-3 anomaly precision",
+    "measured": "dev P=0.9091 R=1.0; holdout P=1.0 R=0.7778",
+    "baseline": "pre-change rule: dev P=0.5556, holdout P=0.5",
+    "formula": "TP / (TP + FP) vs injected-label oracle",
+    "target": "calculate from versioned fixtures and independent ground truth",
+    "status": "measured (synthetic)"
+  },
+  {
+    "kpi": "KPI-4 recovery rate",
+    "measured": "20/20 = 1.0",
+    "baseline": "pre-change code had no breaker/recovery tracking",
+    "formula": "recovered faults / injected faults (local fault injection)",
+    "target": "measure successful recoveries after fault injection",
+    "status": "measured (local, simulated faults)"
+  },
+  {
+    "kpi": "KPI-5 service error rate",
+    "measured": "0.0 (0/135)",
+    "baseline": "not run",
+    "formula": "5xx responses / requests (workload api-workload-v1)",
+    "target": "<= 0.8 x Q2 reference",
+    "status": "measured; vs Q2 BLOCKED"
+  },
+  {
+    "kpi": "KPI-6 p95 latency",
+    "measured": "80.96 ms (in-process, shared endpoints)",
+    "baseline": "not run",
+    "formula": "nearest-rank p95 of sequential request latency",
+    "target": "<= 0.80 x Q2 reference",
+    "status": "measured vs pre-change proxy; vs Q2 BLOCKED"
+  }
+]
+
+Done. Evidence written to output\evidence. Start the app with:
+  .venv\Scripts\python.exe -m uvicorn finops_engine.api.app:app --port 8000
+  then open http://localhost:8000/dashboard
+EXIT CODE 0 

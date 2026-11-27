@@ -1,0 +1,36 @@
+All checks passed!
+94 files already formatted
+finops_engine\optimization\rightsizing.py:88: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "str"  [arg-type]
+finops_engine\optimization\rightsizing.py:88: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "str | None"  [arg-type]
+finops_engine\optimization\rightsizing.py:88: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "float | None"  [arg-type]
+finops_engine\optimization\rightsizing.py:88: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "bool"  [arg-type]
+finops_engine\optimization\rightsizing.py:104: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "str"  [arg-type]
+finops_engine\optimization\rightsizing.py:104: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "str | None"  [arg-type]
+finops_engine\optimization\rightsizing.py:104: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "float | None"  [arg-type]
+finops_engine\optimization\rightsizing.py:104: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "bool"  [arg-type]
+finops_engine\optimization\rightsizing.py:147: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "str"  [arg-type]
+finops_engine\optimization\rightsizing.py:147: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "str | None"  [arg-type]
+finops_engine\optimization\rightsizing.py:147: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "float | None"  [arg-type]
+finops_engine\optimization\rightsizing.py:147: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "bool"  [arg-type]
+finops_engine\optimization\rightsizing.py:179: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "str"  [arg-type]
+finops_engine\optimization\rightsizing.py:179: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "str | None"  [arg-type]
+finops_engine\optimization\rightsizing.py:179: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "float | None"  [arg-type]
+finops_engine\optimization\rightsizing.py:179: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "bool"  [arg-type]
+finops_engine\optimization\commitments.py:91: error: Argument 12 to "Recommendation" has incompatible type "**dict[str, str | None]"; expected "str"  [arg-type]
+finops_engine\optimization\commitments.py:91: error: Argument 12 to "Recommendation" has incompatible type "**dict[str, str | None]"; expected "bool"  [arg-type]
+finops_engine\optimization\commitments.py:130: error: Argument 12 to "Recommendation" has incompatible type "**dict[str, str | None]"; expected "str"  [arg-type]
+finops_engine\optimization\commitments.py:130: error: Argument 12 to "Recommendation" has incompatible type "**dict[str, str | None]"; expected "bool"  [arg-type]
+finops_engine\optimization\commitments.py:175: error: Argument 12 to "Recommendation" has incompatible type "**dict[str, str | None]"; expected "str"  [arg-type]
+finops_engine\optimization\commitments.py:175: error: Argument 12 to "Recommendation" has incompatible type "**dict[str, str | None]"; expected "bool"  [arg-type]
+finops_engine\optimization\idle.py:74: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "str"  [arg-type]
+finops_engine\optimization\idle.py:74: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "str | None"  [arg-type]
+finops_engine\optimization\idle.py:74: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "float | None"  [arg-type]
+finops_engine\optimization\idle.py:74: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "bool"  [arg-type]
+finops_engine\optimization\idle.py:131: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "str"  [arg-type]
+finops_engine\optimization\idle.py:131: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "str | None"  [arg-type]
+finops_engine\optimization\idle.py:131: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "float | None"  [arg-type]
+finops_engine\optimization\idle.py:131: error: Argument 11 to "Recommendation" has incompatible type "**dict[str, str | float | None]"; expected "bool"  [arg-type]
+Found 30 errors in 3 files (checked 40 source files)
+================= 170 passed, 1 warning in 175.94s (0:02:55) ==================
+======================= 38 passed, 1 warning in 40.70s ========================
+EXIT CODE 0 

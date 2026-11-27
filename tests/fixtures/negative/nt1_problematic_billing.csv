@@ -1,0 +1,18 @@
+ProviderName,ChargeCategory,BilledCost,EffectiveCost,BillingCurrency,ConsumedQuantity,ConsumedUnit,ServiceName,RegionId,SubAccountId,ResourceId,ChargePeriodStart,ChargePeriodEnd
+AWS,Usage,100.00,95.00,USD,24,Hours,AmazonEC2,us-east-1,111,i-ok,2026-06-10T00:00:00Z,2026-06-11T00:00:00Z
+AWS,Usage,100.00,95.00,USD,24,Hours,AmazonEC2,us-east-1,111,i-ok,2026-06-10T00:00:00Z,2026-06-11T00:00:00Z
+AWS,Usage,30.00,30.00,,24,Hours,AmazonEC2,us-east-1,111,i-nocur,2026-06-10T00:00:00Z,2026-06-11T00:00:00Z
+GCP,Usage,40.00,40.00,EUR,24,Hours,Compute Engine,europe-west1,proj-a,vm-eur,2026-06-10T00:00:00Z,2026-06-11T00:00:00Z
+AWS,Usage,abc,,USD,24,Hours,AmazonEC2,us-east-1,111,i-bad,2026-06-10T00:00:00Z,2026-06-11T00:00:00Z
+AWS,Usage,12.00,,USD,24,Hours,AmazonEC2,us-east-1,111,i-baddate,not-a-date,2026-06-11T00:00:00Z
+AWS,Usage,13.00,,USD,24,Hours,AmazonEC2,us-east-1,111,i-backwards,2026-06-11T00:00:00Z,2026-06-10T00:00:00Z
+AWS,Usage,-50.00,,USD,24,Hours,AmazonEC2,us-east-1,111,i-neg,2026-06-10T00:00:00Z,2026-06-11T00:00:00Z
+AWS,Usage,NaN,,USD,24,Hours,AmazonEC2,us-east-1,111,i-nan,2026-06-10T00:00:00Z,2026-06-11T00:00:00Z
+AWS,Usage,5000000000,,USD,24,Hours,AmazonEC2,us-east-1,111,i-huge,2026-06-10T00:00:00Z,2026-06-11T00:00:00Z
+AWS,Usage,20.00,20.00,USD,24,Hours,AmazonS3,us-east-1,111,bucket-early,2026-06-01T00:00:00Z,2026-06-02T00:00:00Z
+Azure,Usage,8.00,8.00,USD,7200,seconds,Virtual Machines,eastus,sub-1,vm-sec,2026-06-10T00:00:00Z,2026-06-11T00:00:00Z
+Azure,Usage,9.00,9.00,USD,24,hrs,Virtual Machines,eastus,sub-1,vm-naive,2026-06-10T00:00:00,2026-06-11T00:00:00
+GCP,Usage,70.00,70.00,USD,24,Hours,BigQuery,us-central1,proj-a,ds-conflict,2026-06-10T00:00:00Z,2026-06-11T00:00:00Z
+GCP,Usage,75.00,75.00,USD,24,Hours,BigQuery,us-central1,proj-a,ds-conflict,2026-06-10T00:00:00Z,2026-06-11T00:00:00Z
+Oracle,Usage,11.00,11.00,USD,24,Hours,OCI Compute,us-ashburn-1,tenancy-1,oci-1,2026-06-10T00:00:00Z,2026-06-11T00:00:00Z
+AWS,Usage,14.00,14.00,USD,24,Hours,AmazonEC2,us-east-1,111,i-future,2099-01-01T00:00:00Z,2099-01-02T00:00:00Z

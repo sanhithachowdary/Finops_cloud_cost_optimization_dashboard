@@ -1,0 +1,74 @@
+{
+  "generator_version": "benchmark-v1",
+  "billing_fixture": "billing_benchmark_v1.csv",
+  "seed": 20260630,
+  "days": 120,
+  "period": [
+    "2026-03-03",
+    "2026-06-30"
+  ],
+  "label_semantics": "a (date, provider, service) day whose spend was multiplied by `multiplier`",
+  "labels": [
+    {
+      "date": "2026-04-12",
+      "provider": "AWS",
+      "service": "AmazonEC2",
+      "multiplier": 3.5
+    },
+    {
+      "date": "2026-04-13",
+      "provider": "AWS",
+      "service": "AmazonEC2",
+      "multiplier": 3.2
+    },
+    {
+      "date": "2026-04-27",
+      "provider": "GCP",
+      "service": "BigQuery",
+      "multiplier": 4.0
+    },
+    {
+      "date": "2026-05-05",
+      "provider": "Azure",
+      "service": "Virtual Machines",
+      "multiplier": 2.8
+    },
+    {
+      "date": "2026-05-19",
+      "provider": "AWS",
+      "service": "AmazonRDS",
+      "multiplier": 2.6
+    },
+    {
+      "date": "2026-05-26",
+      "provider": "GCP",
+      "service": "GKE",
+      "multiplier": 3.0
+    },
+    {
+      "date": "2026-06-03",
+      "provider": "Azure",
+      "service": "SQL Database",
+      "multiplier": 2.5
+    },
+    {
+      "date": "2026-06-12",
+      "provider": "AWS",
+      "service": "AmazonEKS",
+      "multiplier": 2.9
+    },
+    {
+      "date": "2026-06-21",
+      "provider": "GCP",
+      "service": "Compute Engine",
+      "multiplier": 1.45
+    },
+    {
+      "date": "2026-06-26",
+      "provider": "Azure",
+      "service": "AKS",
+      "multiplier": 1.5
+    }
+  ],
+  "notes": "SYNTHETIC data. Labels come from the injection plan, not from any detector."
+}

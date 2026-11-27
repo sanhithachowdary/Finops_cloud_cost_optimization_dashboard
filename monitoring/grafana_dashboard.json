@@ -1,0 +1,363 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "multi-cloud-finops-dashboard",
+    "title": "Multi-Cloud FinOps & Cost Intelligence Platform",
+    "tags": [
+      "finops",
+      "aws",
+      "gcp",
+      "azure",
+      "cost-optimization"
+    ],
+    "timezone": "browser",
+    "schemaVersion": 38,
+    "refresh": "10s",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Total Multi-Cloud Spend (USD)",
+        "type": "stat",
+        "gridPos": {
+          "h": 4,
+          "w": 6,
+          "x": 0,
+          "y": 0
+        },
+        "targets": [
+          {
+            "expr": "sum(finops_cloud_cost_usd)",
+            "legendFormat": "Total Spend"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "currencyUSD",
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "orange",
+                  "value": 5000
+                },
+                {
+                  "color": "red",
+                  "value": 10000
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 2,
+        "title": "Active Cost Anomalies Detected",
+        "type": "stat",
+        "gridPos": {
+          "h": 4,
+          "w": 6,
+          "x": 6,
+          "y": 0
+        },
+        "targets": [
+          {
+            "expr": "sum(finops_anomalies_active_count)",
+            "legendFormat": "Active Anomalies"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 1
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 3,
+        "title": "Estimated Monthly Savings (actionable, not realised)",
+        "type": "stat",
+        "gridPos": {
+          "h": 4,
+          "w": 6,
+          "x": 12,
+          "y": 0
+        },
+        "targets": [
+          {
+            "expr": "sum(finops_estimated_monthly_savings_usd)",
+            "legendFormat": "Estimated savings"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "currencyUSD",
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 4,
+        "title": "API Request Throughput",
+        "type": "stat",
+        "gridPos": {
+          "h": 4,
+          "w": 6,
+          "x": 18,
+          "y": 0
+        },
+        "targets": [
+          {
+            "expr": "sum(finops_api_requests_total)",
+            "legendFormat": "API Hits"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Multi-Cloud Spend Distribution by Provider & Service",
+        "type": "timeseries",
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 4
+        },
+        "targets": [
+          {
+            "expr": "finops_cloud_cost_usd",
+            "legendFormat": "{{provider}} - {{service}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "currencyUSD",
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth",
+              "fillOpacity": 15
+            }
+          }
+        }
+      },
+      {
+        "id": 6,
+        "title": "Estimated Savings by Recommendation Kind",
+        "type": "bargauge",
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 4
+        },
+        "targets": [
+          {
+            "expr": "finops_estimated_monthly_savings_usd",
+            "legendFormat": "{{kind}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "currencyUSD"
+          }
+        }
+      },
+      {
+        "id": 7,
+        "title": "API p95 latency by route (5m)",
+        "type": "timeseries",
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 12
+        },
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.95, sum by (le, route) (rate(finops_api_request_duration_seconds_bucket[5m])))",
+            "legendFormat": "{{route}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "s"
+          }
+        }
+      },
+      {
+        "id": 8,
+        "title": "API 5xx error ratio (5m)",
+        "type": "timeseries",
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 12,
+          "y": 12
+        },
+        "targets": [
+          {
+            "expr": "sum(rate(finops_api_responses_total{status_class=\"5xx\"}[5m])) / clamp_min(sum(rate(finops_api_responses_total[5m])), 1e-9)",
+            "legendFormat": "5xx ratio"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percentunit"
+          }
+        }
+      },
+      {
+        "id": 9,
+        "title": "Component health (1 = current status)",
+        "type": "table",
+        "gridPos": {
+          "h": 8,
+          "w": 12,
+          "x": 0,
+          "y": 20
+        },
+        "targets": [
+          {
+            "expr": "finops_component_status == 1",
+            "format": "table",
+            "instant": true
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Safe mode (recommendations suppressed)",
+        "type": "stat",
+        "gridPos": {
+          "h": 4,
+          "w": 6,
+          "x": 12,
+          "y": 20
+        },
+        "targets": [
+          {
+            "expr": "max(finops_safe_mode)",
+            "legendFormat": "safe mode"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [
+              {
+                "type": "value",
+                "options": {
+                  "0": {
+                    "text": "normal"
+                  },
+                  "1": {
+                    "text": "SAFE MODE"
+                  }
+                }
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 1
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 11,
+        "title": "Seconds since last successful metrics refresh",
+        "type": "stat",
+        "gridPos": {
+          "h": 4,
+          "w": 6,
+          "x": 18,
+          "y": 20
+        },
+        "targets": [
+          {
+            "expr": "time() - finops_metrics_refresh_last_success_timestamp_seconds",
+            "legendFormat": "staleness"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "s",
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "orange",
+                  "value": 60
+                },
+                {
+                  "color": "red",
+                  "value": 300
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 12,
+        "title": "Ingestion rows by outcome",
+        "type": "timeseries",
+        "gridPos": {
+          "h": 4,
+          "w": 12,
+          "x": 12,
+          "y": 24
+        },
+        "targets": [
+          {
+            "expr": "increase(finops_ingestion_rows_total[1h])",
+            "legendFormat": "{{outcome}}"
+          }
+        ]
+      }
+    ]
+  }
+}

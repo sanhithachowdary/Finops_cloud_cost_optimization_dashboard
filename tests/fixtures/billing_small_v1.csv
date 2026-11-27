@@ -1,0 +1,10 @@
+ProviderName,ChargeCategory,BilledCost,EffectiveCost,BillingCurrency,ConsumedQuantity,ConsumedUnit,ServiceName,RegionId,SubAccountId,ResourceId,ChargePeriodStart,ChargePeriodEnd,Tags
+AWS,Usage,100.00,90.00,USD,24,Hours,AmazonEC2,us-east-1,111111111111,i-1,2026-06-01T00:00:00Z,2026-06-02T00:00:00Z,
+AWS,Usage,120.00,100.00,USD,24,Hours,AmazonEC2,us-east-1,111111111111,i-1,2026-06-02T00:00:00Z,2026-06-03T00:00:00Z,
+AWS,Usage,10.50,,USD,100,GB-Months,AmazonS3,us-east-1,111111111111,bucket-1,2026-06-01T00:00:00Z,2026-06-02T00:00:00Z,
+GCP,Usage,50.25,,USD,1,Count,BigQuery,us-central1,proj-a,ds-1,2026-06-01T00:00:00Z,2026-06-02T00:00:00Z,team=data
+GCP,Usage,49.75,,USD,1,Count,BigQuery,us-central1,proj-a,ds-1,2026-06-08T00:00:00Z,2026-06-09T00:00:00Z,team=data
+Azure,Usage,30.00,,USD,24,Hours,Virtual Machines,eastus,sub-1,vm-1,2026-05-31T23:30:00-02:00,2026-06-01T23:30:00-02:00,
+Azure,Usage,40.00,,USD,24,Hours,Virtual Machines,eastus,sub-1,vm-1,2026-06-30T00:00:00Z,2026-07-01T00:00:00Z,
+Azure,Usage,45.00,,USD,24,Hours,Virtual Machines,eastus,sub-1,vm-1,2026-07-01T00:00:00Z,2026-07-02T00:00:00Z,
+AWS,Credit,-20.00,-20.00,USD,0,Hours,AmazonEC2,us-east-1,111111111111,i-1,2026-06-02T00:00:00Z,2026-06-03T00:00:00Z,

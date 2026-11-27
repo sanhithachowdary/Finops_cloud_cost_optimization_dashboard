@@ -1,0 +1,21 @@
+{
+  "_purpose": "TEMPLATE - fill in from the approved Q2 reference period, then rerun scripts/acceptance_harness.py. Values below are placeholders (null), NOT measurements.",
+  "reference_period": {"start": null, "end": null, "description": "e.g. 2026-04-01 .. 2026-06-30"},
+  "approved_by": null,
+  "billing_source": {"type": "FOCUS export | AWS CUR | GCP BigQuery export | Azure export | OpenCost", "file_sha256": null},
+  "hardware_envelope": {"host": null, "vcpu": null, "memory_gb": null, "os": null, "python": null, "app_version": null},
+  "workload": {"workload_version": "api-workload-v1", "trace_file": null, "concurrency": 1},
+  "kpi_reference_values": {
+    "monthly_cost_usd": null,
+    "service_error_rate": null,
+    "p95_latency_ms": null,
+    "forecast_mape_pct": null,
+    "anomaly_precision": null
+  },
+  "pre_registered_tolerances": {
+    "kpi1_min_relative_savings_pct": 5.0,
+    "kpi5_max_error_rate_ratio": 0.8,
+    "kpi6_max_p95_ratio": 0.8,
+    "tolerance_note": null
+  }
+}

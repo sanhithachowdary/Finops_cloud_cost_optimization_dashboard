@@ -1,0 +1,561 @@
+{
+  "generated_at": "2026-10-24T09:04:42.717980+00:00",
+  "harness": "scripts/acceptance_harness.py",
+  "app_version": "1.3.0",
+  "config_version": "2026.10-v2",
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39",
+    "cpu_count": 2
+  },
+  "data_label": "SYNTHETIC versioned fixtures (tests/fixtures, generator benchmark-v1)",
+  "spend_oracle": {
+    "checks": 14,
+    "mismatches": {},
+    "status": "pass"
+  },
+  "anomaly_forecast": {
+    "development": {
+      "fixture": "billing_benchmark_v1.csv",
+      "labels": "anomaly_labels_v1.json",
+      "anomaly_shipped_config": {
+        "alerts": 10,
+        "ground_truth_positives": 10,
+        "true_positives": 10,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "false_positive_labels": [],
+        "false_negative_labels": [],
+        "detector": {
+          "method": "isolation_forest+rolling_zscore",
+          "contamination": 0.05,
+          "z_threshold": 3.0,
+          "baseline_window_days": 14,
+          "min_relative_excess": 0.2,
+          "config_version": "2026.10-v2"
+        },
+        "precision_undefined_reason": null
+      },
+      "anomaly_pre_change_rule (no materiality gate)": {
+        "precision": 0.5556,
+        "recall": 1.0,
+        "f1": 0.7143,
+        "alerts": 18,
+        "false_positives": 8
+      },
+      "forecast_backtest": {
+        "status": "ok",
+        "method": "linear_regression_with_t_prediction_interval",
+        "train_days": 106,
+        "holdout_days": 14,
+        "train_period": [
+          "2026-03-03",
+          "2026-06-16"
+        ],
+        "holdout_period": [
+          "2026-06-17",
+          "2026-06-30"
+        ],
+        "model": {
+          "mae_usd": 101.84,
+          "rmse_usd": 136.27,
+          "mape_pct": 3.02,
+          "mape_note": null
+        },
+        "baselines": {
+          "naive_last_value": {
+            "mae_usd": 106.29,
+            "rmse_usd": 133.32,
+            "mape_pct": 3.12,
+            "mape_note": null
+          },
+          "naive_mean_7d": {
+            "mae_usd": 106.29,
+            "rmse_usd": 134.39,
+            "mape_pct": 3.13,
+            "mape_note": null
+          }
+        },
+        "prediction_interval_coverage": 1.0,
+        "nominal_interval": 0.95,
+        "beats_best_naive_baseline_on_mae": true,
+        "holdout_total_actual_usd": 48258.85,
+        "holdout_total_predicted_usd": 48876.44
+      }
+    },
+    "holdout": {
+      "fixture": "billing_holdout_v1.csv",
+      "labels": "anomaly_labels_holdout_v1.json",
+      "anomaly_shipped_config": {
+        "alerts": 7,
+        "ground_truth_positives": 9,
+        "true_positives": 7,
+        "false_positives": 0,
+        "false_negatives": 2,
+        "precision": 1.0,
+        "recall": 0.7778,
+        "f1": 0.875,
+        "false_positive_labels": [],
+        "false_negative_labels": [
+          [
+            "2026-04-25",
+            "GCP",
+            "Compute Engine"
+          ],
+          [
+            "2026-06-28",
+            "Azure",
+            "Virtual Machines"
+          ]
+        ],
+        "detector": {
+          "method": "isolation_forest+rolling_zscore",
+          "contamination": 0.05,
+          "z_threshold": 3.0,
+          "baseline_window_days": 14,
+          "min_relative_excess": 0.2,
+          "config_version": "2026.10-v2"
+        },
+        "precision_undefined_reason": null
+      },
+      "anomaly_pre_change_rule (no materiality gate)": {
+        "precision": 0.5,
+        "recall": 0.7778,
+        "f1": 0.6087,
+        "alerts": 14,
+        "false_positives": 7
+      },
+      "forecast_backtest": {
+        "status": "ok",
+        "method": "linear_regression_with_t_prediction_interval",
+        "train_days": 106,
+        "holdout_days": 14,
+        "train_period": [
+          "2026-03-03",
+          "2026-06-16"
+        ],
+        "holdout_period": [
+          "2026-06-17",
+          "2026-06-30"
+        ],
+        "model": {
+          "mae_usd": 133.85,
+          "rmse_usd": 173.96,
+          "mape_pct": 3.88,
+          "mape_note": null
+        },
+        "baselines": {
+          "naive_last_value": {
+            "mae_usd": 150.85,
+            "rmse_usd": 191.18,
+            "mape_pct": 4.46,
+            "mape_note": null
+          },
+          "naive_mean_7d": {
+            "mae_usd": 152.79,
+            "rmse_usd": 184.44,
+            "mape_pct": 4.34,
+            "mape_note": null
+          }
+        },
+        "prediction_interval_coverage": 0.9286,
+        "nominal_interval": 0.95,
+        "beats_best_naive_baseline_on_mae": true,
+        "holdout_total_actual_usd": 48330.55,
+        "holdout_total_predicted_usd": 48429.67
+      }
+    }
+  },
+  "savings": {
+    "reference": {
+      "monthly_cost_usd": 103156.14,
+      "window_days": 30,
+      "window_start": "2026-06-01",
+      "window_end": "2026-06-30",
+      "formula": "sum(billed_cost in trailing window) / days_with_data * 30"
+    },
+    "estimated_monthly_savings_usd": 31413.84,
+    "estimated_relative_savings_pct": 30.45,
+    "potential_requires_review_usd": 12335.71,
+    "by_kind": {
+      "rightsizing": {
+        "actionable": 12749.71,
+        "potential_requires_review": 12335.71
+      },
+      "idle": {
+        "actionable": 4066.92,
+        "potential_requires_review": 0.0
+      },
+      "commitment": {
+        "actionable": 14597.21,
+        "potential_requires_review": 0.0
+      }
+    },
+    "counts": {
+      "rightsizing": {
+        "actionable": 2,
+        "requires_review": 2,
+        "insufficient_data": 1,
+        "suppressed": 1
+      },
+      "idle": {
+        "actionable": 2
+      },
+      "commitment": {
+        "actionable": 9
+      }
+    },
+    "realized_savings": {
+      "status": "not_measured",
+      "monthly_usd": null,
+      "reason": "No recommendation has been implemented and no post-change billing data is available. Use realized_savings() with before/after billing to measure."
+    }
+  },
+  "fault_campaign": {
+    "faults_injected": 20,
+    "detected": 20,
+    "recovered": 20,
+    "recovery_rate": 1.0,
+    "detection_rate": 1.0,
+    "max_seconds_fault_to_recovery": 0.404,
+    "breaker_reset_seconds": 0.2,
+    "trials": [
+      {
+        "fault": "timeout",
+        "trial": 0,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.404
+      },
+      {
+        "fault": "timeout",
+        "trial": 1,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.402
+      },
+      {
+        "fault": "timeout",
+        "trial": 2,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.402
+      },
+      {
+        "fault": "timeout",
+        "trial": 3,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.402
+      },
+      {
+        "fault": "timeout",
+        "trial": 4,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.402
+      },
+      {
+        "fault": "exception",
+        "trial": 0,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.202
+      },
+      {
+        "fault": "exception",
+        "trial": 1,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.202
+      },
+      {
+        "fault": "exception",
+        "trial": 2,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.201
+      },
+      {
+        "fault": "exception",
+        "trial": 3,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.202
+      },
+      {
+        "fault": "exception",
+        "trial": 4,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.202
+      },
+      {
+        "fault": "breaker_open",
+        "trial": 0,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.202
+      },
+      {
+        "fault": "breaker_open",
+        "trial": 1,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.202
+      },
+      {
+        "fault": "breaker_open",
+        "trial": 2,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.202
+      },
+      {
+        "fault": "breaker_open",
+        "trial": 3,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.202
+      },
+      {
+        "fault": "breaker_open",
+        "trial": 4,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.202
+      },
+      {
+        "fault": "flapping",
+        "trial": 0,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.001
+      },
+      {
+        "fault": "flapping",
+        "trial": 1,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.0
+      },
+      {
+        "fault": "flapping",
+        "trial": 2,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.001
+      },
+      {
+        "fault": "flapping",
+        "trial": 3,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.001
+      },
+      {
+        "fault": "flapping",
+        "trial": 4,
+        "detected": true,
+        "recovered": true,
+        "recovery_event_recorded": true,
+        "seconds_to_recover_after_heal": 0.001
+      }
+    ]
+  },
+  "benchmark_final": {
+    "workload_version": "api-workload-v1",
+    "app_version": "1.3.0",
+    "code_dir_name": "repo",
+    "reps": 30,
+    "warmup_per_endpoint": 2,
+    "requests": 135,
+    "server_errors": 0,
+    "server_error_rate": 0.0,
+    "p50_ms": 20.25,
+    "p95_ms": 64.65,
+    "p99_ms": 76.89,
+    "throughput_rps_sequential": 40.64,
+    "wall_seconds_including_warmup": 5.11,
+    "first_call_ms": {
+      "health": 39.98,
+      "cost_summary": 33.41,
+      "focus_export": 34.39,
+      "forecast": 24.15,
+      "anomalies": 1565.12
+    },
+    "per_endpoint": {
+      "health": {
+        "n": 30,
+        "p50_ms": 17.52,
+        "p95_ms": 38.05,
+        "max_ms": 50.07
+      },
+      "cost_summary": {
+        "n": 30,
+        "p50_ms": 33.27,
+        "p95_ms": 76.89,
+        "max_ms": 97.15
+      },
+      "focus_export": {
+        "n": 30,
+        "p50_ms": 31.34,
+        "p95_ms": 64.65,
+        "max_ms": 75.66
+      },
+      "forecast": {
+        "n": 30,
+        "p50_ms": 17.4,
+        "p95_ms": 24.18,
+        "max_ms": 25.2
+      },
+      "anomalies": {
+        "n": 15,
+        "p50_ms": 1.78,
+        "p95_ms": 2.77,
+        "max_ms": 2.77
+      }
+    },
+    "environment": {
+      "python": "3.13.16",
+      "platform": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39",
+      "cpu_count": 2,
+      "machine": "x86_64",
+      "max_rss_mb": 185.2
+    }
+  },
+  "benchmark_pre_change_reference": {
+    "workload_version": "api-workload-v1",
+    "app_version": "1.3.0",
+    "code_dir_name": "baseline-tree",
+    "reps": 30,
+    "warmup_per_endpoint": 2,
+    "requests": 135,
+    "server_errors": 0,
+    "server_error_rate": 0.0,
+    "p50_ms": 21.08,
+    "p95_ms": 1488.63,
+    "p99_ms": 2244.79,
+    "throughput_rps_sequential": 4.94,
+    "wall_seconds_including_warmup": 30.54,
+    "first_call_ms": {
+      "health": 17.02,
+      "cost_summary": 70.37,
+      "focus_export": 45.03,
+      "forecast": 33.13,
+      "anomalies": 1541.08
+    },
+    "per_endpoint": {
+      "health": {
+        "n": 30,
+        "p50_ms": 31.32,
+        "p95_ms": 83.42,
+        "max_ms": 99.35
+      },
+      "cost_summary": {
+        "n": 30,
+        "p50_ms": 27.59,
+        "p95_ms": 70.3,
+        "max_ms": 73.4
+      },
+      "focus_export": {
+        "n": 30,
+        "p50_ms": 2.42,
+        "p95_ms": 14.21,
+        "max_ms": 15.69
+      },
+      "forecast": {
+        "n": 30,
+        "p50_ms": 17.81,
+        "p95_ms": 22.87,
+        "max_ms": 24.39
+      },
+      "anomalies": {
+        "n": 15,
+        "p50_ms": 1445.14,
+        "p95_ms": 3213.14,
+        "max_ms": 3213.14
+      }
+    },
+    "environment": {
+      "python": "3.13.16",
+      "platform": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39",
+      "cpu_count": 2,
+      "machine": "x86_64",
+      "max_rss_mb": 183.4
+    }
+  },
+  "kpi_table": [
+    {
+      "kpi": "KPI-1 estimated savings",
+      "measured": "30.45% of reference monthly cost (benchmark fixture)",
+      "baseline": "Q2 reference NOT supplied",
+      "formula": "sum(actionable est. monthly savings) / trailing-30-day cost x 30",
+      "target": ">= 5% relative improvement vs Q2 reference",
+      "status": "simulated-only; vs-Q2 BLOCKED (no Q2 baseline)"
+    },
+    {
+      "kpi": "KPI-2 forecast accuracy",
+      "measured": "dev MAPE 3.02% / MAE $101.84; holdout MAPE 3.88% / MAE $133.85",
+      "baseline": "naive 7-day mean MAE dev $106.29, holdout $152.79",
+      "formula": "MAE, RMSE, MAPE on last 14 held-out days",
+      "target": "measure and report against approved reference data",
+      "status": "measured (synthetic); approved reference data not supplied"
+    },
+    {
+      "kpi": "KPI-3 anomaly precision",
+      "measured": "dev P=1.0 R=1.0; holdout P=1.0 R=0.7778",
+      "baseline": "pre-change rule: dev P=0.5556, holdout P=0.5",
+      "formula": "TP / (TP + FP) vs injected-label oracle",
+      "target": "calculate from versioned fixtures and independent ground truth",
+      "status": "measured (synthetic)"
+    },
+    {
+      "kpi": "KPI-4 recovery rate",
+      "measured": "20/20 = 1.0",
+      "baseline": "pre-change code had no breaker/recovery tracking",
+      "formula": "recovered faults / injected faults (local fault injection)",
+      "target": "measure successful recoveries after fault injection",
+      "status": "measured (local, simulated faults)"
+    },
+    {
+      "kpi": "KPI-5 service error rate",
+      "measured": "0.0 (0/135)",
+      "baseline": "pre-change same workload: 0.0",
+      "formula": "5xx responses / requests (workload api-workload-v1)",
+      "target": "<= 0.8 x Q2 reference",
+      "status": "measured; ratio vs Q2 BLOCKED (no Q2 baseline); both runs 0 errors -> ratio undefined"
+    },
+    {
+      "kpi": "KPI-6 p95 latency",
+      "measured": "64.65 ms (in-process, shared endpoints)",
+      "baseline": "pre-change same machine/workload: 1488.63 ms (ratio 0.0434)",
+      "formula": "nearest-rank p95 of sequential request latency",
+      "target": "<= 0.80 x Q2 reference",
+      "status": "measured vs pre-change proxy; vs Q2 BLOCKED"
+    }
+  ],
+  "harness_seconds": 51.6
+}

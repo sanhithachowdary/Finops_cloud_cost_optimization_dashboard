@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>FinOps Cost Dashboard</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f4f4f2; --surface-1: #fcfcfb; --border: #e2e1dc; --grid: #ebeae6;
+  --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #7a7974;
+  --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a;
+  --band: rgba(42,120,214,.14); --accent: #2a78d6;
+  --good: #0ca30c; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #111110; --surface-1: #1a1a19; --border: #2e2e2c; --grid: #262624;
+    --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #8f8e86;
+    --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70;
+    --band: rgba(57,135,229,.2); --accent: #3987e5;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111110; --surface-1: #1a1a19; --border: #2e2e2c; --grid: #262624;
+  --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #8f8e86;
+  --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70;
+  --band: rgba(57,135,229,.2); --accent: #3987e5;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text-primary);
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+header { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+  padding: 14px 20px; border-bottom: 1px solid var(--border); background: var(--surface-1); }
+header h1 { font-size: 17px; margin: 0; font-weight: 650; }
+.badge { font-size: 12px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--text-secondary); }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+select, input, button { font: inherit; color: var(--text-primary); background: var(--surface-1);
+  border: 1px solid var(--border); border-radius: 6px; padding: 5px 8px; }
+button { cursor: pointer; } button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+nav { display: flex; gap: 2px; padding: 0 20px; background: var(--surface-1); border-bottom: 1px solid var(--border); overflow-x: auto; }
+nav button { border: 0; border-bottom: 2px solid transparent; border-radius: 0; background: none; padding: 10px 12px; color: var(--text-secondary); white-space: nowrap; }
+nav button[aria-selected="true"] { color: var(--text-primary); border-bottom-color: var(--accent); font-weight: 600; }
+main { padding: 18px 20px 40px; max-width: 1280px; margin: 0 auto; }
+.grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; min-width: 0; }
+.card h2 { font-size: 14px; margin: 0 0 10px; font-weight: 600; }
+.card .sub { color: var(--text-muted); font-size: 12px; margin-top: -6px; margin-bottom: 8px; }
+.tile .label { color: var(--text-secondary); font-size: 12px; }
+.tile .value { font-size: 26px; font-weight: 650; font-variant-numeric: tabular-nums; margin-top: 2px; }
+.tile .delta { font-size: 12px; color: var(--text-secondary); }
+.wide { grid-column: 1 / -1; }
+.ops { grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+th { color: var(--text-secondary); font-weight: 600; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.status { display: inline-flex; gap: 5px; align-items: center; font-size: 12px; white-space: nowrap; }
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--dot, var(--text-muted)); }
+.s-ok, .s-actionable, .s-met, .s-normal, .s-accepted { --dot: var(--good); }
+.s-degraded, .s-requires_review, .s-accepted_with_quarantine, .s-insufficient_evidence { --dot: var(--warning); }
+.s-insufficient_data, .s-unknown, .s-suppressed { --dot: var(--text-muted); }
+.s-failed, .s-rejected, .s-breached, .s-safe, .s-HIGH { --dot: var(--critical); }
+.s-MEDIUM { --dot: var(--serious); } .s-LOW { --dot: var(--warning); }
+.chart { position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { fill: var(--text-muted); font-size: 11px; }
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 3px; border-radius: 2px; margin-right: 6px; vertical-align: middle; background: var(--c); }
+.tooltip { position: absolute; pointer-events: none; background: var(--surface-1); border: 1px solid var(--border);
+  border-radius: 6px; padding: 6px 8px; font-size: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.12); white-space: nowrap; display: none; z-index: 5; }
+.bars .row { display: grid; grid-template-columns: minmax(90px, 34%) 1fr 90px; gap: 8px; align-items: center; padding: 3px 0; font-size: 13px; }
+.bars .track { height: 10px; }
+.bars .fill { height: 10px; background: var(--series-1); border-radius: 0 4px 4px 0; min-width: 2px; }
+.bars .key { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text-secondary); }
+.flag { font-size: 11px; color: var(--critical); margin-left: 4px; }
+.notice { border-left: 3px solid var(--warning); padding: 8px 12px; background: var(--surface-1); margin-bottom: 14px; border-radius: 4px; }
+.error { border-left-color: var(--critical); }
+.muted { color: var(--text-muted); }
+details summary { cursor: pointer; color: var(--text-secondary); font-size: 12px; }
+pre { white-space: pre-wrap; word-break: break-word; font-size: 12px; background: var(--bg); padding: 8px; border-radius: 6px; }
+.view[hidden] { display: none; }
+@media (max-width: 640px) { header, nav, main { padding-left: 16px; padding-right: 16px; } .bars .row { grid-template-columns: 38% 1fr 74px; } }
+</style>
+</head>
+<body>
+<header>
+  <div style="display:flex;gap:10px;align-items:center">
+    <h1>FinOps Cost Optimisation</h1>
+    <span class="badge" id="srcBadge">source: –</span>
+    <span class="badge" id="modeBadge">mode: –</span>
+  </div>
+  <div class="controls">
+    <label>Source <select id="source">
+      <option value="auto">auto (server default)</option><option value="mock">mock (synthetic)</option>
+      <option value="ingested">ingested</option><option value="live">live</option></select></label>
+    <label>Days <select id="days"><option>30</option><option selected>60</option><option>90</option><option>120</option><option>180</option><option>365</option></select></label>
+    <input id="apiKey" type="password" placeholder="X-API-Key (if required)" autocomplete="off" style="width:180px">
+    <button class="primary" id="refresh">Refresh</button>
+  </div>
+</header>
+<nav role="tablist" id="tabs"></nav>
+<main>
+  <div id="globalNotice"></div>
+  <section class="view" data-view="overview">
+    <div class="grid" id="tiles"></div>
+    <div class="grid" style="margin-top:14px">
+      <div class="card wide"><h2>Daily spend by provider</h2><div class="sub">UTC days · billed cost (<span class="cur">USD</span>)</div><div id="ovTrend" class="chart"></div></div>
+    </div>
+  </section>
+  <section class="view" data-view="spend" hidden>
+    <div class="controls" style="margin-bottom:12px">
+      <label>Granularity <select id="gran"><option>daily</option><option>weekly</option><option>monthly</option></select></label>
+      <label>Breakdown <select id="dim"><option>service</option><option>provider</option><option>account</option><option>region</option><option>resource</option><option>workload</option><option>category</option></select></label>
+    </div>
+    <div class="grid">
+      <div class="card wide"><h2>Spend trend</h2><div class="sub" id="trendSub"></div><div id="spendTrend" class="chart"></div></div>
+      <div class="card wide"><h2 id="bdTitle">Breakdown</h2><div class="sub" id="bdSub"></div><div id="breakdown" class="bars"></div></div>
+    </div>
+  </section>
+  <section class="view" data-view="anomalies" hidden>
+    <div class="card"><h2>Anomaly alerts</h2><div class="sub" id="anomSub"></div><div id="anomTable"></div></div>
+  </section>
+  <section class="view" data-view="forecast" hidden>
+    <div class="grid">
+      <div class="card wide"><h2>Forecast (next 30 days)</h2><div class="sub" id="fcSub"></div><div id="fcChart" class="chart"></div></div>
+      <div class="card wide"><h2>Back-test accuracy (held-out days)</h2><div id="backtest"></div></div>
+    </div>
+  </section>
+  <section class="view" data-view="optimization" hidden>
+    <div class="controls" style="margin-bottom:12px">
+      <label>Kind <select id="kind"><option value="">all</option><option>rightsizing</option><option>idle</option><option>commitment</option></select></label>
+      <span class="muted">Recommendations are advisory only, and nothing is applied automatically.</span>
+    </div>
+    <div class="card"><div id="recTable"></div></div>
+  </section>
+  <section class="view" data-view="savings" hidden>
+    <div class="grid" id="savTiles"></div>
+    <div class="grid" style="margin-top:14px">
+      <div class="card wide"><h2>Estimated savings by kind</h2><div class="sub">Actionable only · requires-review shown separately</div><div id="savBars" class="bars"></div></div>
+      <div class="card wide"><h2>Method</h2><div id="savMethod"></div></div>
+    </div>
+  </section>
+  <section class="view" data-view="operations" hidden>
+    <div class="grid ops">
+      <div class="card"><h2>Service health</h2><div id="health"></div></div>
+      <div class="card"><h2>SLOs (recent requests)</h2><div id="slo"></div></div>
+      <div class="card wide"><h2>Ingest billing export / utilisation</h2>
+        <div class="controls">
+          <select id="upKind"><option value="billing-csv">Billing CSV (FOCUS)</option><option value="billing-json">Billing JSON</option>
+            <option value="opencost">OpenCost allocation JSON</option><option value="utilization">Utilisation JSON</option></select>
+          <input type="file" id="upFile" accept=".csv,.json">
+          <button id="upBtn">Upload</button>
+        </div>
+        <div id="upResult" style="margin-top:10px"></div>
+      </div>
+      <div class="card wide"><h2>Data quality &amp; ingestion batches</h2><div id="quality"></div></div>
+      <div class="card wide"><h2>Recent health / recovery events</h2><div id="events"></div></div>
+    </div>
+  </section>
+</main>
+<div class="tooltip" id="tip" role="status"></div>
+<script>
+"use strict";
+const VIEWS = [["overview","Overview"],["spend","Spend analytics"],["anomalies","Anomalies"],["forecast","Forecast"],
+  ["optimization","Optimisation"],["savings","Savings"],["operations","Operations & validation"]];
+const $ = (id) => document.getElementById(id);
+const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+// Reporting currency comes from /healthz (engine config ingestion.base_currency). JSON keys keep
+// their historical *_usd names; the amounts are in this currency.
+const CUR = {code: "USD", symbol: "$", locale: undefined};
+const SYMBOLS = {USD: "$", INR: "₹", EUR: "€", GBP: "£", JPY: "¥"};
+function setCurrency(code) {
+  if (!code) return;
+  CUR.code = code; CUR.symbol = SYMBOLS[code] || code + " "; CUR.locale = code === "INR" ? "en-IN" : undefined;
+  document.querySelectorAll(".cur").forEach((el) => { el.textContent = code; });
+}
+const money = (v, d) => { const n = Number(v); return (n < 0 ? "-" : "") + CUR.symbol + Math.abs(n).toLocaleString(CUR.locale, {minimumFractionDigits: d, maximumFractionDigits: d}); };
+const usd = (v) => v == null ? "–" : money(v, 0);
+const usd2 = (v) => v == null ? "–" : money(v, 2);
+const pct = (v) => v == null ? "–" : (Number(v) * 100).toFixed(1) + "%";
+const st = (s) => `<span class="status s-${esc(s)}">${esc(String(s).replace(/_/g, " "))}</span>`;
+const PROVIDER_COLOR = {AWS: "var(--series-1)", GCP: "var(--series-2)", Azure: "var(--series-3)"};
+let current = "overview";
+
+function store(k, v) { try { v == null ? sessionStorage.removeItem(k) : sessionStorage.setItem(k, v); } catch (e) {} }
+function load(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
+
+function headers(extra) {
+  const h = Object.assign({}, extra || {}); const key = $("apiKey").value.trim();
+  if (key) h["X-API-Key"] = key; return h;
+}
+function qs(extra) {
+  const p = new URLSearchParams({source: $("source").value, days: $("days").value});
+  for (const [k, v] of Object.entries(extra || {})) if (v !== "" && v != null) p.set(k, v);
+  return p.toString();
+}
+async function api(path, opts) {
+  const res = await fetch(path, Object.assign({headers: headers()}, opts || {}));
+  let body = null; try { body = await res.json(); } catch (e) {}
+  if (!res.ok) throw new Error(`${res.status}: ${body && body.detail ? (typeof body.detail === "string" ? body.detail : JSON.stringify(body.detail)) : res.statusText}`);
+  return body;
+}
+function notice(msg, isError) { $("globalNotice").innerHTML = msg ? `<div class="notice ${isError ? "error" : ""}">${esc(msg)}</div>` : ""; }
+
+// ---------- tooltip ----------
+const tip = $("tip");
+function showTip(evt, html, host) {
+  const r = host.getBoundingClientRect(); tip.innerHTML = html; tip.style.display = "block";
+  let x = evt.clientX - r.left + 12, y = evt.clientY - r.top + 12;
+  host.appendChild(tip);
+  if (x + tip.offsetWidth > host.clientWidth) x = evt.clientX - r.left - tip.offsetWidth - 12;
+  tip.style.left = x + "px"; tip.style.top = y + "px";
+}
+function hideTip() { tip.style.display = "none"; }
+
+// ---------- line chart (shared x, one y-axis) ----------
+function lineChart(el, xs, series, opts) {
+  opts = opts || {};
+  if (!xs.length) { el.innerHTML = '<p class="muted">No data for this selection.</p>'; return; }
+  const W = 900, H = 260, L = 56, R = 70, T = 10, B = 26;
+  const all = series.flatMap((s) => s.values.concat(s.upper || [], s.lower || [])).filter((v) => v != null);
+  let max = Math.max(...all, 0) * 1.08 || 1; const min = 0;
+  const x = (i) => L + (xs.length === 1 ? (W - L - R) / 2 : i * (W - L - R) / (xs.length - 1));
+  const y = (v) => T + (H - T - B) * (1 - (v - min) / (max - min));
+  let g = "";
+  for (let k = 0; k <= 4; k++) { const v = min + (max - min) * k / 4;
+    g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--grid)" stroke-width="1"/>`;
+    g += `<text x="${L - 8}" y="${y(v) + 4}" text-anchor="end">${usd(v)}</text>`; }
+  const step = Math.max(1, Math.ceil(xs.length / 8));
+  xs.forEach((d, i) => {
+    const last = i === xs.length - 1;
+    if ((i % step === 0 && (last || xs.length - 1 - i >= step * 0.6)) || last)
+      g += `<text x="${x(i)}" y="${H - 6}" text-anchor="${last && xs.length > 1 ? "end" : "middle"}">${esc(d)}</text>`;
+  });
+  // End-of-line direct labels, nudged apart so they never collide.
+  const ends = series.filter(() => series.length <= 4).map((s) => {
+    let li = s.values.length - 1; while (li > 0 && s.values[li] == null) li--;
+    return {s, li, y: y(s.values[li] ?? 0)}; }).sort((a, b) => a.y - b.y);
+  for (let k = 1; k < ends.length; k++) if (ends[k].y - ends[k - 1].y < 13) ends[k].y = ends[k - 1].y + 13;
+  for (const s of series) {
+    if (s.upper && s.lower) {
+      const idx = s.upper.map((v, i) => (v == null ? null : i)).filter((i) => i != null);
+      const up = idx.map((i) => `${x(i)},${y(s.upper[i])}`).join(" ");
+      const lo = idx.map((i) => `${x(i)},${y(s.lower[i])}`).reverse().join(" ");
+      g += `<polygon points="${up} ${lo}" fill="var(--band)" stroke="none"/>`;
+    }
+    const pts = s.values.map((v, i) => v == null ? null : `${x(i)},${y(v)}`).filter(Boolean).join(" ");
+    g += `<polyline points="${pts}" fill="none" stroke="${s.color}" stroke-width="2" stroke-linejoin="round" ${s.dashed ? 'stroke-dasharray="5 4"' : ""}/>`;
+  }
+  for (const e of ends) g += `<text x="${x(e.li) + 6}" y="${e.y + 4}" style="fill:var(--text-secondary)">${esc(e.s.name)}</text>`;
+  for (const m of opts.markers || []) {
+    g += `<circle cx="${x(m.i)}" cy="${y(m.v)}" r="5" fill="var(--critical)" stroke="var(--surface-1)" stroke-width="2"/>`;
+  }
+  g += `<line id="xh" x1="0" x2="0" y1="${T}" y2="${H - B}" stroke="var(--text-muted)" stroke-width="1" visibility="hidden"/>`;
+  g += `<rect x="${L}" y="${T}" width="${W - L - R}" height="${H - T - B}" fill="transparent" class="hit"/>`;
+  const legend = series.length > 1 ? `<div class="legend">${series.map((s) => `<span style="--c:${s.color}">${esc(s.name)}</span>`).join("")}</div>` : "";
+  el.innerHTML = legend + `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.label || "line chart")}">${g}</svg>`;
+  const svg = el.querySelector("svg"), hit = svg.querySelector(".hit"), xh = svg.querySelector("#xh");
+  hit.addEventListener("mousemove", (evt) => {
+    const r = svg.getBoundingClientRect(); const px = (evt.clientX - r.left) * W / r.width;
+    const i = Math.max(0, Math.min(xs.length - 1, Math.round((px - L) / ((W - L - R) / Math.max(1, xs.length - 1)))));
+    xh.setAttribute("x1", x(i)); xh.setAttribute("x2", x(i)); xh.setAttribute("visibility", "visible");
+    const rows = series.map((s) => `<div><span style="color:${s.color}">■</span> ${esc(s.name)}: <b>${usd2(s.values[i])}</b>${s.upper && s.upper[i] != null ? ` <span class="muted">(${usd(s.lower[i])}–${usd(s.upper[i])})</span>` : ""}</div>`).join("");
+    showTip(evt, `<div class="muted">${esc(xs[i])}</div>${rows}`, el);
+  });
+  hit.addEventListener("mouseleave", () => { xh.setAttribute("visibility", "hidden"); hideTip(); });
+}
+
+function barList(el, items, valueKey, labelKey, fmt) {
+  if (!items.length) { el.innerHTML = '<p class="muted">No data.</p>'; return; }
+  const max = Math.max(...items.map((i) => Math.abs(i[valueKey]))) || 1;
+  el.innerHTML = items.map((i) => `<div class="row" title="${esc(i[labelKey])}"><div class="key">${esc(i[labelKey])}${(i.flags || []).map((f) => `<span class="flag">⚠ ${esc(f.replace(/_/g, " "))}</span>`).join("")}</div>
+    <div class="track"><div class="fill" style="width:${(100 * Math.abs(i[valueKey]) / max).toFixed(1)}%"></div></div><div class="num" style="text-align:right">${(fmt || usd)(i[valueKey])}${i.share != null ? ` <span class="muted">${pct(i.share)}</span>` : ""}</div></div>`).join("");
+}
+
+function table(cols, rows) {
+  if (!rows.length) return '<p class="muted">Nothing to show.</p>';
+  return `<div style="overflow-x:auto"><table><thead><tr>${cols.map((c) => `<th class="${c.num ? "num" : ""}">${esc(c.h)}</th>`).join("")}</tr></thead><tbody>${rows.map((r) => `<tr>${cols.map((c) => `<td class="${c.num ? "num" : ""}">${c.f(r)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+}
+
+function pivotTrend(series) {
+  const dates = [...new Set(series.map((s) => s.period))].sort();
+  const providers = [...new Set(series.map((s) => s.provider))].sort();
+  const idx = Object.fromEntries(dates.map((d, i) => [d, i]));
+  return {dates, lines: providers.map((p) => { const v = dates.map(() => 0);
+    series.filter((s) => s.provider === p).forEach((s) => { v[idx[s.period]] = s.cost_usd; });
+    return {name: p, color: PROVIDER_COLOR[p] || "var(--series-1)", values: v}; })};
+}
+
+// ---------- views ----------
+const loaders = {
+  async overview() {
+    const [ov, tr, sav, an] = await Promise.all([api("/api/v1/costs/overview?" + qs()),
+      api("/api/v1/costs/trends?" + qs({granularity: "daily", split_by_provider: true})),
+      api("/api/v1/savings/summary?" + qs()), api("/api/v1/anomalies/detect?" + qs({use_mock: $("source").value === "mock" ? "true" : ""}))]);
+    $("srcBadge").textContent = "source: " + ov.data_source;
+    const c = ov.comparison;
+    $("tiles").innerHTML = [
+      ["Spend in period", usd(ov.overview.total_cost_usd), `${ov.overview.days_covered || 0} days · avg ${usd(ov.overview.average_daily_cost_usd)}/day`],
+      [`Last ${c.window_days} days vs prior`, c.change_pct == null ? "–" : (c.change_pct > 0 ? "+" : "") + c.change_pct + "%", `${usd(c.current_usd)} vs ${usd(c.previous_usd)}`],
+      ["Open anomalies", an.anomalies_detected_count, `${an.anomalies.filter((a) => a.severity === "HIGH").length} high severity`],
+      ["Estimated savings / month", usd(sav.estimated_monthly_savings_usd), `${sav.estimated_relative_savings_pct ?? "–"}% of reference · estimated, not realised`],
+      ["Unattributed spend", pct(ov.attribution.unattributed_share), `${ov.attribution.conflicting_resource_ids.length} resources with conflicting attribution`],
+    ].map(([l, v, d]) => `<div class="card tile"><div class="label">${esc(l)}</div><div class="value">${esc(v)}</div><div class="delta">${esc(d)}</div></div>`).join("");
+    const p = pivotTrend(tr.series); lineChart($("ovTrend"), p.dates, p.lines, {label: "Daily spend by provider"});
+  },
+  async spend() {
+    const gran = $("gran").value, dim = $("dim").value;
+    const [tr, bd] = await Promise.all([api("/api/v1/costs/trends?" + qs({granularity: gran})),
+      api("/api/v1/costs/breakdown?" + qs({dimension: dim, top_n: 15}))]);
+    $("trendSub").textContent = `${gran} · UTC · ${tr.metric.replace("_", " ")} · source ${tr.data_source}`;
+    lineChart($("spendTrend"), tr.series.map((s) => s.period), [{name: "Total", color: "var(--series-1)", values: tr.series.map((s) => s.cost_usd)}], {label: "Spend trend"});
+    $("bdTitle").textContent = "Breakdown by " + dim;
+    $("bdSub").textContent = `Total ${usd2(bd.total_cost_usd)} · unattributed ${usd2(bd.unattributed_cost_usd)}${bd.other ? ` · ${bd.other.members} more in (other) ${usd(bd.other.cost_usd)}` : ""}`;
+    barList($("breakdown"), bd.items, "cost_usd", "key");
+  },
+  async anomalies() {
+    const an = await api("/api/v1/anomalies/detect?" + qs({use_mock: $("source").value === "mock" ? "true" : ""}));
+    $("anomSub").textContent = `${an.anomalies_detected_count} alerts · ${an.analyzed_days} days analysed · source ${an.data_source}`;
+    $("anomTable").innerHTML = table([
+      {h: "Severity", f: (a) => st(a.severity)}, {h: "Day (UTC)", f: (a) => esc(a.date)},
+      {h: "Entity", f: (a) => `${esc(a.provider)} · ${esc(a.service)}<div class="muted">${esc((a.affected_entity?.accounts || []).join(", "))}</div>`},
+      {h: "Observed", num: true, f: (a) => usd2(a.observed_cost_usd ?? a.actual_cost_usd)},
+      {h: "Expected", num: true, f: (a) => usd2(a.expected_cost_usd ?? a.expected_baseline_usd)},
+      {h: "Score (z)", num: true, f: (a) => esc(a.score ?? a.z_score)},
+      {h: "Status", f: (a) => st(a.status || "open")},
+      {h: "Reason / evidence", f: (a) => `${esc(a.reason || a.root_cause)}<details><summary>evidence</summary><pre>${esc(JSON.stringify(a.evidence, null, 1))}</pre></details>`},
+    ], an.anomalies);
+  },
+  async forecast() {
+    const [fc, tr, bt] = await Promise.all([api("/api/v1/forecast/predict?" + qs({forecast_days: 30, use_mock: $("source").value === "mock" ? "true" : ""})),
+      api("/api/v1/costs/trends?" + qs({granularity: "daily"})), api("/api/v1/forecast/backtest?" + qs({days: 120, holdout_days: 14})).catch((e) => ({status: "error", status_reason: e.message}))]);
+    $("fcSub").textContent = `${fc.method || ""} · ${fc.status || ""}${fc.status_reason ? " – " + fc.status_reason : ""} · projected ${usd(fc.total_projected_spend_usd)} · shaded = 95% prediction interval`;
+    const hist = tr.series.slice(-45); const xs = hist.map((h) => h.period).concat(fc.forecast.map((f) => f.date));
+    const n = hist.length, pad = (arr, before) => before ? arr.concat(Array(fc.forecast.length).fill(null)) : Array(n).fill(null).concat(arr);
+    lineChart($("fcChart"), xs, [
+      {name: "Actual", color: "var(--series-1)", values: pad(hist.map((h) => h.cost_usd), true)},
+      {name: "Forecast", color: "var(--series-2)", dashed: true, values: pad(fc.forecast.map((f) => f.predicted_cost_usd), false),
+       upper: pad(fc.forecast.map((f) => f.confidence_upper_usd), false), lower: pad(fc.forecast.map((f) => f.confidence_lower_usd), false)},
+    ], {label: "Forecast"});
+    if (bt.status !== "ok") { $("backtest").innerHTML = `<p>${st("insufficient_data")} ${esc(bt.status_reason)}</p>`; return; }
+    const rows = [["Model (" + bt.method + ")", bt.model], ["Naive: last value", bt.baselines.naive_last_value], ["Naive: 7-day mean", bt.baselines.naive_mean_7d]];
+    $("backtest").innerHTML = `<p class="muted">Train ${esc(bt.train_period.join(" → "))} · hold-out ${esc(bt.holdout_period.join(" → "))} · 95% interval coverage ${pct(bt.prediction_interval_coverage)}</p>` +
+      table([{h: "Method", f: (r) => esc(r[0])}, {h: "MAE", num: true, f: (r) => usd2(r[1].mae_usd)}, {h: "RMSE", num: true, f: (r) => usd2(r[1].rmse_usd)}, {h: "MAPE", num: true, f: (r) => r[1].mape_pct == null ? esc(r[1].mape_note) : r[1].mape_pct + "%"}], rows);
+  },
+  async optimization() {
+    const r = await api("/api/v1/recommendations?" + qs({kind: $("kind").value}));
+    const notes = (r.notes || []).map((n) => `<div class="notice">${esc(n)}</div>`).join("");
+    $("recTable").innerHTML = notes + table([
+      {h: "Status", f: (x) => st(x.status)}, {h: "Kind", f: (x) => esc(x.kind)},
+      {h: "Resource / service", f: (x) => `${esc(x.resource_id || x.service)}<div class="muted">${esc(x.provider || "")}</div>`},
+      {h: "Action", f: (x) => esc(x.action.replace(/_/g, " "))},
+      {h: "Est. savings / mo", num: true, f: (x) => usd2(x.estimated_monthly_savings_usd)},
+      {h: "Confidence", f: (x) => esc(x.confidence)},
+      {h: "Reason & next step", f: (x) => `${esc(x.reason)}<details><summary>assumptions, limitations, next action</summary><pre>${esc(JSON.stringify({safe_next_action: x.safe_next_action, assumptions: x.assumptions, limitations: x.limitations, evidence: x.evidence}, null, 1))}</pre></details>`},
+    ], r.recommendations);
+  },
+  async savings() {
+    const s = await api("/api/v1/savings/summary?" + qs());
+    $("savTiles").innerHTML = [
+      ["Reference monthly cost", usd(s.reference.monthly_cost_usd), `${s.reference.window_start || "–"} → ${s.reference.window_end || "–"}`],
+      ["Estimated savings / month", usd(s.estimated_monthly_savings_usd), `${s.estimated_relative_savings_pct ?? "–"}% of reference (actionable only)`],
+      ["Potential, needs review", usd(s.potential_monthly_savings_requires_review_usd), "not counted in the estimate"],
+      ["Realised savings", s.realized_savings.monthly_usd == null ? "not measured" : usd(s.realized_savings.monthly_usd), s.realized_savings.status],
+    ].map(([l, v, d]) => `<div class="card tile"><div class="label">${esc(l)}</div><div class="value">${esc(v)}</div><div class="delta">${esc(d)}</div></div>`).join("");
+    barList($("savBars"), Object.entries(s.by_kind).map(([k, v]) => ({key: k, value: v.actionable})), "value", "key");
+    $("savMethod").innerHTML = `<p>${esc(s.formula)}</p><p class="muted">Reference: ${esc(s.reference.formula || "")}</p><ul>${s.double_counting_controls.map((c) => `<li>${esc(c)}</li>`).join("")}</ul><p class="muted">${esc(s.realized_savings.reason || "")}</p>`;
+  },
+  async operations() {
+    const [h, slo, rep] = await Promise.all([api("/api/v1/ops/health"), api("/api/v1/ops/slo"), api("/api/v1/ingest/reports")]);
+    $("modeBadge").textContent = "mode: " + h.mode;
+    $("health").innerHTML = `<p>Overall ${st(h.overall_status)} · mode ${st(h.mode)} · config ${esc(h.config_version)}</p>` +
+      table([{h: "Component", f: (c) => esc(c.name)}, {h: "Status", f: (c) => st(c.status)}, {h: "Detail", f: (c) => esc(c.detail)}], h.components) +
+      `<ul>${h.operator_guidance.map((g) => `<li>${esc(g)}</li>`).join("")}</ul>`;
+    const m = slo.measurement;
+    $("slo").innerHTML = table([{h: "Objective", f: (r) => esc(r[0])}, {h: "Measured", num: true, f: (r) => esc(r[1])}, {h: "Target", num: true, f: (r) => esc(r[2])}, {h: "Status", f: (r) => st(r[3])}], [
+      ["p95 latency (ms)", m.p95_ms ?? "–", slo.targets.p95_latency_ms_target, slo.status.p95_latency],
+      ["Server error rate", m.server_error_rate ?? "–", slo.targets.max_error_rate, slo.status.error_rate],
+      ["Data integrity", h.mode, "not safe mode", slo.status.data_integrity]]) + `<p class="muted">${m.sample_count} requests sampled · ${esc(slo.note)}</p>`;
+    const q = rep.quality;
+    $("quality").innerHTML = `<p>${q.batches} batches · ${q.records} records · quarantine ratio ${q.quarantine_ratio == null ? "–" : pct(q.quarantine_ratio)} · attributed cost ${q.attributed_cost_share == null ? "–" : pct(q.attributed_cost_share)} · ${q.utilization_samples} utilisation samples</p>` +
+      table([{h: "Batch", f: (b) => esc(b.batch_id)}, {h: "Source", f: (b) => esc(b.source_name)}, {h: "Status", f: (b) => st(b.status)},
+        {h: "Rows in / ok / quarantined / dup", num: true, f: (b) => `${b.rows_received} / ${b.rows_accepted ?? 0} / ${b.rows_quarantined ?? 0} / ${b.rows_duplicate ?? 0}`},
+        {h: "Reasons", f: (b) => esc(Object.entries(b.quarantine_reasons || {}).map(([k, v]) => `${k}×${v}`).join(", ") || b.rejection_reason || "–")}], rep.batches);
+    $("events").innerHTML = table([{h: "Time (UTC)", f: (e) => esc(e.ts.replace("T", " ").slice(0, 19))}, {h: "Component", f: (e) => esc(e.component)}, {h: "Event", f: (e) => st(e.event)}, {h: "Detail", f: (e) => esc(e.detail)}], h.recent_events.slice().reverse());
+  },
+};
+
+async function render() {
+  notice("");
+  for (const s of document.querySelectorAll(".view")) s.hidden = s.dataset.view !== current;
+  for (const b of document.querySelectorAll("nav button")) b.setAttribute("aria-selected", String(b.dataset.view === current));
+  try { await loaders[current](); }
+  catch (e) { notice("Could not load this view: " + e.message + (String(e.message).startsWith("401") ? " (enter the API key)" : ""), true); }
+  api("/api/v1/ops/health").then((h) => { $("modeBadge").textContent = "mode: " + h.mode; }).catch(() => {});
+}
+
+$("upBtn").addEventListener("click", async () => {
+  const f = $("upFile").files[0]; if (!f) { $("upResult").textContent = "Choose a file first."; return; }
+  const kind = $("upKind").value;
+  const url = {"billing-csv": "/api/v1/ingest/billing?format=csv", "billing-json": "/api/v1/ingest/billing?format=json",
+    "opencost": "/api/v1/ingest/opencost", "utilization": "/api/v1/ingest/utilization"}[kind] + (kind.startsWith("billing") ? "&source_name=" + encodeURIComponent(f.name) : "");
+  try {
+    const r = await api(url, {method: "POST", body: await f.arrayBuffer(), headers: headers({"Content-Type": kind === "billing-csv" ? "text/csv" : "application/json"})});
+    $("upResult").innerHTML = `<pre>${esc(JSON.stringify(r, null, 1))}</pre>`; $("source").value = "ingested"; store("source", "ingested");
+  } catch (e) { $("upResult").innerHTML = `<div class="notice error">${esc(e.message)}</div>`; }
+  render();
+});
+
+$("tabs").innerHTML = VIEWS.map(([k, l]) => `<button role="tab" data-view="${k}">${esc(l)}</button>`).join("");
+$("tabs").addEventListener("click", (e) => { const v = e.target.dataset?.view; if (v) { current = v; store("view", v); render(); } });
+for (const id of ["source", "days", "gran", "dim", "kind"]) $(id).addEventListener("change", () => { store(id, $(id).value); render(); });
+$("refresh").addEventListener("click", render);
+// The API key is deliberately kept in memory only (never persisted to storage).
+for (const id of ["source", "days", "gran", "dim", "kind"]) { const v = load(id); if (v != null) $(id).value = v; }
+// Optional deep link, e.g. /dashboard?source=ingested&days=90 (only values present in the menus are accepted).
+const qp = new URLSearchParams(location.search);
+for (const id of ["source", "days"]) { const v = qp.get(id); if (v && [...$(id).options].some((o) => o.value === v)) { $(id).value = v; store(id, v); } }
+current = load("view") || "overview"; if (!loaders[current]) current = "overview";
+fetch("/healthz").then((r) => r.json()).then((h) => setCurrency(h.currency)).catch(() => {}).finally(render);
+</script>
+</body>
+</html>

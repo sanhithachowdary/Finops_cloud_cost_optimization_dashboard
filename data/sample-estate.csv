@@ -1,0 +1,18 @@
+provider,service,resource_id,account,region,usage_type,unit,price_usd,qty_per_day,kind,cpu_mean,noise,growth_per_day,tags
+AWS,AmazonEC2,i-0a1web01,111111111111,ap-south-1,BoxUsage:m5.4xlarge,Hours,0.768,24.0,compute,58.0,0.03,0.0,team=web;env=prod
+AWS,AmazonEC2,i-0b2batch01,222222222222,ap-south-1,BoxUsage:c5.2xlarge,Hours,0.34,24.0,compute,12.0,0.03,0.0,team=data;env=dev
+AWS,AmazonRDS,db-orders-prod,111111111111,ap-south-1,InstanceUsage:db.r5.2xlarge,Hours,1.0,24.0,database,46.0,0.03,0.0,team=orders;env=prod
+AWS,AmazonS3,s3-media-assets,111111111111,ap-south-1,TimedStorage-ByteHrs,GB-Month,0.023,1333.3333333333333,storage,,0.03,0.0005,team=web;env=prod
+AWS,AWSLambda,fn-image-resize,111111111111,ap-south-1,Lambda-GB-Second,GB-Seconds,1.66667e-05,1200000.0,serverless,,0.12,0.001,team=web;env=prod
+AWS,AmazonEKS,eks-shop-checkout,111111111111,ap-south-1,NodeGroup:m5.2xlarge,Hours,0.384,72.0,compute,63.0,0.03,0.0,team=shop;env=prod;k8s_cluster=eks-shop;k8s_namespace=checkout;k8s_workload=checkout-api
+Azure,Virtual Machines,vm-erp-app-01,sub-erp-prod,centralindia,D8s v5,Hours,0.384,24.0,compute,61.0,0.03,0.0,team=erp;env=prod
+Azure,Virtual Machines,vm-reporting-02,sub-erp-prod,centralindia,D4s v5,Hours,0.192,24.0,compute,34.0,0.03,0.0,team=finance;env=prod
+Azure,Azure SQL Database,sql-erp-prod,sub-erp-prod,centralindia,vCore General Purpose,Hours,0.5,24.0,database,52.0,0.03,0.0,team=erp;env=prod
+Azure,Storage,st-erp-archive,sub-erp-prod,centralindia,Hot LRS Data Stored,GB-Month,0.018,666.6666666666666,storage,,0.03,0.0003,team=erp;env=prod
+Azure,Azure Functions,func-invoice-pdf,sub-erp-prod,centralindia,Execution Time,GB-Seconds,1.6e-05,600000.0,serverless,,0.12,0.0,team=finance;env=prod
+GCP,Compute Engine,gce-ml-train-01,proj-analytics,asia-south1,N2 Instance Core,Hours,0.388,24.0,compute,71.0,0.03,0.0,team=ml;env=prod
+GCP,Kubernetes Engine,gke-reco-pool,proj-analytics,asia-south1,E2 node pool,Hours,0.268,72.0,compute,57.0,0.03,0.0,team=ml;env=prod;k8s_cluster=gke-analytics;k8s_namespace=reco;k8s_workload=recommendation-api
+GCP,Cloud SQL,csql-analytics,proj-analytics,asia-south1,DB custom CORE,Hours,0.4,24.0,database,48.0,0.03,0.0,team=ml;env=prod
+GCP,Cloud Storage,gcs-datalake,proj-analytics,asia-south1,Standard Storage,GB-Month,0.02,500.0,storage,,0.03,0.0008,team=ml;env=prod
+GCP,BigQuery,bq-analytics,proj-analytics,asia-south1,Analysis,GB,0.00625,800.0,analytics,,0.3,0.0,team=ml;env=prod
+AWS,AWS Data Transfer,,,ap-south-1,DataTransfer-Out-Bytes,GB,0.09,35.0,network,,0.1,0.0,

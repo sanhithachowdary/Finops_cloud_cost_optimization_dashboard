@@ -1,0 +1,47 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.6.0 -- <venv>/bin/python
+rootdir: <repo>
+configfile: pyproject.toml
+plugins: anyio-4.15.1
+collecting ... collected 38 items
+
+tests/negative/test_nt1_billing_complexity.py::test_each_problem_row_is_quarantined_with_the_right_reason PASSED [  2%]
+tests/negative/test_nt1_billing_complexity.py::test_exact_duplicate_counted_once PASSED [  5%]
+tests/negative/test_nt1_billing_complexity.py::test_accepted_rows_and_transformations PASSED [  7%]
+tests/negative/test_nt1_billing_complexity.py::test_totals_reconcile_no_silent_corruption PASSED [ 10%]
+tests/negative/test_nt1_billing_complexity.py::test_high_quarantine_ratio_enters_safe_mode_and_suppresses_recommendations PASSED [ 13%]
+tests/negative/test_nt1_billing_complexity.py::test_api_rejects_unparseable_and_oversized_payloads PASSED [ 15%]
+tests/negative/test_nt2_attribution.py::test_totals_preserved_and_unattributed_bucket_explicit PASSED [ 18%]
+tests/negative/test_nt2_attribution.py::test_conflicting_attribution_detected_and_flagged PASSED [ 21%]
+tests/negative/test_nt2_attribution.py::test_recommendation_on_conflicting_resource_requires_review PASSED [ 23%]
+tests/negative/test_nt2_attribution.py::test_conflict_detected_across_batches PASSED [ 26%]
+tests/negative/test_nt2_attribution.py::test_opencost_row_without_determinable_provider_is_quarantined PASSED [ 28%]
+tests/negative/test_nt2_attribution.py::test_opencost_idle_allocation_is_unattributed_workload PASSED [ 31%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_missing_utilization_is_insufficient_data PASSED [ 34%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_unsupported_resource_type_rejected PASSED [ 36%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_short_observation_window_requires_review PASSED [ 39%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_implausible_savings_rejected PASSED [ 42%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_protected_resource_requires_review PASSED [ 44%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_no_billing_evidence_requires_review_without_savings PASSED [ 47%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_cpu_only_idle_signal_is_not_actionable PASSED [ 50%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_disk_with_unknown_attachment_is_insufficient PASSED [ 52%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_safe_mode_suppresses_everything PASSED [ 55%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_invalid_utilization_values_rejected_at_the_boundary PASSED [ 57%]
+tests/negative/test_nt3_unsafe_recommendation.py::test_no_recommendation_is_ever_auto_applied PASSED [ 60%]
+tests/negative/test_nt4_latency_overload.py::test_slow_dependency_is_bounded_in_time_and_attempts PASSED [ 63%]
+tests/negative/test_nt4_latency_overload.py::test_breaker_opens_fails_fast_then_recovers PASSED [ 65%]
+tests/negative/test_nt4_latency_overload.py::test_partial_failure_is_labelled_not_hidden PASSED [ 68%]
+tests/negative/test_nt4_latency_overload.py::test_saturation_is_rejected_immediately PASSED [ 71%]
+tests/negative/test_nt4_latency_overload.py::test_retry_count_is_bounded PASSED [ 73%]
+tests/negative/test_nt4_latency_overload.py::test_open_breaker_raises_without_calling PASSED [ 76%]
+tests/negative/test_nt4_latency_overload.py::test_timeout_error_type PASSED [ 78%]
+tests/negative/test_nt4_latency_overload.py::test_api_returns_503_quickly_when_live_dependency_hangs PASSED [ 81%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_metrics_refresh_failure_is_visible PASSED [ 84%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_stale_telemetry_reported_unknown_not_ok PASSED [ 86%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_no_signal_is_unknown PASSED [ 89%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_live_mode_without_utilization_says_not_evaluated PASSED [ 92%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_corrupt_utilization_samples_rejected_with_reasons PASSED [ 94%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_slo_verdict_requires_enough_evidence PASSED [ 97%]
+tests/negative/test_nt5_insufficient_telemetry.py::test_unhandled_error_returns_incident_id_not_stack_trace PASSED [100%]
+
+============================= 38 passed in 13.24s ==============================

@@ -1,0 +1,199 @@
+{
+  "data_label": "GENERATED bills (scripts/period_bills.py, seed 2026, events preset 'demo'); not real bills",
+  "config_version": "2026.10-v2-inr",
+  "currency": "INR",
+  "uploads": [
+    {
+      "source_name": "focus_bill_2026-01-01_2026-03-31.csv",
+      "rows_received": 1530,
+      "rows_accepted": 1530,
+      "rows_duplicate": 0,
+      "rows_quarantined": 0,
+      "quarantine_reasons": {},
+      "idempotent_replay": false
+    },
+    {
+      "source_name": "focus_bill_2026-03-01_2026-06-30_inr.csv",
+      "rows_received": 2074,
+      "rows_accepted": 1547,
+      "rows_duplicate": 527,
+      "rows_quarantined": 0,
+      "quarantine_reasons": {},
+      "idempotent_replay": false
+    },
+    {
+      "source_name": "focus_bill_2026-07-01_2026-09-30.csv",
+      "rows_received": 1564,
+      "rows_accepted": 1564,
+      "rows_duplicate": 0,
+      "rows_quarantined": 0,
+      "quarantine_reasons": {},
+      "idempotent_replay": false
+    },
+    {
+      "source_name": "focus_bill_2026-01-01_2026-03-31.csv",
+      "rows_received": 1530,
+      "rows_accepted": 1530,
+      "rows_duplicate": 0,
+      "rows_quarantined": 0,
+      "quarantine_reasons": {},
+      "idempotent_replay": true
+    }
+  ],
+  "spend": {
+    "engine_total": 6546320.17,
+    "oracle_total": 6546320.17,
+    "distinct_lines": 4641,
+    "period": [
+      "2026-01-01",
+      "2026-09-30"
+    ],
+    "engine_by_provider": {
+      "AWS": 3687811.36,
+      "GCP": 1616042.23,
+      "Azure": 1242466.58
+    },
+    "oracle_by_provider": {
+      "AWS": 3687811.36,
+      "Azure": 1242466.58,
+      "GCP": 1616042.23
+    }
+  },
+  "anomalies": {
+    "alerts": [
+      [
+        "2026-02-20",
+        "AWS",
+        "AWSLambda",
+        8807.72,
+        2036.53
+      ],
+      [
+        "2026-08-14",
+        "Azure",
+        "Azure Functions",
+        3463.79,
+        901.84
+      ],
+      [
+        "2026-06-10",
+        "GCP",
+        "Kubernetes Engine",
+        3664.31,
+        1832.16
+      ],
+      [
+        "2026-05-12",
+        "AWS",
+        "AWSLambda",
+        2866.09,
+        2137.78
+      ]
+    ],
+    "planted": [
+      [
+        "2026-02-20",
+        "AWS",
+        "AWSLambda"
+      ],
+      [
+        "2026-06-10",
+        "GCP",
+        "Kubernetes Engine"
+      ],
+      [
+        "2026-08-14",
+        "Azure",
+        "Azure Functions"
+      ]
+    ],
+    "true_positives": 3,
+    "false_positives": [
+      [
+        "2026-05-12",
+        "AWS",
+        "AWSLambda"
+      ]
+    ],
+    "missed": [],
+    "precision": 0.75,
+    "recall": 1.0
+  },
+  "forecast": {
+    "forecast_days": 30,
+    "total_projected_spend_usd": 776902.22,
+    "average_daily_projected_usd": 25896.74,
+    "confidence_level": "95%",
+    "data_source": "ingested",
+    "status": "ok",
+    "status_reason": null,
+    "method": "linear_regression_with_t_prediction_interval",
+    "history_days": 273,
+    "trend_usd_per_day": 12.6571
+  },
+  "backtest": {
+    "status": "ok",
+    "method": "linear_regression_with_t_prediction_interval",
+    "train_days": 259,
+    "holdout_days": 14,
+    "train_period": [
+      "2026-01-01",
+      "2026-09-16"
+    ],
+    "holdout_period": [
+      "2026-09-17",
+      "2026-09-30"
+    ],
+    "model": {
+      "mae_usd": 359.73,
+      "rmse_usd": 409.81,
+      "mape_pct": 1.43,
+      "mape_note": null
+    },
+    "baselines": {
+      "naive_last_value": {
+        "mae_usd": 903.16,
+        "rmse_usd": 935.99,
+        "mape_pct": 3.56,
+        "mape_note": null
+      },
+      "naive_mean_7d": {
+        "mae_usd": 482.56,
+        "rmse_usd": 541.53,
+        "mape_pct": 1.9,
+        "mape_note": null
+      }
+    },
+    "prediction_interval_coverage": 1.0,
+    "nominal_interval": 0.95,
+    "beats_best_naive_baseline_on_mae": true,
+    "holdout_total_actual_usd": 354765.33,
+    "holdout_total_predicted_usd": 359562.14,
+    "data_source": "ingested"
+  },
+  "recommendations": {
+    "rightsizing": {
+      "requires_review": 1,
+      "suppressed": 1
+    },
+    "idle": {
+      "requires_review": 1
+    },
+    "commitment": {
+      "actionable": 12
+    }
+  },
+  "savings": {
+    "estimated_monthly_savings_usd": 121583.04,
+    "potential_monthly_savings_requires_review_usd": 24747.77,
+    "estimated_relative_savings_pct": 16.19
+  },
+  "checks": {
+    "all_bills_accepted_without_quarantine": true,
+    "overlap_counted_once": true,
+    "reupload_is_idempotent": true,
+    "total_matches_oracle": true,
+    "providers_match_oracle": true,
+    "all_planted_anomalies_found": true
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "version": "2026.10-v2-sample-inr",
+  "ingestion": {
+    "supported_schema_versions": [
+      "1.0",
+      "1.0-preview",
+      "1.1"
+    ],
+    "base_currency": "INR",
+    "fx_rates_to_base": {
+      "USD": 94.95
+    },
+    "accepted_usage_units": [
+      "Hours",
+      "GB-Hours",
+      "GB-Months",
+      "GB",
+      "Requests",
+      "vCPU-Hours",
+      "Count",
+      "GB-Seconds",
+      "Invocations"
+    ],
+    "max_abs_cost_per_row": 1000000.0,
+    "max_rows_per_batch": 200000,
+    "max_upload_bytes": 20971520,
+    "quarantine_ratio_safe_mode": 0.2,
+    "max_future_skew_hours": 48
+  },
+  "anomaly": {
+    "contamination": 0.05,
+    "z_threshold": 3.0,
+    "baseline_window_days": 14,
+    "min_baseline_points": 3,
+    "min_relative_excess": 0.2,
+    "min_absolute_excess_usd": 95,
+    "severity_high_excess_usd": 19000.0,
+    "severity_medium_excess_usd": 4750.0
+  },
+  "forecast": {
+    "default_horizon_days": 30,
+    "min_history_days": 14,
+    "backtest_holdout_days": 14
+  },
+  "rightsizing": {
+    "min_observation_days": 14,
+    "cpu_p95_threshold_pct": 40.0,
+    "mem_p95_threshold_pct": 50.0,
+    "one_step_savings_fraction": 0.5,
+    "max_plausible_savings_fraction": 0.9,
+    "supported_resource_types": [
+      "vm",
+      "k8s_workload",
+      "database"
+    ]
+  },
+  "idle": {
+    "min_observation_days": 7,
+    "cpu_p95_idle_pct": 3.0,
+    "max_requests_per_day": 5.0,
+    "max_network_mb_per_day": 5.0,
+    "protected_tag_keys": [
+      "do-not-delete",
+      "finops-exempt"
+    ],
+    "protected_tag_values": {
+      "env": "prod"
+    }
+  },
+  "commitments": {
+    "min_history_days": 30,
+    "max_coefficient_of_variation": 0.35,
+    "coverage_target": 0.8,
+    "eligible_categories": [
+      "Compute",
+      "Database",
+      "Container"
+    ],
+    "assumed_discount_rate": {
+      "AWS": 0.28,
+      "GCP": 0.25,
+      "Azure": 0.3
+    }
+  },
+  "resilience": {
+    "connector_timeout_seconds": 20.0,
+    "connector_max_retries": 2,
+    "retry_backoff_seconds": 0.5,
+    "breaker_failure_threshold": 3,
+    "breaker_reset_seconds": 60.0,
+    "telemetry_stale_factor": 3.0
+  },
+  "slo": {
+    "availability_target": 0.99,
+    "p95_latency_ms_target": 1500.0,
+    "max_error_rate": 0.01,
+    "max_recovery_seconds": 60.0,
+    "data_integrity_reconciliation_tolerance_usd": 0.01
+  }
+}

@@ -1,0 +1,1093 @@
+ChargePeriodStart,ChargePeriodEnd,ProviderName,ServiceName,ResourceId,UsageType,UsageQuantity,UsageUnit,ContractedUnitPrice,BilledCost,BillingCurrency,ResourceUtilizationPercent
+2026-04-01T00:00:00Z,2026-04-01T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,61.24
+2026-04-01T00:00:00Z,2026-04-01T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,78.52
+2026-04-01T00:00:00Z,2026-04-01T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,71.96
+2026-04-01T00:00:00Z,2026-04-01T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1110268.0,GB-Seconds,1.667e-05,18.5082,USD,67.91
+2026-04-01T00:00:00Z,2026-04-01T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,63.37
+2026-04-01T00:00:00Z,2026-04-01T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,53.0
+2026-04-01T00:00:00Z,2026-04-01T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,63.78
+2026-04-01T00:00:00Z,2026-04-01T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4009908.0,GB-Seconds,1.6e-05,64.1585,USD,68.03
+2026-04-01T00:00:00Z,2026-04-01T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,71.24
+2026-04-01T00:00:00Z,2026-04-01T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,50.62
+2026-04-01T00:00:00Z,2026-04-01T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,79.1
+2026-04-01T00:00:00Z,2026-04-01T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2766891.0,Invocations,2.5e-06,6.9172,USD,78.16
+2026-04-02T00:00:00Z,2026-04-02T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,50.02
+2026-04-02T00:00:00Z,2026-04-02T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,79.77
+2026-04-02T00:00:00Z,2026-04-02T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,68.52
+2026-04-02T00:00:00Z,2026-04-02T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2396025.0,GB-Seconds,1.667e-05,39.9417,USD,65.74
+2026-04-02T00:00:00Z,2026-04-02T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,62.96
+2026-04-02T00:00:00Z,2026-04-02T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,58.74
+2026-04-02T00:00:00Z,2026-04-02T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,68.36
+2026-04-02T00:00:00Z,2026-04-02T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4530409.0,GB-Seconds,1.6e-05,72.4865,USD,51.4
+2026-04-02T00:00:00Z,2026-04-02T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,79.21
+2026-04-02T00:00:00Z,2026-04-02T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,56.98
+2026-04-02T00:00:00Z,2026-04-02T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,52.72
+2026-04-02T00:00:00Z,2026-04-02T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1953277.0,Invocations,2.5e-06,4.8832,USD,55.99
+2026-04-03T00:00:00Z,2026-04-03T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,65.43
+2026-04-03T00:00:00Z,2026-04-03T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,67.77
+2026-04-03T00:00:00Z,2026-04-03T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,51.39
+2026-04-03T00:00:00Z,2026-04-03T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1528178.0,GB-Seconds,1.667e-05,25.4747,USD,70.41
+2026-04-03T00:00:00Z,2026-04-03T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,63.51
+2026-04-03T00:00:00Z,2026-04-03T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,50.4
+2026-04-03T00:00:00Z,2026-04-03T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,78.27
+2026-04-03T00:00:00Z,2026-04-03T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4385357.0,GB-Seconds,1.6e-05,70.1657,USD,74.25
+2026-04-03T00:00:00Z,2026-04-03T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,59.14
+2026-04-03T00:00:00Z,2026-04-03T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,52.93
+2026-04-03T00:00:00Z,2026-04-03T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,70.53
+2026-04-03T00:00:00Z,2026-04-03T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4003758.0,Invocations,2.5e-06,10.0094,USD,70.5
+2026-04-04T00:00:00Z,2026-04-04T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,28.3
+2026-04-04T00:00:00Z,2026-04-04T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,35.0
+2026-04-04T00:00:00Z,2026-04-04T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,15.2
+2026-04-04T00:00:00Z,2026-04-04T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2870928.0,GB-Seconds,1.667e-05,47.8584,USD,17.76
+2026-04-04T00:00:00Z,2026-04-04T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,29.88
+2026-04-04T00:00:00Z,2026-04-04T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,19.35
+2026-04-04T00:00:00Z,2026-04-04T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,25.6
+2026-04-04T00:00:00Z,2026-04-04T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4486825.0,GB-Seconds,1.6e-05,71.7892,USD,27.03
+2026-04-04T00:00:00Z,2026-04-04T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,10.94
+2026-04-04T00:00:00Z,2026-04-04T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,35.27
+2026-04-04T00:00:00Z,2026-04-04T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,23.49
+2026-04-04T00:00:00Z,2026-04-04T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3658505.0,Invocations,2.5e-06,9.1463,USD,36.84
+2026-04-05T00:00:00Z,2026-04-05T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,27.94
+2026-04-05T00:00:00Z,2026-04-05T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,37.66
+2026-04-05T00:00:00Z,2026-04-05T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,12.65
+2026-04-05T00:00:00Z,2026-04-05T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3879190.0,GB-Seconds,1.667e-05,64.6661,USD,25.63
+2026-04-05T00:00:00Z,2026-04-05T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,38.84
+2026-04-05T00:00:00Z,2026-04-05T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,35.34
+2026-04-05T00:00:00Z,2026-04-05T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,32.42
+2026-04-05T00:00:00Z,2026-04-05T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3704238.0,GB-Seconds,1.6e-05,59.2678,USD,34.86
+2026-04-05T00:00:00Z,2026-04-05T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,20.7
+2026-04-05T00:00:00Z,2026-04-05T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,18.43
+2026-04-05T00:00:00Z,2026-04-05T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,26.28
+2026-04-05T00:00:00Z,2026-04-05T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2285160.0,Invocations,2.5e-06,5.7129,USD,18.89
+2026-04-06T00:00:00Z,2026-04-06T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,54.96
+2026-04-06T00:00:00Z,2026-04-06T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,50.47
+2026-04-06T00:00:00Z,2026-04-06T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,62.7
+2026-04-06T00:00:00Z,2026-04-06T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2504384.0,GB-Seconds,1.667e-05,41.7481,USD,55.96
+2026-04-06T00:00:00Z,2026-04-06T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,50.17
+2026-04-06T00:00:00Z,2026-04-06T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,74.46
+2026-04-06T00:00:00Z,2026-04-06T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,71.21
+2026-04-06T00:00:00Z,2026-04-06T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3111138.0,GB-Seconds,1.6e-05,49.7782,USD,73.71
+2026-04-06T00:00:00Z,2026-04-06T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,68.18
+2026-04-06T00:00:00Z,2026-04-06T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,77.79
+2026-04-06T00:00:00Z,2026-04-06T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,69.53
+2026-04-06T00:00:00Z,2026-04-06T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4853339.0,Invocations,2.5e-06,12.1333,USD,75.89
+2026-04-07T00:00:00Z,2026-04-07T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,68.7
+2026-04-07T00:00:00Z,2026-04-07T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,59.93
+2026-04-07T00:00:00Z,2026-04-07T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,51.91
+2026-04-07T00:00:00Z,2026-04-07T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2870230.0,GB-Seconds,1.667e-05,47.8467,USD,70.07
+2026-04-07T00:00:00Z,2026-04-07T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,69.98
+2026-04-07T00:00:00Z,2026-04-07T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,67.74
+2026-04-07T00:00:00Z,2026-04-07T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,58.24
+2026-04-07T00:00:00Z,2026-04-07T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3991650.0,GB-Seconds,1.6e-05,63.8664,USD,64.17
+2026-04-07T00:00:00Z,2026-04-07T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,53.59
+2026-04-07T00:00:00Z,2026-04-07T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,71.4
+2026-04-07T00:00:00Z,2026-04-07T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,72.82
+2026-04-07T00:00:00Z,2026-04-07T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4136729.0,Invocations,2.5e-06,10.3418,USD,57.08
+2026-04-08T00:00:00Z,2026-04-08T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,57.68
+2026-04-08T00:00:00Z,2026-04-08T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,51.21
+2026-04-08T00:00:00Z,2026-04-08T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,71.32
+2026-04-08T00:00:00Z,2026-04-08T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3316121.0,GB-Seconds,1.667e-05,55.2797,USD,50.76
+2026-04-08T00:00:00Z,2026-04-08T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,53.24
+2026-04-08T00:00:00Z,2026-04-08T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,50.94
+2026-04-08T00:00:00Z,2026-04-08T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,69.09
+2026-04-08T00:00:00Z,2026-04-08T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4777075.0,GB-Seconds,1.6e-05,76.4332,USD,66.9
+2026-04-08T00:00:00Z,2026-04-08T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,70.87
+2026-04-08T00:00:00Z,2026-04-08T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,54.18
+2026-04-08T00:00:00Z,2026-04-08T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,68.13
+2026-04-08T00:00:00Z,2026-04-08T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4344014.0,Invocations,2.5e-06,10.86,USD,72.67
+2026-04-09T00:00:00Z,2026-04-09T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,56.86
+2026-04-09T00:00:00Z,2026-04-09T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,52.31
+2026-04-09T00:00:00Z,2026-04-09T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,58.69
+2026-04-09T00:00:00Z,2026-04-09T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1379989.0,GB-Seconds,1.667e-05,23.0044,USD,76.41
+2026-04-09T00:00:00Z,2026-04-09T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,68.73
+2026-04-09T00:00:00Z,2026-04-09T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,58.87
+2026-04-09T00:00:00Z,2026-04-09T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,53.16
+2026-04-09T00:00:00Z,2026-04-09T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3061083.0,GB-Seconds,1.6e-05,48.9773,USD,74.11
+2026-04-09T00:00:00Z,2026-04-09T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,55.6
+2026-04-09T00:00:00Z,2026-04-09T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,76.78
+2026-04-09T00:00:00Z,2026-04-09T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,66.18
+2026-04-09T00:00:00Z,2026-04-09T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4433977.0,Invocations,2.5e-06,11.0849,USD,53.66
+2026-04-10T00:00:00Z,2026-04-10T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,60.69
+2026-04-10T00:00:00Z,2026-04-10T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,77.2
+2026-04-10T00:00:00Z,2026-04-10T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,58.16
+2026-04-10T00:00:00Z,2026-04-10T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1984346.0,GB-Seconds,1.667e-05,33.079,USD,62.81
+2026-04-10T00:00:00Z,2026-04-10T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,74.54
+2026-04-10T00:00:00Z,2026-04-10T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,75.82
+2026-04-10T00:00:00Z,2026-04-10T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,50.21
+2026-04-10T00:00:00Z,2026-04-10T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1021959.0,GB-Seconds,1.6e-05,16.3513,USD,66.02
+2026-04-10T00:00:00Z,2026-04-10T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,64.54
+2026-04-10T00:00:00Z,2026-04-10T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,70.77
+2026-04-10T00:00:00Z,2026-04-10T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,58.08
+2026-04-10T00:00:00Z,2026-04-10T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3262990.0,Invocations,2.5e-06,8.1575,USD,55.05
+2026-04-11T00:00:00Z,2026-04-11T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,16.56
+2026-04-11T00:00:00Z,2026-04-11T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,26.74
+2026-04-11T00:00:00Z,2026-04-11T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,22.12
+2026-04-11T00:00:00Z,2026-04-11T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2886013.0,GB-Seconds,1.667e-05,48.1098,USD,39.15
+2026-04-11T00:00:00Z,2026-04-11T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,38.87
+2026-04-11T00:00:00Z,2026-04-11T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,17.55
+2026-04-11T00:00:00Z,2026-04-11T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,24.92
+2026-04-11T00:00:00Z,2026-04-11T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1416880.0,GB-Seconds,1.6e-05,22.6701,USD,14.44
+2026-04-11T00:00:00Z,2026-04-11T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,39.93
+2026-04-11T00:00:00Z,2026-04-11T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,18.0
+2026-04-11T00:00:00Z,2026-04-11T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,39.3
+2026-04-11T00:00:00Z,2026-04-11T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4782875.0,Invocations,2.5e-06,11.9572,USD,11.54
+2026-04-12T00:00:00Z,2026-04-12T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,18.36
+2026-04-12T00:00:00Z,2026-04-12T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,37.25
+2026-04-12T00:00:00Z,2026-04-12T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,17.19
+2026-04-12T00:00:00Z,2026-04-12T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2561729.0,GB-Seconds,1.667e-05,42.704,USD,25.93
+2026-04-12T00:00:00Z,2026-04-12T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,23.43
+2026-04-12T00:00:00Z,2026-04-12T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,26.59
+2026-04-12T00:00:00Z,2026-04-12T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,27.78
+2026-04-12T00:00:00Z,2026-04-12T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4329462.0,GB-Seconds,1.6e-05,69.2714,USD,32.85
+2026-04-12T00:00:00Z,2026-04-12T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,17.13
+2026-04-12T00:00:00Z,2026-04-12T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,31.85
+2026-04-12T00:00:00Z,2026-04-12T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,21.03
+2026-04-12T00:00:00Z,2026-04-12T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3018163.0,Invocations,2.5e-06,7.5454,USD,39.5
+2026-04-13T00:00:00Z,2026-04-13T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,61.96
+2026-04-13T00:00:00Z,2026-04-13T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,74.49
+2026-04-13T00:00:00Z,2026-04-13T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,73.95
+2026-04-13T00:00:00Z,2026-04-13T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2404104.0,GB-Seconds,1.667e-05,40.0764,USD,59.62
+2026-04-13T00:00:00Z,2026-04-13T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,55.6
+2026-04-13T00:00:00Z,2026-04-13T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,51.22
+2026-04-13T00:00:00Z,2026-04-13T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,67.73
+2026-04-13T00:00:00Z,2026-04-13T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4464122.0,GB-Seconds,1.6e-05,71.426,USD,56.61
+2026-04-13T00:00:00Z,2026-04-13T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,71.33
+2026-04-13T00:00:00Z,2026-04-13T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,74.29
+2026-04-13T00:00:00Z,2026-04-13T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,60.46
+2026-04-13T00:00:00Z,2026-04-13T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3033350.0,Invocations,2.5e-06,7.5834,USD,55.23
+2026-04-14T00:00:00Z,2026-04-14T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,70.73
+2026-04-14T00:00:00Z,2026-04-14T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,61.6
+2026-04-14T00:00:00Z,2026-04-14T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,78.1
+2026-04-14T00:00:00Z,2026-04-14T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4445376.0,GB-Seconds,1.667e-05,74.1044,USD,70.27
+2026-04-14T00:00:00Z,2026-04-14T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,72.06
+2026-04-14T00:00:00Z,2026-04-14T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,56.27
+2026-04-14T00:00:00Z,2026-04-14T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,66.24
+2026-04-14T00:00:00Z,2026-04-14T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3026793.0,GB-Seconds,1.6e-05,48.4287,USD,57.74
+2026-04-14T00:00:00Z,2026-04-14T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,69.8
+2026-04-14T00:00:00Z,2026-04-14T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,74.52
+2026-04-14T00:00:00Z,2026-04-14T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,66.66
+2026-04-14T00:00:00Z,2026-04-14T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2519163.0,Invocations,2.5e-06,6.2979,USD,57.82
+2026-04-15T00:00:00Z,2026-04-15T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,79.89
+2026-04-15T00:00:00Z,2026-04-15T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,78.96
+2026-04-15T00:00:00Z,2026-04-15T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,66.75
+2026-04-15T00:00:00Z,2026-04-15T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4437727.0,GB-Seconds,1.667e-05,73.9769,USD,68.99
+2026-04-15T00:00:00Z,2026-04-15T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,60.17
+2026-04-15T00:00:00Z,2026-04-15T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,60.48
+2026-04-15T00:00:00Z,2026-04-15T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,71.78
+2026-04-15T00:00:00Z,2026-04-15T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3688130.0,GB-Seconds,1.6e-05,59.0101,USD,75.69
+2026-04-15T00:00:00Z,2026-04-15T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,62.14
+2026-04-15T00:00:00Z,2026-04-15T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,76.63
+2026-04-15T00:00:00Z,2026-04-15T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,75.53
+2026-04-15T00:00:00Z,2026-04-15T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1378480.0,Invocations,2.5e-06,3.4462,USD,54.85
+2026-04-16T00:00:00Z,2026-04-16T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,76.96
+2026-04-16T00:00:00Z,2026-04-16T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,68.19
+2026-04-16T00:00:00Z,2026-04-16T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,50.28
+2026-04-16T00:00:00Z,2026-04-16T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4803645.0,GB-Seconds,1.667e-05,80.0768,USD,78.2
+2026-04-16T00:00:00Z,2026-04-16T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,79.21
+2026-04-16T00:00:00Z,2026-04-16T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,58.52
+2026-04-16T00:00:00Z,2026-04-16T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,59.16
+2026-04-16T00:00:00Z,2026-04-16T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2126081.0,GB-Seconds,1.6e-05,34.0173,USD,70.76
+2026-04-16T00:00:00Z,2026-04-16T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,69.56
+2026-04-16T00:00:00Z,2026-04-16T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,56.73
+2026-04-16T00:00:00Z,2026-04-16T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,71.37
+2026-04-16T00:00:00Z,2026-04-16T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4955488.0,Invocations,2.5e-06,12.3887,USD,64.82
+2026-04-17T00:00:00Z,2026-04-17T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,55.36
+2026-04-17T00:00:00Z,2026-04-17T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,60.99
+2026-04-17T00:00:00Z,2026-04-17T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,72.33
+2026-04-17T00:00:00Z,2026-04-17T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2017026.0,GB-Seconds,1.667e-05,33.6238,USD,69.73
+2026-04-17T00:00:00Z,2026-04-17T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,67.05
+2026-04-17T00:00:00Z,2026-04-17T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,52.81
+2026-04-17T00:00:00Z,2026-04-17T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,61.03
+2026-04-17T00:00:00Z,2026-04-17T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3379126.0,GB-Seconds,1.6e-05,54.066,USD,57.51
+2026-04-17T00:00:00Z,2026-04-17T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,67.7
+2026-04-17T00:00:00Z,2026-04-17T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,79.37
+2026-04-17T00:00:00Z,2026-04-17T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,64.6
+2026-04-17T00:00:00Z,2026-04-17T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4544839.0,Invocations,2.5e-06,11.3621,USD,68.93
+2026-04-18T00:00:00Z,2026-04-18T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,33.84
+2026-04-18T00:00:00Z,2026-04-18T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,25.08
+2026-04-18T00:00:00Z,2026-04-18T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,27.31
+2026-04-18T00:00:00Z,2026-04-18T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2418175.0,GB-Seconds,1.667e-05,40.311,USD,35.93
+2026-04-18T00:00:00Z,2026-04-18T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,16.91
+2026-04-18T00:00:00Z,2026-04-18T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,24.98
+2026-04-18T00:00:00Z,2026-04-18T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,27.16
+2026-04-18T00:00:00Z,2026-04-18T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3727423.0,GB-Seconds,1.6e-05,59.6388,USD,15.31
+2026-04-18T00:00:00Z,2026-04-18T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,38.21
+2026-04-18T00:00:00Z,2026-04-18T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,38.62
+2026-04-18T00:00:00Z,2026-04-18T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,37.45
+2026-04-18T00:00:00Z,2026-04-18T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1178274.0,Invocations,2.5e-06,2.9457,USD,32.43
+2026-04-19T00:00:00Z,2026-04-19T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,38.59
+2026-04-19T00:00:00Z,2026-04-19T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,19.92
+2026-04-19T00:00:00Z,2026-04-19T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,26.58
+2026-04-19T00:00:00Z,2026-04-19T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1115294.0,GB-Seconds,1.667e-05,18.592,USD,38.91
+2026-04-19T00:00:00Z,2026-04-19T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,35.59
+2026-04-19T00:00:00Z,2026-04-19T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,18.83
+2026-04-19T00:00:00Z,2026-04-19T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,21.55
+2026-04-19T00:00:00Z,2026-04-19T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3365398.0,GB-Seconds,1.6e-05,53.8464,USD,18.05
+2026-04-19T00:00:00Z,2026-04-19T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,24.56
+2026-04-19T00:00:00Z,2026-04-19T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,21.18
+2026-04-19T00:00:00Z,2026-04-19T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,21.84
+2026-04-19T00:00:00Z,2026-04-19T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2989173.0,Invocations,2.5e-06,7.4729,USD,30.88
+2026-04-20T00:00:00Z,2026-04-20T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,67.1
+2026-04-20T00:00:00Z,2026-04-20T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,52.92
+2026-04-20T00:00:00Z,2026-04-20T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,68.45
+2026-04-20T00:00:00Z,2026-04-20T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4418965.0,GB-Seconds,1.667e-05,73.6641,USD,60.76
+2026-04-20T00:00:00Z,2026-04-20T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,57.62
+2026-04-20T00:00:00Z,2026-04-20T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,58.86
+2026-04-20T00:00:00Z,2026-04-20T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,59.68
+2026-04-20T00:00:00Z,2026-04-20T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1158823.0,GB-Seconds,1.6e-05,18.5412,USD,70.91
+2026-04-20T00:00:00Z,2026-04-20T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,71.07
+2026-04-20T00:00:00Z,2026-04-20T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,60.78
+2026-04-20T00:00:00Z,2026-04-20T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,58.81
+2026-04-20T00:00:00Z,2026-04-20T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4295990.0,Invocations,2.5e-06,10.74,USD,62.59
+2026-04-21T00:00:00Z,2026-04-21T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,57.69
+2026-04-21T00:00:00Z,2026-04-21T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,68.35
+2026-04-21T00:00:00Z,2026-04-21T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,52.45
+2026-04-21T00:00:00Z,2026-04-21T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2297286.0,GB-Seconds,1.667e-05,38.2958,USD,65.05
+2026-04-21T00:00:00Z,2026-04-21T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,73.95
+2026-04-21T00:00:00Z,2026-04-21T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,69.5
+2026-04-21T00:00:00Z,2026-04-21T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,71.06
+2026-04-21T00:00:00Z,2026-04-21T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4740047.0,GB-Seconds,1.6e-05,75.8408,USD,51.52
+2026-04-21T00:00:00Z,2026-04-21T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,76.6
+2026-04-21T00:00:00Z,2026-04-21T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,50.83
+2026-04-21T00:00:00Z,2026-04-21T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,67.37
+2026-04-21T00:00:00Z,2026-04-21T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1666326.0,Invocations,2.5e-06,4.1658,USD,70.16
+2026-04-22T00:00:00Z,2026-04-22T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,59.84
+2026-04-22T00:00:00Z,2026-04-22T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,54.65
+2026-04-22T00:00:00Z,2026-04-22T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,79.46
+2026-04-22T00:00:00Z,2026-04-22T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1284821.0,GB-Seconds,1.667e-05,21.418,USD,67.72
+2026-04-22T00:00:00Z,2026-04-22T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,50.92
+2026-04-22T00:00:00Z,2026-04-22T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,51.12
+2026-04-22T00:00:00Z,2026-04-22T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,74.68
+2026-04-22T00:00:00Z,2026-04-22T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4503157.0,GB-Seconds,1.6e-05,72.0505,USD,66.11
+2026-04-22T00:00:00Z,2026-04-22T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,59.8
+2026-04-22T00:00:00Z,2026-04-22T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,74.84
+2026-04-22T00:00:00Z,2026-04-22T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,58.15
+2026-04-22T00:00:00Z,2026-04-22T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2752683.0,Invocations,2.5e-06,6.8817,USD,68.69
+2026-04-23T00:00:00Z,2026-04-23T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,52.56
+2026-04-23T00:00:00Z,2026-04-23T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,51.55
+2026-04-23T00:00:00Z,2026-04-23T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,65.94
+2026-04-23T00:00:00Z,2026-04-23T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3560046.0,GB-Seconds,1.667e-05,59.346,USD,70.99
+2026-04-23T00:00:00Z,2026-04-23T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,54.15
+2026-04-23T00:00:00Z,2026-04-23T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,53.98
+2026-04-23T00:00:00Z,2026-04-23T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,79.09
+2026-04-23T00:00:00Z,2026-04-23T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4126377.0,GB-Seconds,1.6e-05,66.022,USD,59.69
+2026-04-23T00:00:00Z,2026-04-23T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,73.86
+2026-04-23T00:00:00Z,2026-04-23T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,58.12
+2026-04-23T00:00:00Z,2026-04-23T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,63.17
+2026-04-23T00:00:00Z,2026-04-23T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2423286.0,Invocations,2.5e-06,6.0582,USD,57.53
+2026-04-24T00:00:00Z,2026-04-24T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,55.53
+2026-04-24T00:00:00Z,2026-04-24T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,52.43
+2026-04-24T00:00:00Z,2026-04-24T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,62.85
+2026-04-24T00:00:00Z,2026-04-24T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1100235.0,GB-Seconds,1.667e-05,18.3409,USD,62.27
+2026-04-24T00:00:00Z,2026-04-24T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,55.2
+2026-04-24T00:00:00Z,2026-04-24T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,54.69
+2026-04-24T00:00:00Z,2026-04-24T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,57.51
+2026-04-24T00:00:00Z,2026-04-24T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2711741.0,GB-Seconds,1.6e-05,43.3879,USD,52.82
+2026-04-24T00:00:00Z,2026-04-24T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,55.49
+2026-04-24T00:00:00Z,2026-04-24T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,78.04
+2026-04-24T00:00:00Z,2026-04-24T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,69.15
+2026-04-24T00:00:00Z,2026-04-24T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1406716.0,Invocations,2.5e-06,3.5168,USD,72.14
+2026-04-25T00:00:00Z,2026-04-25T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,26.63
+2026-04-25T00:00:00Z,2026-04-25T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,28.35
+2026-04-25T00:00:00Z,2026-04-25T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,22.59
+2026-04-25T00:00:00Z,2026-04-25T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3837579.0,GB-Seconds,1.667e-05,63.9724,USD,26.98
+2026-04-25T00:00:00Z,2026-04-25T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,14.76
+2026-04-25T00:00:00Z,2026-04-25T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,13.6
+2026-04-25T00:00:00Z,2026-04-25T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,20.26
+2026-04-25T00:00:00Z,2026-04-25T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1009435.0,GB-Seconds,1.6e-05,16.151,USD,11.38
+2026-04-25T00:00:00Z,2026-04-25T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,11.22
+2026-04-25T00:00:00Z,2026-04-25T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,35.66
+2026-04-25T00:00:00Z,2026-04-25T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,31.11
+2026-04-25T00:00:00Z,2026-04-25T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3323659.0,Invocations,2.5e-06,8.3091,USD,10.51
+2026-04-26T00:00:00Z,2026-04-26T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,32.9
+2026-04-26T00:00:00Z,2026-04-26T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,34.21
+2026-04-26T00:00:00Z,2026-04-26T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,20.39
+2026-04-26T00:00:00Z,2026-04-26T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4464445.0,GB-Seconds,1.667e-05,74.4223,USD,23.02
+2026-04-26T00:00:00Z,2026-04-26T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,21.96
+2026-04-26T00:00:00Z,2026-04-26T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,28.48
+2026-04-26T00:00:00Z,2026-04-26T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,29.05
+2026-04-26T00:00:00Z,2026-04-26T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2641249.0,GB-Seconds,1.6e-05,42.26,USD,17.83
+2026-04-26T00:00:00Z,2026-04-26T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,10.46
+2026-04-26T00:00:00Z,2026-04-26T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,38.0
+2026-04-26T00:00:00Z,2026-04-26T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,25.03
+2026-04-26T00:00:00Z,2026-04-26T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2352695.0,Invocations,2.5e-06,5.8817,USD,29.76
+2026-04-27T00:00:00Z,2026-04-27T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,54.89
+2026-04-27T00:00:00Z,2026-04-27T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,52.12
+2026-04-27T00:00:00Z,2026-04-27T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,69.27
+2026-04-27T00:00:00Z,2026-04-27T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1618992.0,GB-Seconds,1.667e-05,26.9886,USD,76.02
+2026-04-27T00:00:00Z,2026-04-27T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,69.09
+2026-04-27T00:00:00Z,2026-04-27T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,74.03
+2026-04-27T00:00:00Z,2026-04-27T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,70.32
+2026-04-27T00:00:00Z,2026-04-27T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1536226.0,GB-Seconds,1.6e-05,24.5796,USD,69.3
+2026-04-27T00:00:00Z,2026-04-27T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,63.75
+2026-04-27T00:00:00Z,2026-04-27T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,66.37
+2026-04-27T00:00:00Z,2026-04-27T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,78.24
+2026-04-27T00:00:00Z,2026-04-27T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2548098.0,Invocations,2.5e-06,6.3702,USD,74.61
+2026-04-28T00:00:00Z,2026-04-28T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,69.54
+2026-04-28T00:00:00Z,2026-04-28T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,56.2
+2026-04-28T00:00:00Z,2026-04-28T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,58.22
+2026-04-28T00:00:00Z,2026-04-28T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4100683.0,GB-Seconds,1.667e-05,68.3584,USD,53.02
+2026-04-28T00:00:00Z,2026-04-28T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,50.55
+2026-04-28T00:00:00Z,2026-04-28T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,52.83
+2026-04-28T00:00:00Z,2026-04-28T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,70.49
+2026-04-28T00:00:00Z,2026-04-28T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4763024.0,GB-Seconds,1.6e-05,76.2084,USD,69.67
+2026-04-28T00:00:00Z,2026-04-28T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,61.56
+2026-04-28T00:00:00Z,2026-04-28T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,70.45
+2026-04-28T00:00:00Z,2026-04-28T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,60.22
+2026-04-28T00:00:00Z,2026-04-28T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4989618.0,Invocations,2.5e-06,12.474,USD,58.46
+2026-04-29T00:00:00Z,2026-04-29T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,53.54
+2026-04-29T00:00:00Z,2026-04-29T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,70.9
+2026-04-29T00:00:00Z,2026-04-29T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,68.87
+2026-04-29T00:00:00Z,2026-04-29T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3228636.0,GB-Seconds,1.667e-05,53.8214,USD,51.18
+2026-04-29T00:00:00Z,2026-04-29T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,62.54
+2026-04-29T00:00:00Z,2026-04-29T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,79.03
+2026-04-29T00:00:00Z,2026-04-29T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,66.44
+2026-04-29T00:00:00Z,2026-04-29T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3660196.0,GB-Seconds,1.6e-05,58.5631,USD,72.52
+2026-04-29T00:00:00Z,2026-04-29T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,74.21
+2026-04-29T00:00:00Z,2026-04-29T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,79.72
+2026-04-29T00:00:00Z,2026-04-29T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,62.38
+2026-04-29T00:00:00Z,2026-04-29T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4970001.0,Invocations,2.5e-06,12.425,USD,57.5
+2026-04-30T00:00:00Z,2026-04-30T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,67.42
+2026-04-30T00:00:00Z,2026-04-30T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,76.01
+2026-04-30T00:00:00Z,2026-04-30T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,66.86
+2026-04-30T00:00:00Z,2026-04-30T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2355531.0,GB-Seconds,1.667e-05,39.2667,USD,62.87
+2026-04-30T00:00:00Z,2026-04-30T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,72.53
+2026-04-30T00:00:00Z,2026-04-30T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,72.64
+2026-04-30T00:00:00Z,2026-04-30T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,53.09
+2026-04-30T00:00:00Z,2026-04-30T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1898320.0,GB-Seconds,1.6e-05,30.3731,USD,66.03
+2026-04-30T00:00:00Z,2026-04-30T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,64.9
+2026-04-30T00:00:00Z,2026-04-30T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,61.69
+2026-04-30T00:00:00Z,2026-04-30T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,58.93
+2026-04-30T00:00:00Z,2026-04-30T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2612818.0,Invocations,2.5e-06,6.532,USD,61.68
+2026-05-01T00:00:00Z,2026-05-01T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,50.33
+2026-05-01T00:00:00Z,2026-05-01T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,77.16
+2026-05-01T00:00:00Z,2026-05-01T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,52.74
+2026-05-01T00:00:00Z,2026-05-01T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4204891.0,GB-Seconds,1.667e-05,70.0955,USD,78.5
+2026-05-01T00:00:00Z,2026-05-01T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,78.52
+2026-05-01T00:00:00Z,2026-05-01T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,67.2
+2026-05-01T00:00:00Z,2026-05-01T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,68.96
+2026-05-01T00:00:00Z,2026-05-01T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1873332.0,GB-Seconds,1.6e-05,29.9733,USD,52.75
+2026-05-01T00:00:00Z,2026-05-01T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,68.07
+2026-05-01T00:00:00Z,2026-05-01T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,66.61
+2026-05-01T00:00:00Z,2026-05-01T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,56.38
+2026-05-01T00:00:00Z,2026-05-01T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4788340.0,Invocations,2.5e-06,11.9709,USD,73.75
+2026-05-02T00:00:00Z,2026-05-02T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,33.69
+2026-05-02T00:00:00Z,2026-05-02T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,12.74
+2026-05-02T00:00:00Z,2026-05-02T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,24.83
+2026-05-02T00:00:00Z,2026-05-02T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4943334.0,GB-Seconds,1.667e-05,82.4054,USD,39.88
+2026-05-02T00:00:00Z,2026-05-02T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,11.68
+2026-05-02T00:00:00Z,2026-05-02T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,32.11
+2026-05-02T00:00:00Z,2026-05-02T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,26.38
+2026-05-02T00:00:00Z,2026-05-02T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4235658.0,GB-Seconds,1.6e-05,67.7705,USD,13.51
+2026-05-02T00:00:00Z,2026-05-02T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,14.29
+2026-05-02T00:00:00Z,2026-05-02T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,32.85
+2026-05-02T00:00:00Z,2026-05-02T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,28.55
+2026-05-02T00:00:00Z,2026-05-02T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3305276.0,Invocations,2.5e-06,8.2632,USD,35.15
+2026-05-03T00:00:00Z,2026-05-03T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,22.78
+2026-05-03T00:00:00Z,2026-05-03T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,16.68
+2026-05-03T00:00:00Z,2026-05-03T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,21.9
+2026-05-03T00:00:00Z,2026-05-03T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2268506.0,GB-Seconds,1.667e-05,37.816,USD,31.19
+2026-05-03T00:00:00Z,2026-05-03T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,12.44
+2026-05-03T00:00:00Z,2026-05-03T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,12.55
+2026-05-03T00:00:00Z,2026-05-03T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,39.6
+2026-05-03T00:00:00Z,2026-05-03T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2062383.0,GB-Seconds,1.6e-05,32.9981,USD,35.89
+2026-05-03T00:00:00Z,2026-05-03T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,36.41
+2026-05-03T00:00:00Z,2026-05-03T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,17.1
+2026-05-03T00:00:00Z,2026-05-03T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,37.23
+2026-05-03T00:00:00Z,2026-05-03T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1394540.0,Invocations,2.5e-06,3.4864,USD,32.6
+2026-05-04T00:00:00Z,2026-05-04T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,61.29
+2026-05-04T00:00:00Z,2026-05-04T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,52.51
+2026-05-04T00:00:00Z,2026-05-04T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,73.31
+2026-05-04T00:00:00Z,2026-05-04T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4380405.0,GB-Seconds,1.667e-05,73.0214,USD,71.15
+2026-05-04T00:00:00Z,2026-05-04T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,57.46
+2026-05-04T00:00:00Z,2026-05-04T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,59.91
+2026-05-04T00:00:00Z,2026-05-04T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,63.03
+2026-05-04T00:00:00Z,2026-05-04T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4231916.0,GB-Seconds,1.6e-05,67.7107,USD,50.34
+2026-05-04T00:00:00Z,2026-05-04T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,64.06
+2026-05-04T00:00:00Z,2026-05-04T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,51.69
+2026-05-04T00:00:00Z,2026-05-04T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,53.56
+2026-05-04T00:00:00Z,2026-05-04T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2454908.0,Invocations,2.5e-06,6.1373,USD,74.68
+2026-05-05T00:00:00Z,2026-05-05T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,72.33
+2026-05-05T00:00:00Z,2026-05-05T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,70.43
+2026-05-05T00:00:00Z,2026-05-05T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,57.13
+2026-05-05T00:00:00Z,2026-05-05T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4473912.0,GB-Seconds,1.667e-05,74.5801,USD,61.25
+2026-05-05T00:00:00Z,2026-05-05T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,58.57
+2026-05-05T00:00:00Z,2026-05-05T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,76.06
+2026-05-05T00:00:00Z,2026-05-05T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,56.71
+2026-05-05T00:00:00Z,2026-05-05T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2425541.0,GB-Seconds,1.6e-05,38.8087,USD,74.06
+2026-05-05T00:00:00Z,2026-05-05T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,79.34
+2026-05-05T00:00:00Z,2026-05-05T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,66.68
+2026-05-05T00:00:00Z,2026-05-05T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,59.68
+2026-05-05T00:00:00Z,2026-05-05T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2855567.0,Invocations,2.5e-06,7.1389,USD,65.83
+2026-05-06T00:00:00Z,2026-05-06T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,79.79
+2026-05-06T00:00:00Z,2026-05-06T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,52.21
+2026-05-06T00:00:00Z,2026-05-06T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,66.62
+2026-05-06T00:00:00Z,2026-05-06T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3373139.0,GB-Seconds,1.667e-05,56.2302,USD,52.26
+2026-05-06T00:00:00Z,2026-05-06T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,54.99
+2026-05-06T00:00:00Z,2026-05-06T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,56.5
+2026-05-06T00:00:00Z,2026-05-06T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,58.83
+2026-05-06T00:00:00Z,2026-05-06T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4067392.0,GB-Seconds,1.6e-05,65.0783,USD,68.83
+2026-05-06T00:00:00Z,2026-05-06T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,67.53
+2026-05-06T00:00:00Z,2026-05-06T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,77.03
+2026-05-06T00:00:00Z,2026-05-06T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,51.36
+2026-05-06T00:00:00Z,2026-05-06T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3962443.0,Invocations,2.5e-06,9.9061,USD,78.76
+2026-05-07T00:00:00Z,2026-05-07T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,51.74
+2026-05-07T00:00:00Z,2026-05-07T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,61.84
+2026-05-07T00:00:00Z,2026-05-07T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,53.2
+2026-05-07T00:00:00Z,2026-05-07T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4002740.0,GB-Seconds,1.667e-05,66.7257,USD,58.32
+2026-05-07T00:00:00Z,2026-05-07T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,55.64
+2026-05-07T00:00:00Z,2026-05-07T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,63.91
+2026-05-07T00:00:00Z,2026-05-07T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,60.6
+2026-05-07T00:00:00Z,2026-05-07T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3784433.0,GB-Seconds,1.6e-05,60.5509,USD,57.98
+2026-05-07T00:00:00Z,2026-05-07T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,60.81
+2026-05-07T00:00:00Z,2026-05-07T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,57.8
+2026-05-07T00:00:00Z,2026-05-07T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,63.6
+2026-05-07T00:00:00Z,2026-05-07T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1383934.0,Invocations,2.5e-06,3.4598,USD,66.08
+2026-05-08T00:00:00Z,2026-05-08T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,59.29
+2026-05-08T00:00:00Z,2026-05-08T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,74.41
+2026-05-08T00:00:00Z,2026-05-08T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,70.54
+2026-05-08T00:00:00Z,2026-05-08T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3179996.0,GB-Seconds,1.667e-05,53.0105,USD,54.0
+2026-05-08T00:00:00Z,2026-05-08T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,52.29
+2026-05-08T00:00:00Z,2026-05-08T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,78.22
+2026-05-08T00:00:00Z,2026-05-08T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,62.5
+2026-05-08T00:00:00Z,2026-05-08T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1463556.0,GB-Seconds,1.6e-05,23.4169,USD,68.4
+2026-05-08T00:00:00Z,2026-05-08T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,62.55
+2026-05-08T00:00:00Z,2026-05-08T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,77.98
+2026-05-08T00:00:00Z,2026-05-08T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,75.98
+2026-05-08T00:00:00Z,2026-05-08T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2274732.0,Invocations,2.5e-06,5.6868,USD,54.95
+2026-05-09T00:00:00Z,2026-05-09T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,22.34
+2026-05-09T00:00:00Z,2026-05-09T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,33.33
+2026-05-09T00:00:00Z,2026-05-09T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,24.41
+2026-05-09T00:00:00Z,2026-05-09T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4912942.0,GB-Seconds,1.667e-05,81.8987,USD,14.51
+2026-05-09T00:00:00Z,2026-05-09T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,27.82
+2026-05-09T00:00:00Z,2026-05-09T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,21.43
+2026-05-09T00:00:00Z,2026-05-09T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,39.1
+2026-05-09T00:00:00Z,2026-05-09T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2383194.0,GB-Seconds,1.6e-05,38.1311,USD,27.07
+2026-05-09T00:00:00Z,2026-05-09T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,11.91
+2026-05-09T00:00:00Z,2026-05-09T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,11.1
+2026-05-09T00:00:00Z,2026-05-09T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,14.02
+2026-05-09T00:00:00Z,2026-05-09T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1000404.0,Invocations,2.5e-06,2.501,USD,11.69
+2026-05-10T00:00:00Z,2026-05-10T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,35.94
+2026-05-10T00:00:00Z,2026-05-10T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,34.39
+2026-05-10T00:00:00Z,2026-05-10T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,39.99
+2026-05-10T00:00:00Z,2026-05-10T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3332517.0,GB-Seconds,1.667e-05,55.5531,USD,37.39
+2026-05-10T00:00:00Z,2026-05-10T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,27.55
+2026-05-10T00:00:00Z,2026-05-10T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,31.78
+2026-05-10T00:00:00Z,2026-05-10T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,32.71
+2026-05-10T00:00:00Z,2026-05-10T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4854418.0,GB-Seconds,1.6e-05,77.6707,USD,17.42
+2026-05-10T00:00:00Z,2026-05-10T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,23.52
+2026-05-10T00:00:00Z,2026-05-10T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,13.87
+2026-05-10T00:00:00Z,2026-05-10T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,38.62
+2026-05-10T00:00:00Z,2026-05-10T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4031756.0,Invocations,2.5e-06,10.0794,USD,16.22
+2026-05-11T00:00:00Z,2026-05-11T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,76.35
+2026-05-11T00:00:00Z,2026-05-11T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,72.71
+2026-05-11T00:00:00Z,2026-05-11T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,51.41
+2026-05-11T00:00:00Z,2026-05-11T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1505950.0,GB-Seconds,1.667e-05,25.1042,USD,53.41
+2026-05-11T00:00:00Z,2026-05-11T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,70.15
+2026-05-11T00:00:00Z,2026-05-11T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,65.61
+2026-05-11T00:00:00Z,2026-05-11T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,73.17
+2026-05-11T00:00:00Z,2026-05-11T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3715514.0,GB-Seconds,1.6e-05,59.4482,USD,59.23
+2026-05-11T00:00:00Z,2026-05-11T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,74.49
+2026-05-11T00:00:00Z,2026-05-11T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,79.04
+2026-05-11T00:00:00Z,2026-05-11T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,52.65
+2026-05-11T00:00:00Z,2026-05-11T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4445498.0,Invocations,2.5e-06,11.1137,USD,62.1
+2026-05-12T00:00:00Z,2026-05-12T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,54.02
+2026-05-12T00:00:00Z,2026-05-12T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,50.86
+2026-05-12T00:00:00Z,2026-05-12T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,72.65
+2026-05-12T00:00:00Z,2026-05-12T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1826196.0,GB-Seconds,1.667e-05,30.4427,USD,69.18
+2026-05-12T00:00:00Z,2026-05-12T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,74.15
+2026-05-12T00:00:00Z,2026-05-12T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,77.09
+2026-05-12T00:00:00Z,2026-05-12T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,68.52
+2026-05-12T00:00:00Z,2026-05-12T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1006949.0,GB-Seconds,1.6e-05,16.1112,USD,68.24
+2026-05-12T00:00:00Z,2026-05-12T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,69.1
+2026-05-12T00:00:00Z,2026-05-12T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,66.64
+2026-05-12T00:00:00Z,2026-05-12T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,52.73
+2026-05-12T00:00:00Z,2026-05-12T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4483617.0,Invocations,2.5e-06,11.209,USD,60.45
+2026-05-13T00:00:00Z,2026-05-13T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,65.42
+2026-05-13T00:00:00Z,2026-05-13T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,73.51
+2026-05-13T00:00:00Z,2026-05-13T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,61.9
+2026-05-13T00:00:00Z,2026-05-13T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1070390.0,GB-Seconds,1.667e-05,17.8434,USD,65.71
+2026-05-13T00:00:00Z,2026-05-13T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,70.93
+2026-05-13T00:00:00Z,2026-05-13T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,73.89
+2026-05-13T00:00:00Z,2026-05-13T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,63.78
+2026-05-13T00:00:00Z,2026-05-13T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2265040.0,GB-Seconds,1.6e-05,36.2406,USD,64.76
+2026-05-13T00:00:00Z,2026-05-13T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,57.75
+2026-05-13T00:00:00Z,2026-05-13T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,63.77
+2026-05-13T00:00:00Z,2026-05-13T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,79.4
+2026-05-13T00:00:00Z,2026-05-13T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2849396.0,Invocations,2.5e-06,7.1235,USD,60.42
+2026-05-14T00:00:00Z,2026-05-14T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,56.27
+2026-05-14T00:00:00Z,2026-05-14T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,67.39
+2026-05-14T00:00:00Z,2026-05-14T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,60.25
+2026-05-14T00:00:00Z,2026-05-14T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1661614.0,GB-Seconds,1.667e-05,27.6991,USD,53.87
+2026-05-14T00:00:00Z,2026-05-14T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,53.84
+2026-05-14T00:00:00Z,2026-05-14T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,54.56
+2026-05-14T00:00:00Z,2026-05-14T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,54.16
+2026-05-14T00:00:00Z,2026-05-14T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2072647.0,GB-Seconds,1.6e-05,33.1624,USD,55.4
+2026-05-14T00:00:00Z,2026-05-14T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,70.9
+2026-05-14T00:00:00Z,2026-05-14T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,62.35
+2026-05-14T00:00:00Z,2026-05-14T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,76.23
+2026-05-14T00:00:00Z,2026-05-14T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3523802.0,Invocations,2.5e-06,8.8095,USD,70.03
+2026-05-15T00:00:00Z,2026-05-15T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,55.17
+2026-05-15T00:00:00Z,2026-05-15T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,55.77
+2026-05-15T00:00:00Z,2026-05-15T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,51.23
+2026-05-15T00:00:00Z,2026-05-15T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2529297.0,GB-Seconds,1.667e-05,42.1634,USD,58.36
+2026-05-15T00:00:00Z,2026-05-15T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,55.31
+2026-05-15T00:00:00Z,2026-05-15T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,52.66
+2026-05-15T00:00:00Z,2026-05-15T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,53.62
+2026-05-15T00:00:00Z,2026-05-15T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4512552.0,GB-Seconds,1.6e-05,72.2008,USD,60.68
+2026-05-15T00:00:00Z,2026-05-15T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,76.83
+2026-05-15T00:00:00Z,2026-05-15T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,53.86
+2026-05-15T00:00:00Z,2026-05-15T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,59.9
+2026-05-15T00:00:00Z,2026-05-15T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2261466.0,Invocations,2.5e-06,5.6537,USD,51.18
+2026-05-16T00:00:00Z,2026-05-16T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,33.98
+2026-05-16T00:00:00Z,2026-05-16T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,28.84
+2026-05-16T00:00:00Z,2026-05-16T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,12.45
+2026-05-16T00:00:00Z,2026-05-16T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3283869.0,GB-Seconds,1.667e-05,54.7421,USD,14.71
+2026-05-16T00:00:00Z,2026-05-16T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,21.32
+2026-05-16T00:00:00Z,2026-05-16T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,10.08
+2026-05-16T00:00:00Z,2026-05-16T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,36.05
+2026-05-16T00:00:00Z,2026-05-16T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3287623.0,GB-Seconds,1.6e-05,52.602,USD,32.45
+2026-05-16T00:00:00Z,2026-05-16T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,15.54
+2026-05-16T00:00:00Z,2026-05-16T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,16.28
+2026-05-16T00:00:00Z,2026-05-16T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,21.11
+2026-05-16T00:00:00Z,2026-05-16T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1635605.0,Invocations,2.5e-06,4.089,USD,17.08
+2026-05-17T00:00:00Z,2026-05-17T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,32.8
+2026-05-17T00:00:00Z,2026-05-17T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,25.94
+2026-05-17T00:00:00Z,2026-05-17T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,31.62
+2026-05-17T00:00:00Z,2026-05-17T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4512985.0,GB-Seconds,1.667e-05,75.2315,USD,11.1
+2026-05-17T00:00:00Z,2026-05-17T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,17.57
+2026-05-17T00:00:00Z,2026-05-17T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,31.4
+2026-05-17T00:00:00Z,2026-05-17T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,36.86
+2026-05-17T00:00:00Z,2026-05-17T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3546026.0,GB-Seconds,1.6e-05,56.7364,USD,25.96
+2026-05-17T00:00:00Z,2026-05-17T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,13.22
+2026-05-17T00:00:00Z,2026-05-17T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,23.42
+2026-05-17T00:00:00Z,2026-05-17T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,25.98
+2026-05-17T00:00:00Z,2026-05-17T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2215502.0,Invocations,2.5e-06,5.5388,USD,13.15
+2026-05-18T00:00:00Z,2026-05-18T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,72.12
+2026-05-18T00:00:00Z,2026-05-18T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,55.47
+2026-05-18T00:00:00Z,2026-05-18T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,66.92
+2026-05-18T00:00:00Z,2026-05-18T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4720464.0,GB-Seconds,1.667e-05,78.6901,USD,56.34
+2026-05-18T00:00:00Z,2026-05-18T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,59.82
+2026-05-18T00:00:00Z,2026-05-18T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,53.59
+2026-05-18T00:00:00Z,2026-05-18T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,76.72
+2026-05-18T00:00:00Z,2026-05-18T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4517651.0,GB-Seconds,1.6e-05,72.2824,USD,64.22
+2026-05-18T00:00:00Z,2026-05-18T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,60.65
+2026-05-18T00:00:00Z,2026-05-18T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,69.46
+2026-05-18T00:00:00Z,2026-05-18T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,64.39
+2026-05-18T00:00:00Z,2026-05-18T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1923875.0,Invocations,2.5e-06,4.8097,USD,66.11
+2026-05-19T00:00:00Z,2026-05-19T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,67.61
+2026-05-19T00:00:00Z,2026-05-19T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,72.36
+2026-05-19T00:00:00Z,2026-05-19T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,62.95
+2026-05-19T00:00:00Z,2026-05-19T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3693714.0,GB-Seconds,1.667e-05,61.5742,USD,61.36
+2026-05-19T00:00:00Z,2026-05-19T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,60.12
+2026-05-19T00:00:00Z,2026-05-19T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,76.99
+2026-05-19T00:00:00Z,2026-05-19T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,68.23
+2026-05-19T00:00:00Z,2026-05-19T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1912826.0,GB-Seconds,1.6e-05,30.6052,USD,60.68
+2026-05-19T00:00:00Z,2026-05-19T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,79.6
+2026-05-19T00:00:00Z,2026-05-19T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,68.17
+2026-05-19T00:00:00Z,2026-05-19T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,57.12
+2026-05-19T00:00:00Z,2026-05-19T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1944789.0,Invocations,2.5e-06,4.862,USD,56.76
+2026-05-20T00:00:00Z,2026-05-20T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,60.96
+2026-05-20T00:00:00Z,2026-05-20T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,64.63
+2026-05-20T00:00:00Z,2026-05-20T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,75.52
+2026-05-20T00:00:00Z,2026-05-20T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4931965.0,GB-Seconds,1.667e-05,82.2159,USD,74.18
+2026-05-20T00:00:00Z,2026-05-20T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,51.67
+2026-05-20T00:00:00Z,2026-05-20T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,75.27
+2026-05-20T00:00:00Z,2026-05-20T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,51.55
+2026-05-20T00:00:00Z,2026-05-20T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3853406.0,GB-Seconds,1.6e-05,61.6545,USD,62.31
+2026-05-20T00:00:00Z,2026-05-20T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,79.47
+2026-05-20T00:00:00Z,2026-05-20T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,53.36
+2026-05-20T00:00:00Z,2026-05-20T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,61.94
+2026-05-20T00:00:00Z,2026-05-20T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4094235.0,Invocations,2.5e-06,10.2356,USD,77.52
+2026-05-21T00:00:00Z,2026-05-21T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,50.16
+2026-05-21T00:00:00Z,2026-05-21T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,79.25
+2026-05-21T00:00:00Z,2026-05-21T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,64.72
+2026-05-21T00:00:00Z,2026-05-21T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2030117.0,GB-Seconds,1.667e-05,33.8421,USD,70.06
+2026-05-21T00:00:00Z,2026-05-21T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,77.88
+2026-05-21T00:00:00Z,2026-05-21T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,66.7
+2026-05-21T00:00:00Z,2026-05-21T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,67.15
+2026-05-21T00:00:00Z,2026-05-21T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3930098.0,GB-Seconds,1.6e-05,62.8816,USD,75.16
+2026-05-21T00:00:00Z,2026-05-21T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,56.15
+2026-05-21T00:00:00Z,2026-05-21T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,79.04
+2026-05-21T00:00:00Z,2026-05-21T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,71.33
+2026-05-21T00:00:00Z,2026-05-21T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2237715.0,Invocations,2.5e-06,5.5943,USD,65.23
+2026-05-22T00:00:00Z,2026-05-22T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,57.27
+2026-05-22T00:00:00Z,2026-05-22T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,53.45
+2026-05-22T00:00:00Z,2026-05-22T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,68.32
+2026-05-22T00:00:00Z,2026-05-22T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3339135.0,GB-Seconds,1.667e-05,55.6634,USD,52.62
+2026-05-22T00:00:00Z,2026-05-22T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,65.18
+2026-05-22T00:00:00Z,2026-05-22T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,77.96
+2026-05-22T00:00:00Z,2026-05-22T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,59.62
+2026-05-22T00:00:00Z,2026-05-22T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1571650.0,GB-Seconds,1.6e-05,25.1464,USD,51.55
+2026-05-22T00:00:00Z,2026-05-22T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,60.1
+2026-05-22T00:00:00Z,2026-05-22T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,54.03
+2026-05-22T00:00:00Z,2026-05-22T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,51.9
+2026-05-22T00:00:00Z,2026-05-22T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4016875.0,Invocations,2.5e-06,10.0422,USD,56.05
+2026-05-23T00:00:00Z,2026-05-23T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,30.54
+2026-05-23T00:00:00Z,2026-05-23T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,12.64
+2026-05-23T00:00:00Z,2026-05-23T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,14.16
+2026-05-23T00:00:00Z,2026-05-23T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4254600.0,GB-Seconds,1.667e-05,70.9242,USD,32.81
+2026-05-23T00:00:00Z,2026-05-23T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,27.87
+2026-05-23T00:00:00Z,2026-05-23T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,24.15
+2026-05-23T00:00:00Z,2026-05-23T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,22.36
+2026-05-23T00:00:00Z,2026-05-23T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2011293.0,GB-Seconds,1.6e-05,32.1807,USD,13.2
+2026-05-23T00:00:00Z,2026-05-23T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,35.52
+2026-05-23T00:00:00Z,2026-05-23T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,32.38
+2026-05-23T00:00:00Z,2026-05-23T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,22.26
+2026-05-23T00:00:00Z,2026-05-23T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2378164.0,Invocations,2.5e-06,5.9454,USD,31.93
+2026-05-24T00:00:00Z,2026-05-24T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,38.15
+2026-05-24T00:00:00Z,2026-05-24T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,15.44
+2026-05-24T00:00:00Z,2026-05-24T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,11.99
+2026-05-24T00:00:00Z,2026-05-24T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4806503.0,GB-Seconds,1.667e-05,80.1244,USD,31.65
+2026-05-24T00:00:00Z,2026-05-24T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,11.44
+2026-05-24T00:00:00Z,2026-05-24T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,33.45
+2026-05-24T00:00:00Z,2026-05-24T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,34.84
+2026-05-24T00:00:00Z,2026-05-24T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3155748.0,GB-Seconds,1.6e-05,50.492,USD,16.05
+2026-05-24T00:00:00Z,2026-05-24T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,14.91
+2026-05-24T00:00:00Z,2026-05-24T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,14.93
+2026-05-24T00:00:00Z,2026-05-24T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,34.44
+2026-05-24T00:00:00Z,2026-05-24T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1679290.0,Invocations,2.5e-06,4.1982,USD,29.01
+2026-05-25T00:00:00Z,2026-05-25T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,77.24
+2026-05-25T00:00:00Z,2026-05-25T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,59.49
+2026-05-25T00:00:00Z,2026-05-25T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,67.65
+2026-05-25T00:00:00Z,2026-05-25T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2567121.0,GB-Seconds,1.667e-05,42.7939,USD,74.5
+2026-05-25T00:00:00Z,2026-05-25T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,63.17
+2026-05-25T00:00:00Z,2026-05-25T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,61.31
+2026-05-25T00:00:00Z,2026-05-25T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,63.88
+2026-05-25T00:00:00Z,2026-05-25T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3562469.0,GB-Seconds,1.6e-05,56.9995,USD,66.19
+2026-05-25T00:00:00Z,2026-05-25T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,63.16
+2026-05-25T00:00:00Z,2026-05-25T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,67.32
+2026-05-25T00:00:00Z,2026-05-25T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,60.66
+2026-05-25T00:00:00Z,2026-05-25T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4681262.0,Invocations,2.5e-06,11.7032,USD,61.52
+2026-05-26T00:00:00Z,2026-05-26T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,66.31
+2026-05-26T00:00:00Z,2026-05-26T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,77.19
+2026-05-26T00:00:00Z,2026-05-26T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,68.73
+2026-05-26T00:00:00Z,2026-05-26T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3951090.0,GB-Seconds,1.667e-05,65.8647,USD,62.95
+2026-05-26T00:00:00Z,2026-05-26T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,59.98
+2026-05-26T00:00:00Z,2026-05-26T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,71.92
+2026-05-26T00:00:00Z,2026-05-26T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,70.81
+2026-05-26T00:00:00Z,2026-05-26T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4071475.0,GB-Seconds,1.6e-05,65.1436,USD,73.82
+2026-05-26T00:00:00Z,2026-05-26T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,68.6
+2026-05-26T00:00:00Z,2026-05-26T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,66.0
+2026-05-26T00:00:00Z,2026-05-26T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,76.82
+2026-05-26T00:00:00Z,2026-05-26T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3195875.0,Invocations,2.5e-06,7.9897,USD,79.93
+2026-05-27T00:00:00Z,2026-05-27T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,72.57
+2026-05-27T00:00:00Z,2026-05-27T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,71.21
+2026-05-27T00:00:00Z,2026-05-27T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,73.36
+2026-05-27T00:00:00Z,2026-05-27T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3361632.0,GB-Seconds,1.667e-05,56.0384,USD,51.01
+2026-05-27T00:00:00Z,2026-05-27T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,67.1
+2026-05-27T00:00:00Z,2026-05-27T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,72.87
+2026-05-27T00:00:00Z,2026-05-27T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,76.3
+2026-05-27T00:00:00Z,2026-05-27T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2223520.0,GB-Seconds,1.6e-05,35.5763,USD,53.09
+2026-05-27T00:00:00Z,2026-05-27T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,66.09
+2026-05-27T00:00:00Z,2026-05-27T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,61.36
+2026-05-27T00:00:00Z,2026-05-27T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,63.71
+2026-05-27T00:00:00Z,2026-05-27T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2899443.0,Invocations,2.5e-06,7.2486,USD,61.92
+2026-05-28T00:00:00Z,2026-05-28T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,73.92
+2026-05-28T00:00:00Z,2026-05-28T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,54.5
+2026-05-28T00:00:00Z,2026-05-28T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,56.88
+2026-05-28T00:00:00Z,2026-05-28T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3460491.0,GB-Seconds,1.667e-05,57.6864,USD,73.16
+2026-05-28T00:00:00Z,2026-05-28T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,50.37
+2026-05-28T00:00:00Z,2026-05-28T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,67.95
+2026-05-28T00:00:00Z,2026-05-28T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,66.97
+2026-05-28T00:00:00Z,2026-05-28T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2540889.0,GB-Seconds,1.6e-05,40.6542,USD,57.55
+2026-05-28T00:00:00Z,2026-05-28T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,60.37
+2026-05-28T00:00:00Z,2026-05-28T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,55.45
+2026-05-28T00:00:00Z,2026-05-28T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,77.25
+2026-05-28T00:00:00Z,2026-05-28T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2649189.0,Invocations,2.5e-06,6.623,USD,56.82
+2026-05-29T00:00:00Z,2026-05-29T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,62.71
+2026-05-29T00:00:00Z,2026-05-29T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,58.64
+2026-05-29T00:00:00Z,2026-05-29T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,68.45
+2026-05-29T00:00:00Z,2026-05-29T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4090649.0,GB-Seconds,1.667e-05,68.1911,USD,67.59
+2026-05-29T00:00:00Z,2026-05-29T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,65.18
+2026-05-29T00:00:00Z,2026-05-29T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,68.34
+2026-05-29T00:00:00Z,2026-05-29T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,50.54
+2026-05-29T00:00:00Z,2026-05-29T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1230203.0,GB-Seconds,1.6e-05,19.6832,USD,67.79
+2026-05-29T00:00:00Z,2026-05-29T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,53.07
+2026-05-29T00:00:00Z,2026-05-29T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,77.56
+2026-05-29T00:00:00Z,2026-05-29T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,73.7
+2026-05-29T00:00:00Z,2026-05-29T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3412324.0,Invocations,2.5e-06,8.5308,USD,71.22
+2026-05-30T00:00:00Z,2026-05-30T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,14.58
+2026-05-30T00:00:00Z,2026-05-30T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,27.29
+2026-05-30T00:00:00Z,2026-05-30T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,28.2
+2026-05-30T00:00:00Z,2026-05-30T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2299445.0,GB-Seconds,1.667e-05,38.3317,USD,12.32
+2026-05-30T00:00:00Z,2026-05-30T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,13.13
+2026-05-30T00:00:00Z,2026-05-30T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,35.21
+2026-05-30T00:00:00Z,2026-05-30T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,37.32
+2026-05-30T00:00:00Z,2026-05-30T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4180288.0,GB-Seconds,1.6e-05,66.8846,USD,13.4
+2026-05-30T00:00:00Z,2026-05-30T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,39.55
+2026-05-30T00:00:00Z,2026-05-30T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,35.17
+2026-05-30T00:00:00Z,2026-05-30T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,13.74
+2026-05-30T00:00:00Z,2026-05-30T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4951416.0,Invocations,2.5e-06,12.3785,USD,19.96
+2026-05-31T00:00:00Z,2026-05-31T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,19.34
+2026-05-31T00:00:00Z,2026-05-31T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,16.82
+2026-05-31T00:00:00Z,2026-05-31T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,28.24
+2026-05-31T00:00:00Z,2026-05-31T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2715630.0,GB-Seconds,1.667e-05,45.2696,USD,11.64
+2026-05-31T00:00:00Z,2026-05-31T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,20.06
+2026-05-31T00:00:00Z,2026-05-31T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,34.09
+2026-05-31T00:00:00Z,2026-05-31T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,10.14
+2026-05-31T00:00:00Z,2026-05-31T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3110376.0,GB-Seconds,1.6e-05,49.766,USD,13.43
+2026-05-31T00:00:00Z,2026-05-31T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,22.44
+2026-05-31T00:00:00Z,2026-05-31T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,35.91
+2026-05-31T00:00:00Z,2026-05-31T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,37.69
+2026-05-31T00:00:00Z,2026-05-31T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4678086.0,Invocations,2.5e-06,11.6952,USD,20.41
+2026-06-01T00:00:00Z,2026-06-01T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,72.13
+2026-06-01T00:00:00Z,2026-06-01T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,63.57
+2026-06-01T00:00:00Z,2026-06-01T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,56.74
+2026-06-01T00:00:00Z,2026-06-01T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2250155.0,GB-Seconds,1.667e-05,37.5101,USD,77.38
+2026-06-01T00:00:00Z,2026-06-01T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,57.45
+2026-06-01T00:00:00Z,2026-06-01T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,67.33
+2026-06-01T00:00:00Z,2026-06-01T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,54.97
+2026-06-01T00:00:00Z,2026-06-01T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3903540.0,GB-Seconds,1.6e-05,62.4566,USD,77.45
+2026-06-01T00:00:00Z,2026-06-01T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,60.87
+2026-06-01T00:00:00Z,2026-06-01T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,67.42
+2026-06-01T00:00:00Z,2026-06-01T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,68.97
+2026-06-01T00:00:00Z,2026-06-01T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2714331.0,Invocations,2.5e-06,6.7858,USD,56.38
+2026-06-02T00:00:00Z,2026-06-02T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,65.46
+2026-06-02T00:00:00Z,2026-06-02T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,79.27
+2026-06-02T00:00:00Z,2026-06-02T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,63.77
+2026-06-02T00:00:00Z,2026-06-02T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3855059.0,GB-Seconds,1.667e-05,64.2638,USD,62.44
+2026-06-02T00:00:00Z,2026-06-02T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,52.56
+2026-06-02T00:00:00Z,2026-06-02T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,79.91
+2026-06-02T00:00:00Z,2026-06-02T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,65.07
+2026-06-02T00:00:00Z,2026-06-02T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3828032.0,GB-Seconds,1.6e-05,61.2485,USD,59.3
+2026-06-02T00:00:00Z,2026-06-02T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,61.92
+2026-06-02T00:00:00Z,2026-06-02T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,62.8
+2026-06-02T00:00:00Z,2026-06-02T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,73.99
+2026-06-02T00:00:00Z,2026-06-02T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4239229.0,Invocations,2.5e-06,10.5981,USD,56.15
+2026-06-03T00:00:00Z,2026-06-03T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,55.72
+2026-06-03T00:00:00Z,2026-06-03T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,51.1
+2026-06-03T00:00:00Z,2026-06-03T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,64.16
+2026-06-03T00:00:00Z,2026-06-03T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2666471.0,GB-Seconds,1.667e-05,44.4501,USD,67.62
+2026-06-03T00:00:00Z,2026-06-03T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,58.82
+2026-06-03T00:00:00Z,2026-06-03T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,71.42
+2026-06-03T00:00:00Z,2026-06-03T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,65.83
+2026-06-03T00:00:00Z,2026-06-03T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2186293.0,GB-Seconds,1.6e-05,34.9807,USD,63.22
+2026-06-03T00:00:00Z,2026-06-03T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,62.02
+2026-06-03T00:00:00Z,2026-06-03T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,66.79
+2026-06-03T00:00:00Z,2026-06-03T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,54.66
+2026-06-03T00:00:00Z,2026-06-03T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2234816.0,Invocations,2.5e-06,5.587,USD,60.03
+2026-06-04T00:00:00Z,2026-06-04T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,52.27
+2026-06-04T00:00:00Z,2026-06-04T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,72.6
+2026-06-04T00:00:00Z,2026-06-04T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,58.17
+2026-06-04T00:00:00Z,2026-06-04T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2910637.0,GB-Seconds,1.667e-05,48.5203,USD,65.8
+2026-06-04T00:00:00Z,2026-06-04T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,74.02
+2026-06-04T00:00:00Z,2026-06-04T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,79.37
+2026-06-04T00:00:00Z,2026-06-04T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,75.19
+2026-06-04T00:00:00Z,2026-06-04T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4362182.0,GB-Seconds,1.6e-05,69.7949,USD,69.77
+2026-06-04T00:00:00Z,2026-06-04T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,50.81
+2026-06-04T00:00:00Z,2026-06-04T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,56.66
+2026-06-04T00:00:00Z,2026-06-04T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,56.93
+2026-06-04T00:00:00Z,2026-06-04T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1076218.0,Invocations,2.5e-06,2.6905,USD,65.17
+2026-06-05T00:00:00Z,2026-06-05T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,67.85
+2026-06-05T00:00:00Z,2026-06-05T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,60.18
+2026-06-05T00:00:00Z,2026-06-05T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,67.08
+2026-06-05T00:00:00Z,2026-06-05T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4185714.0,GB-Seconds,1.667e-05,69.7759,USD,69.58
+2026-06-05T00:00:00Z,2026-06-05T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,57.15
+2026-06-05T00:00:00Z,2026-06-05T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,52.98
+2026-06-05T00:00:00Z,2026-06-05T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,57.3
+2026-06-05T00:00:00Z,2026-06-05T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3522189.0,GB-Seconds,1.6e-05,56.355,USD,68.1
+2026-06-05T00:00:00Z,2026-06-05T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,74.21
+2026-06-05T00:00:00Z,2026-06-05T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,78.88
+2026-06-05T00:00:00Z,2026-06-05T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,78.33
+2026-06-05T00:00:00Z,2026-06-05T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2962165.0,Invocations,2.5e-06,7.4054,USD,56.15
+2026-06-06T00:00:00Z,2026-06-06T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,18.79
+2026-06-06T00:00:00Z,2026-06-06T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,36.89
+2026-06-06T00:00:00Z,2026-06-06T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,10.39
+2026-06-06T00:00:00Z,2026-06-06T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3351878.0,GB-Seconds,1.667e-05,55.8758,USD,32.08
+2026-06-06T00:00:00Z,2026-06-06T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,35.44
+2026-06-06T00:00:00Z,2026-06-06T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,13.68
+2026-06-06T00:00:00Z,2026-06-06T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,36.29
+2026-06-06T00:00:00Z,2026-06-06T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2492252.0,GB-Seconds,1.6e-05,39.876,USD,22.64
+2026-06-06T00:00:00Z,2026-06-06T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,36.78
+2026-06-06T00:00:00Z,2026-06-06T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,34.52
+2026-06-06T00:00:00Z,2026-06-06T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,20.25
+2026-06-06T00:00:00Z,2026-06-06T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3724585.0,Invocations,2.5e-06,9.3115,USD,34.75
+2026-06-07T00:00:00Z,2026-06-07T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,20.89
+2026-06-07T00:00:00Z,2026-06-07T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,11.03
+2026-06-07T00:00:00Z,2026-06-07T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,34.92
+2026-06-07T00:00:00Z,2026-06-07T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2999652.0,GB-Seconds,1.667e-05,50.0042,USD,22.28
+2026-06-07T00:00:00Z,2026-06-07T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,26.56
+2026-06-07T00:00:00Z,2026-06-07T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,23.08
+2026-06-07T00:00:00Z,2026-06-07T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,18.83
+2026-06-07T00:00:00Z,2026-06-07T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1906739.0,GB-Seconds,1.6e-05,30.5078,USD,39.24
+2026-06-07T00:00:00Z,2026-06-07T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,33.39
+2026-06-07T00:00:00Z,2026-06-07T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,13.43
+2026-06-07T00:00:00Z,2026-06-07T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,26.97
+2026-06-07T00:00:00Z,2026-06-07T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1067642.0,Invocations,2.5e-06,2.6691,USD,36.84
+2026-06-08T00:00:00Z,2026-06-08T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,74.0
+2026-06-08T00:00:00Z,2026-06-08T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,62.76
+2026-06-08T00:00:00Z,2026-06-08T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,50.67
+2026-06-08T00:00:00Z,2026-06-08T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1526861.0,GB-Seconds,1.667e-05,25.4528,USD,72.25
+2026-06-08T00:00:00Z,2026-06-08T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,70.97
+2026-06-08T00:00:00Z,2026-06-08T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,62.08
+2026-06-08T00:00:00Z,2026-06-08T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,56.54
+2026-06-08T00:00:00Z,2026-06-08T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3245909.0,GB-Seconds,1.6e-05,51.9345,USD,75.05
+2026-06-08T00:00:00Z,2026-06-08T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,79.53
+2026-06-08T00:00:00Z,2026-06-08T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,65.77
+2026-06-08T00:00:00Z,2026-06-08T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,55.15
+2026-06-08T00:00:00Z,2026-06-08T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4534550.0,Invocations,2.5e-06,11.3364,USD,70.5
+2026-06-09T00:00:00Z,2026-06-09T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,74.68
+2026-06-09T00:00:00Z,2026-06-09T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,65.89
+2026-06-09T00:00:00Z,2026-06-09T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,74.45
+2026-06-09T00:00:00Z,2026-06-09T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1188456.0,GB-Seconds,1.667e-05,19.8116,USD,58.22
+2026-06-09T00:00:00Z,2026-06-09T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,66.63
+2026-06-09T00:00:00Z,2026-06-09T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,69.54
+2026-06-09T00:00:00Z,2026-06-09T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,74.89
+2026-06-09T00:00:00Z,2026-06-09T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2574486.0,GB-Seconds,1.6e-05,41.1918,USD,53.2
+2026-06-09T00:00:00Z,2026-06-09T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,54.2
+2026-06-09T00:00:00Z,2026-06-09T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,57.91
+2026-06-09T00:00:00Z,2026-06-09T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,57.99
+2026-06-09T00:00:00Z,2026-06-09T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4175130.0,Invocations,2.5e-06,10.4378,USD,67.92
+2026-06-10T00:00:00Z,2026-06-10T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,68.02
+2026-06-10T00:00:00Z,2026-06-10T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,69.95
+2026-06-10T00:00:00Z,2026-06-10T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,55.26
+2026-06-10T00:00:00Z,2026-06-10T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2500844.0,GB-Seconds,1.667e-05,41.6891,USD,75.14
+2026-06-10T00:00:00Z,2026-06-10T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,62.13
+2026-06-10T00:00:00Z,2026-06-10T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,73.13
+2026-06-10T00:00:00Z,2026-06-10T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,62.66
+2026-06-10T00:00:00Z,2026-06-10T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2527937.0,GB-Seconds,1.6e-05,40.447,USD,54.99
+2026-06-10T00:00:00Z,2026-06-10T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,72.14
+2026-06-10T00:00:00Z,2026-06-10T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,52.48
+2026-06-10T00:00:00Z,2026-06-10T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,68.09
+2026-06-10T00:00:00Z,2026-06-10T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1996121.0,Invocations,2.5e-06,4.9903,USD,52.05
+2026-06-11T00:00:00Z,2026-06-11T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,75.11
+2026-06-11T00:00:00Z,2026-06-11T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,63.12
+2026-06-11T00:00:00Z,2026-06-11T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,77.47
+2026-06-11T00:00:00Z,2026-06-11T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4563706.0,GB-Seconds,1.667e-05,76.077,USD,58.91
+2026-06-11T00:00:00Z,2026-06-11T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,66.99
+2026-06-11T00:00:00Z,2026-06-11T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,64.28
+2026-06-11T00:00:00Z,2026-06-11T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,69.91
+2026-06-11T00:00:00Z,2026-06-11T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2315573.0,GB-Seconds,1.6e-05,37.0492,USD,54.05
+2026-06-11T00:00:00Z,2026-06-11T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,64.51
+2026-06-11T00:00:00Z,2026-06-11T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,58.1
+2026-06-11T00:00:00Z,2026-06-11T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,66.2
+2026-06-11T00:00:00Z,2026-06-11T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4784146.0,Invocations,2.5e-06,11.9604,USD,67.85
+2026-06-12T00:00:00Z,2026-06-12T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,51.54
+2026-06-12T00:00:00Z,2026-06-12T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,64.89
+2026-06-12T00:00:00Z,2026-06-12T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,67.91
+2026-06-12T00:00:00Z,2026-06-12T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2114593.0,GB-Seconds,1.667e-05,35.2503,USD,68.7
+2026-06-12T00:00:00Z,2026-06-12T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,64.23
+2026-06-12T00:00:00Z,2026-06-12T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,60.33
+2026-06-12T00:00:00Z,2026-06-12T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,60.55
+2026-06-12T00:00:00Z,2026-06-12T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3938496.0,GB-Seconds,1.6e-05,63.0159,USD,64.86
+2026-06-12T00:00:00Z,2026-06-12T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,70.65
+2026-06-12T00:00:00Z,2026-06-12T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,63.04
+2026-06-12T00:00:00Z,2026-06-12T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,57.39
+2026-06-12T00:00:00Z,2026-06-12T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4190914.0,Invocations,2.5e-06,10.4773,USD,52.33
+2026-06-13T00:00:00Z,2026-06-13T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,10.07
+2026-06-13T00:00:00Z,2026-06-13T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,39.03
+2026-06-13T00:00:00Z,2026-06-13T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,10.16
+2026-06-13T00:00:00Z,2026-06-13T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3382347.0,GB-Seconds,1.667e-05,56.3837,USD,20.83
+2026-06-13T00:00:00Z,2026-06-13T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,12.75
+2026-06-13T00:00:00Z,2026-06-13T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,37.52
+2026-06-13T00:00:00Z,2026-06-13T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,14.1
+2026-06-13T00:00:00Z,2026-06-13T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1180553.0,GB-Seconds,1.6e-05,18.8888,USD,30.72
+2026-06-13T00:00:00Z,2026-06-13T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,25.64
+2026-06-13T00:00:00Z,2026-06-13T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,12.6
+2026-06-13T00:00:00Z,2026-06-13T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,38.75
+2026-06-13T00:00:00Z,2026-06-13T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3490706.0,Invocations,2.5e-06,8.7268,USD,31.97
+2026-06-14T00:00:00Z,2026-06-14T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,34.2
+2026-06-14T00:00:00Z,2026-06-14T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,29.76
+2026-06-14T00:00:00Z,2026-06-14T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,30.77
+2026-06-14T00:00:00Z,2026-06-14T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3417349.0,GB-Seconds,1.667e-05,56.9672,USD,39.42
+2026-06-14T00:00:00Z,2026-06-14T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,37.1
+2026-06-14T00:00:00Z,2026-06-14T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,29.4
+2026-06-14T00:00:00Z,2026-06-14T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,30.8
+2026-06-14T00:00:00Z,2026-06-14T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4498472.0,GB-Seconds,1.6e-05,71.9756,USD,38.32
+2026-06-14T00:00:00Z,2026-06-14T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,11.18
+2026-06-14T00:00:00Z,2026-06-14T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,31.17
+2026-06-14T00:00:00Z,2026-06-14T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,37.76
+2026-06-14T00:00:00Z,2026-06-14T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4813270.0,Invocations,2.5e-06,12.0332,USD,26.67
+2026-06-15T00:00:00Z,2026-06-15T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,64.2
+2026-06-15T00:00:00Z,2026-06-15T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,59.39
+2026-06-15T00:00:00Z,2026-06-15T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,53.62
+2026-06-15T00:00:00Z,2026-06-15T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3383366.0,GB-Seconds,1.667e-05,56.4007,USD,58.92
+2026-06-15T00:00:00Z,2026-06-15T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,77.73
+2026-06-15T00:00:00Z,2026-06-15T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,79.13
+2026-06-15T00:00:00Z,2026-06-15T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,78.33
+2026-06-15T00:00:00Z,2026-06-15T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3497105.0,GB-Seconds,1.6e-05,55.9537,USD,72.35
+2026-06-15T00:00:00Z,2026-06-15T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,51.65
+2026-06-15T00:00:00Z,2026-06-15T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,63.65
+2026-06-15T00:00:00Z,2026-06-15T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,65.67
+2026-06-15T00:00:00Z,2026-06-15T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1066150.0,Invocations,2.5e-06,2.6654,USD,51.11
+2026-06-16T00:00:00Z,2026-06-16T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,67.89
+2026-06-16T00:00:00Z,2026-06-16T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,56.9
+2026-06-16T00:00:00Z,2026-06-16T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,53.62
+2026-06-16T00:00:00Z,2026-06-16T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4355745.0,GB-Seconds,1.667e-05,72.6103,USD,76.55
+2026-06-16T00:00:00Z,2026-06-16T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,65.91
+2026-06-16T00:00:00Z,2026-06-16T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,63.23
+2026-06-16T00:00:00Z,2026-06-16T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,62.13
+2026-06-16T00:00:00Z,2026-06-16T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1696358.0,GB-Seconds,1.6e-05,27.1417,USD,59.46
+2026-06-16T00:00:00Z,2026-06-16T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,66.18
+2026-06-16T00:00:00Z,2026-06-16T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,73.72
+2026-06-16T00:00:00Z,2026-06-16T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,59.56
+2026-06-16T00:00:00Z,2026-06-16T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4828433.0,Invocations,2.5e-06,12.0711,USD,65.61
+2026-06-17T00:00:00Z,2026-06-17T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,62.8
+2026-06-17T00:00:00Z,2026-06-17T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,76.3
+2026-06-17T00:00:00Z,2026-06-17T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,62.53
+2026-06-17T00:00:00Z,2026-06-17T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1123618.0,GB-Seconds,1.667e-05,18.7307,USD,76.1
+2026-06-17T00:00:00Z,2026-06-17T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,50.64
+2026-06-17T00:00:00Z,2026-06-17T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,76.24
+2026-06-17T00:00:00Z,2026-06-17T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,65.87
+2026-06-17T00:00:00Z,2026-06-17T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3538911.0,GB-Seconds,1.6e-05,56.6226,USD,77.98
+2026-06-17T00:00:00Z,2026-06-17T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,52.1
+2026-06-17T00:00:00Z,2026-06-17T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,50.28
+2026-06-17T00:00:00Z,2026-06-17T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,51.58
+2026-06-17T00:00:00Z,2026-06-17T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3803696.0,Invocations,2.5e-06,9.5092,USD,62.06
+2026-06-18T00:00:00Z,2026-06-18T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,64.4
+2026-06-18T00:00:00Z,2026-06-18T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,68.83
+2026-06-18T00:00:00Z,2026-06-18T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,76.21
+2026-06-18T00:00:00Z,2026-06-18T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3942190.0,GB-Seconds,1.667e-05,65.7163,USD,61.95
+2026-06-18T00:00:00Z,2026-06-18T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,52.75
+2026-06-18T00:00:00Z,2026-06-18T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,60.09
+2026-06-18T00:00:00Z,2026-06-18T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,65.68
+2026-06-18T00:00:00Z,2026-06-18T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4549760.0,GB-Seconds,1.6e-05,72.7962,USD,57.16
+2026-06-18T00:00:00Z,2026-06-18T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,53.31
+2026-06-18T00:00:00Z,2026-06-18T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,60.64
+2026-06-18T00:00:00Z,2026-06-18T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,58.62
+2026-06-18T00:00:00Z,2026-06-18T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2759555.0,Invocations,2.5e-06,6.8989,USD,71.47
+2026-06-19T00:00:00Z,2026-06-19T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,67.67
+2026-06-19T00:00:00Z,2026-06-19T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,58.32
+2026-06-19T00:00:00Z,2026-06-19T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,77.31
+2026-06-19T00:00:00Z,2026-06-19T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,1767950.0,GB-Seconds,1.667e-05,29.4717,USD,62.83
+2026-06-19T00:00:00Z,2026-06-19T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,61.53
+2026-06-19T00:00:00Z,2026-06-19T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,70.39
+2026-06-19T00:00:00Z,2026-06-19T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,56.55
+2026-06-19T00:00:00Z,2026-06-19T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4188729.0,GB-Seconds,1.6e-05,67.0197,USD,73.94
+2026-06-19T00:00:00Z,2026-06-19T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,57.77
+2026-06-19T00:00:00Z,2026-06-19T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,67.66
+2026-06-19T00:00:00Z,2026-06-19T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,79.47
+2026-06-19T00:00:00Z,2026-06-19T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2760574.0,Invocations,2.5e-06,6.9014,USD,78.34
+2026-06-20T00:00:00Z,2026-06-20T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,24.02
+2026-06-20T00:00:00Z,2026-06-20T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,28.4
+2026-06-20T00:00:00Z,2026-06-20T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,15.01
+2026-06-20T00:00:00Z,2026-06-20T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3290435.0,GB-Seconds,1.667e-05,54.8516,USD,16.95
+2026-06-20T00:00:00Z,2026-06-20T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,38.28
+2026-06-20T00:00:00Z,2026-06-20T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,29.49
+2026-06-20T00:00:00Z,2026-06-20T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,28.23
+2026-06-20T00:00:00Z,2026-06-20T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1951661.0,GB-Seconds,1.6e-05,31.2266,USD,16.92
+2026-06-20T00:00:00Z,2026-06-20T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,15.3
+2026-06-20T00:00:00Z,2026-06-20T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,16.61
+2026-06-20T00:00:00Z,2026-06-20T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,15.59
+2026-06-20T00:00:00Z,2026-06-20T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2235202.0,Invocations,2.5e-06,5.588,USD,34.79
+2026-06-21T00:00:00Z,2026-06-21T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,34.02
+2026-06-21T00:00:00Z,2026-06-21T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,28.89
+2026-06-21T00:00:00Z,2026-06-21T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,16.49
+2026-06-21T00:00:00Z,2026-06-21T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3930184.0,GB-Seconds,1.667e-05,65.5162,USD,37.83
+2026-06-21T00:00:00Z,2026-06-21T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,39.85
+2026-06-21T00:00:00Z,2026-06-21T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,15.22
+2026-06-21T00:00:00Z,2026-06-21T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,21.89
+2026-06-21T00:00:00Z,2026-06-21T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2829553.0,GB-Seconds,1.6e-05,45.2728,USD,24.74
+2026-06-21T00:00:00Z,2026-06-21T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,39.89
+2026-06-21T00:00:00Z,2026-06-21T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,36.92
+2026-06-21T00:00:00Z,2026-06-21T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,23.9
+2026-06-21T00:00:00Z,2026-06-21T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,4724044.0,Invocations,2.5e-06,11.8101,USD,16.71
+2026-06-22T00:00:00Z,2026-06-22T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,66.11
+2026-06-22T00:00:00Z,2026-06-22T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,67.79
+2026-06-22T00:00:00Z,2026-06-22T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,67.4
+2026-06-22T00:00:00Z,2026-06-22T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3862689.0,GB-Seconds,1.667e-05,64.391,USD,63.72
+2026-06-22T00:00:00Z,2026-06-22T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,61.74
+2026-06-22T00:00:00Z,2026-06-22T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,58.19
+2026-06-22T00:00:00Z,2026-06-22T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,64.3
+2026-06-22T00:00:00Z,2026-06-22T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2852610.0,GB-Seconds,1.6e-05,45.6418,USD,78.67
+2026-06-22T00:00:00Z,2026-06-22T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,75.86
+2026-06-22T00:00:00Z,2026-06-22T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,74.29
+2026-06-22T00:00:00Z,2026-06-22T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,69.66
+2026-06-22T00:00:00Z,2026-06-22T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1326916.0,Invocations,2.5e-06,3.3173,USD,72.06
+2026-06-23T00:00:00Z,2026-06-23T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,58.44
+2026-06-23T00:00:00Z,2026-06-23T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,57.58
+2026-06-23T00:00:00Z,2026-06-23T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,50.15
+2026-06-23T00:00:00Z,2026-06-23T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2725690.0,GB-Seconds,1.667e-05,45.4373,USD,71.7
+2026-06-23T00:00:00Z,2026-06-23T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,64.88
+2026-06-23T00:00:00Z,2026-06-23T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,52.43
+2026-06-23T00:00:00Z,2026-06-23T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,56.61
+2026-06-23T00:00:00Z,2026-06-23T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3755532.0,GB-Seconds,1.6e-05,60.0885,USD,76.83
+2026-06-23T00:00:00Z,2026-06-23T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,79.74
+2026-06-23T00:00:00Z,2026-06-23T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,51.85
+2026-06-23T00:00:00Z,2026-06-23T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,76.49
+2026-06-23T00:00:00Z,2026-06-23T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2950013.0,Invocations,2.5e-06,7.375,USD,67.77
+2026-06-24T00:00:00Z,2026-06-24T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,74.74
+2026-06-24T00:00:00Z,2026-06-24T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,60.43
+2026-06-24T00:00:00Z,2026-06-24T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,70.34
+2026-06-24T00:00:00Z,2026-06-24T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2298266.0,GB-Seconds,1.667e-05,38.3121,USD,75.93
+2026-06-24T00:00:00Z,2026-06-24T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,72.02
+2026-06-24T00:00:00Z,2026-06-24T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,65.64
+2026-06-24T00:00:00Z,2026-06-24T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,76.04
+2026-06-24T00:00:00Z,2026-06-24T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1723035.0,GB-Seconds,1.6e-05,27.5686,USD,75.52
+2026-06-24T00:00:00Z,2026-06-24T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,76.02
+2026-06-24T00:00:00Z,2026-06-24T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,71.25
+2026-06-24T00:00:00Z,2026-06-24T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,75.11
+2026-06-24T00:00:00Z,2026-06-24T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1884056.0,Invocations,2.5e-06,4.7101,USD,77.9
+2026-06-25T00:00:00Z,2026-06-25T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,53.18
+2026-06-25T00:00:00Z,2026-06-25T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,70.97
+2026-06-25T00:00:00Z,2026-06-25T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,55.68
+2026-06-25T00:00:00Z,2026-06-25T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4340420.0,GB-Seconds,1.667e-05,72.3548,USD,76.43
+2026-06-25T00:00:00Z,2026-06-25T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,76.16
+2026-06-25T00:00:00Z,2026-06-25T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,50.88
+2026-06-25T00:00:00Z,2026-06-25T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,74.77
+2026-06-25T00:00:00Z,2026-06-25T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,3624159.0,GB-Seconds,1.6e-05,57.9865,USD,60.05
+2026-06-25T00:00:00Z,2026-06-25T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,72.31
+2026-06-25T00:00:00Z,2026-06-25T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,54.82
+2026-06-25T00:00:00Z,2026-06-25T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,74.54
+2026-06-25T00:00:00Z,2026-06-25T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,1442061.0,Invocations,2.5e-06,3.6052,USD,72.7
+2026-06-26T00:00:00Z,2026-06-26T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,57.76
+2026-06-26T00:00:00Z,2026-06-26T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,55.79
+2026-06-26T00:00:00Z,2026-06-26T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,52.52
+2026-06-26T00:00:00Z,2026-06-26T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,2123994.0,GB-Seconds,1.667e-05,35.407,USD,79.44
+2026-06-26T00:00:00Z,2026-06-26T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,68.95
+2026-06-26T00:00:00Z,2026-06-26T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,57.79
+2026-06-26T00:00:00Z,2026-06-26T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,69.02
+2026-06-26T00:00:00Z,2026-06-26T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,4963735.0,GB-Seconds,1.6e-05,79.4198,USD,74.56
+2026-06-26T00:00:00Z,2026-06-26T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,53.85
+2026-06-26T00:00:00Z,2026-06-26T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,58.5
+2026-06-26T00:00:00Z,2026-06-26T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,50.55
+2026-06-26T00:00:00Z,2026-06-26T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3577640.0,Invocations,2.5e-06,8.9441,USD,78.89
+2026-06-27T00:00:00Z,2026-06-27T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,20.26
+2026-06-27T00:00:00Z,2026-06-27T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,28.98
+2026-06-27T00:00:00Z,2026-06-27T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,37.96
+2026-06-27T00:00:00Z,2026-06-27T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4096853.0,GB-Seconds,1.667e-05,68.2945,USD,38.12
+2026-06-27T00:00:00Z,2026-06-27T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,30.64
+2026-06-27T00:00:00Z,2026-06-27T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,12.04
+2026-06-27T00:00:00Z,2026-06-27T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,19.03
+2026-06-27T00:00:00Z,2026-06-27T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1705552.0,GB-Seconds,1.6e-05,27.2888,USD,33.13
+2026-06-27T00:00:00Z,2026-06-27T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,31.26
+2026-06-27T00:00:00Z,2026-06-27T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,24.21
+2026-06-27T00:00:00Z,2026-06-27T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,11.74
+2026-06-27T00:00:00Z,2026-06-27T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3042999.0,Invocations,2.5e-06,7.6075,USD,11.37
+2026-06-28T00:00:00Z,2026-06-28T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,36.15
+2026-06-28T00:00:00Z,2026-06-28T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,39.2
+2026-06-28T00:00:00Z,2026-06-28T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,39.07
+2026-06-28T00:00:00Z,2026-06-28T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3698915.0,GB-Seconds,1.667e-05,61.6609,USD,29.43
+2026-06-28T00:00:00Z,2026-06-28T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,27.83
+2026-06-28T00:00:00Z,2026-06-28T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,21.51
+2026-06-28T00:00:00Z,2026-06-28T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,11.97
+2026-06-28T00:00:00Z,2026-06-28T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,1961568.0,GB-Seconds,1.6e-05,31.3851,USD,19.71
+2026-06-28T00:00:00Z,2026-06-28T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,24.66
+2026-06-28T00:00:00Z,2026-06-28T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,33.11
+2026-06-28T00:00:00Z,2026-06-28T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,30.5
+2026-06-28T00:00:00Z,2026-06-28T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,3534937.0,Invocations,2.5e-06,8.8373,USD,14.77
+2026-06-29T00:00:00Z,2026-06-29T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,64.06
+2026-06-29T00:00:00Z,2026-06-29T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,78.33
+2026-06-29T00:00:00Z,2026-06-29T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,53.07
+2026-06-29T00:00:00Z,2026-06-29T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,3981352.0,GB-Seconds,1.667e-05,66.3691,USD,54.91
+2026-06-29T00:00:00Z,2026-06-29T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,73.84
+2026-06-29T00:00:00Z,2026-06-29T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,70.81
+2026-06-29T00:00:00Z,2026-06-29T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,56.62
+2026-06-29T00:00:00Z,2026-06-29T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2502337.0,GB-Seconds,1.6e-05,40.0374,USD,73.18
+2026-06-29T00:00:00Z,2026-06-29T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,56.9
+2026-06-29T00:00:00Z,2026-06-29T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,53.94
+2026-06-29T00:00:00Z,2026-06-29T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,76.04
+2026-06-29T00:00:00Z,2026-06-29T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2486205.0,Invocations,2.5e-06,6.2155,USD,54.53
+2026-06-30T00:00:00Z,2026-06-30T23:59:59Z,AWS,AmazonEC2,res-aws-amazonec2-001,Compute-t3.medium,24.0,Hours,0.1,2.4,USD,62.97
+2026-06-30T00:00:00Z,2026-06-30T23:59:59Z,AWS,AmazonS3,res-aws-amazons3-001,Storage-Standard,16.6667,GB-Month,0.023,0.3833,USD,78.31
+2026-06-30T00:00:00Z,2026-06-30T23:59:59Z,AWS,AmazonRDS,res-aws-amazonrds-001,DB-db.m5.large,24.0,Hours,0.2,4.8,USD,62.59
+2026-06-30T00:00:00Z,2026-06-30T23:59:59Z,AWS,AWSLambda,res-aws-awslambda-001,Serverless-Execution,4567546.0,GB-Seconds,1.667e-05,76.141,USD,78.94
+2026-06-30T00:00:00Z,2026-06-30T23:59:59Z,Azure,Virtual Machines,res-azure-virtual-machines-001,Compute-D2s_v3,24.0,Hours,0.096,2.304,USD,72.8
+2026-06-30T00:00:00Z,2026-06-30T23:59:59Z,Azure,Blob Storage,res-azure-blob-storage-001,Storage-HotLRS,16.6667,GB-Month,0.018,0.3,USD,63.27
+2026-06-30T00:00:00Z,2026-06-30T23:59:59Z,Azure,Azure SQL,res-azure-azure-sql-001,DB-Gen5-2vCore,24.0,Hours,0.25,6.0,USD,59.36
+2026-06-30T00:00:00Z,2026-06-30T23:59:59Z,Azure,Azure Functions,res-azure-azure-functions-001,Serverless-Execution,2847865.0,GB-Seconds,1.6e-05,45.5658,USD,76.82
+2026-06-30T00:00:00Z,2026-06-30T23:59:59Z,GCP,Compute Engine,res-gcp-compute-engine-001,Compute-e2-medium,24.0,Hours,0.0475,1.14,USD,56.9
+2026-06-30T00:00:00Z,2026-06-30T23:59:59Z,GCP,Cloud Storage,res-gcp-cloud-storage-001,Storage-Standard,16.6667,GB-Month,0.02,0.3333,USD,56.39
+2026-06-30T00:00:00Z,2026-06-30T23:59:59Z,GCP,Cloud SQL,res-gcp-cloud-sql-001,DB-Custom-2-3840,24.0,Hours,0.15,3.6,USD,50.93
+2026-06-30T00:00:00Z,2026-06-30T23:59:59Z,GCP,Cloud Functions,res-gcp-cloud-functions-001,Serverless-Execution,2286936.0,Invocations,2.5e-06,5.7173,USD,71.45

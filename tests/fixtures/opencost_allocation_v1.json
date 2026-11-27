@@ -1,0 +1,48 @@
+{
+  "code": 200,
+  "status": "success",
+  "_comment": "SYNTHETIC fixture shaped like an OpenCost /allocation?window=2026-06-01T00:00:00Z,2026-06-02T00:00:00Z&aggregate=controller response (field names from opencost core/pkg/opencost/allocation.go).",
+  "data": [
+    {
+      "checkout/deployment/checkout-api": {
+        "name": "checkout/deployment/checkout-api",
+        "properties": {"cluster": "prod-eks", "namespace": "checkout", "controller": "checkout-api", "controllerKind": "deployment", "providerID": "aws:///us-east-1a/i-0abc", "labels": {"team": "payments"}},
+        "window": {"start": "2026-06-01T00:00:00Z", "end": "2026-06-02T00:00:00Z"},
+        "start": "2026-06-01T00:00:00Z",
+        "end": "2026-06-02T00:00:00Z",
+        "minutes": 43200,
+        "cpuCoreRequestAverage": 4.0,
+        "cpuCoreUsageAverage": 0.6,
+        "cpuCost": 12.0,
+        "ramByteRequestAverage": 8589934592,
+        "ramByteUsageAverage": 2147483648,
+        "ramCost": 4.0,
+        "pvCost": 1.5,
+        "networkCost": 0.5,
+        "totalCost": 18.0
+      },
+      "search/statefulset/es": {
+        "name": "search/statefulset/es",
+        "properties": {"cluster": "prod-eks", "namespace": "search", "controller": "es", "controllerKind": "statefulset", "providerID": "aws:///us-east-1b/i-0def"},
+        "start": "2026-06-01T00:00:00Z",
+        "end": "2026-06-02T00:00:00Z",
+        "minutes": 43200,
+        "cpuCoreRequestAverage": 8.0,
+        "cpuCoreUsageAverage": 6.4,
+        "cpuCost": 24.0,
+        "ramCost": 9.0,
+        "pvCost": 3.0,
+        "totalCost": 36.0
+      },
+      "__idle__": {
+        "name": "__idle__",
+        "properties": {"cluster": "prod-eks"},
+        "start": "2026-06-01T00:00:00Z",
+        "end": "2026-06-02T00:00:00Z",
+        "cpuCost": 7.0,
+        "ramCost": 3.0,
+        "totalCost": 10.0
+      }
+    }
+  ]
+}
